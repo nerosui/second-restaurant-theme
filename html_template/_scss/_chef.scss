@@ -9,77 +9,65 @@
 
   .container {
     @media (max-width: 390px) {
-      margin: 0 -145px;
-      width: 680px;
-      max-width: none;
     }
   }
 
-    .chef-grid {
-    max-width: 800px;
+  .chef-grid {
+
+    width: clamp(20px, 100%, 870px);
     margin: 0 auto 80px;
     position: relative;
 
     .chef-swiper {
-      
-      .swiper-wrapper {
-        align-items: stretch;
-        overflow: hidden;
-      }
-
       .swiper-slide {
         width: 100%;
         display: flex;
         justify-content: center;
       }
-
     }
 
-      // Swiperのナビゲーションボタンカスタマイズ
-      .swiper-button-next,
-      .swiper-button-prev {
-        width: 40px;
-        height: 40px;
-        border-radius: 50%;
-        background-color: #E65D3E;
-        color: #FFFFFF;
-        top: 50%;
-        transform: translateY(-50%);
-        margin-top: 0;
+    // Swiperのナビゲーションボタンカスタマイズ
+    .swiper-button-next,
+    .swiper-button-prev {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background-color: #e65d3e;
+      color: #ffffff;
+      top: 35%;
+      transform: translateY(-50%);
+      margin-top: 0;
 
-        &:after {
-          font-size: 16px;
-          font-weight: bold;
-        }
-
-        &:hover {
-          background-color: #d04a2a;
-        }
+      &:after {
+        font-size: 16px;
+        font-weight: bold;
       }
 
-      .swiper-button-prev {
-        left: -50px;
+      &:hover {
+        background-color: #d04a2a;
       }
+    }
 
-      .swiper-button-next {
-        right: -50px;
-      }
-
-      // ページネーション
-      .swiper-pagination {
-        bottom: -60px;
+    .swiper-button-prev {
+      left: -50px;
+      @media screen and (max-width: 768px) {
+        left: -30px;
         
-        .swiper-pagination-bullet {
-          width: 8px;
-          height: 8px;
-          background-color: #E5E5E5;
-          opacity: 1;
-
-          &.swiper-pagination-bullet-active {
-            background-color: #E65D3E;
-          }
-        }
       }
+    }
+
+    .swiper-button-next {
+      right: -50px;
+      @media screen and (max-width: 768px) {
+        right: -30px;
+        
+      }
+    }
+
+    // ページネーション
+    .swiper-pagination {
+      display: none;
+    }
   }
 
   .chef-card {
@@ -112,7 +100,7 @@
     justify-content: flex-start;
 
     .chef-name {
-      font-family: 'Noto Sans JP', sans-serif;
+      font-family: "Noto Sans JP", sans-serif;
       font-size: 20px;
       font-weight: 500;
       line-height: 21px;
@@ -122,11 +110,11 @@
     }
 
     .chef-position {
-      font-family: 'Noto Sans JP', sans-serif;
+      font-family: "Noto Sans JP", sans-serif;
       font-size: 14px;
       font-weight: 500;
       line-height: 24px;
-      color: #E65D3E;
+      color: #e65d3e;
       text-align: left;
     }
   }
@@ -150,15 +138,11 @@
       margin-bottom: 60px;
 
       .chef-swiper {
-        .swiper-button-next,
-        .swiper-button-prev {
-          display: none;
-        }
-
         .swiper-pagination {
           bottom: -40px;
         }
       }
     }
+
   }
 }

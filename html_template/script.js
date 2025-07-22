@@ -144,11 +144,6 @@ style.textContent = `
             opacity: 0;
         }
     }
-    
-    .section-dot {
-        animation: pulse 2s infinite;
-    }
-    
 `;
 document.head.appendChild(style);
 
@@ -157,7 +152,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // 他の初期化コードの後にSwiperを初期化
     setTimeout(() => {
         const partnerSwiper = new Swiper(".partner-swiper", {
-          slidesPerView: 1,
+          slidesPerView: 1.4,
           spaceBetween: 16,
           centeredSlides: true,
           loop: true,
@@ -176,17 +171,13 @@ document.addEventListener('DOMContentLoaded', function() {
 
           // レスポンシブ設定
           breakpoints: {
-            390: {
-              slidesPerView: 1,
-              spaceBetween: 16,
-            },
             768: {
-              slidesPerView: 2,
-              spaceBetween: 24,
+              slidesPerView: 1.6,
+              spaceBetween: 40,
             },
             1024: {
               slidesPerView: 3,
-              spaceBetween: 80,
+              spaceBetween: 40,
             },
           },
 
@@ -196,9 +187,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
         // Chef Swiperの初期化
         const chefSwiper = new Swiper(".chef-swiper", {
-          slidesPerView: 3,
+          slidesPerView: 1,
           spaceBetween: 40,
-          centeredSlides: false,
+          centeredSlides: true,
           loop: true,
 
           // ページネーション
@@ -215,13 +206,21 @@ document.addEventListener('DOMContentLoaded', function() {
 
           // レスポンシブ設定
           breakpoints: {
-            320: {
-              slidesPerView: 1,
-              spaceBetween: 20,
+            390: {
+              slidesPerView:1,
+              spaceBetween: 0,
+            },
+            450: {
+              slidesPerView:1.6,
+              spaceBetween: 10,
+            },
+            600: {
+              slidesPerView:2,
+              spaceBetween: 10,
             },
             768: {
-              slidesPerView: 2,
-              spaceBetween: 30,
+              slidesPerView: 2.5,
+              spaceBetween: 20,
             },
             1024: {
               slidesPerView: 3,

@@ -7,17 +7,18 @@
   }
 
   .cta-buttons {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
+    justify-content: space-between;
     gap: 0;
 
-    @media (max-width: 390px) {
-      grid-template-columns: 1fr;
+    @media (max-width: 768px) {
+      flex-direction: column;
     }
   }
 
   .cta-button {
     display: flex;
+    flex: 1 1 100%;
     align-items: center;
     justify-content: space-between;
     padding: 72px 60px;

@@ -65,6 +65,14 @@
         </ul>
       </div>
       <div class="footer-links">
+        <div class="social">
+          <a href="#" class="social-link" aria-label="X (Twitter)">
+            <img src="images/sns-icon-x.svg" alt="X" />
+          </a>
+          <a href="#" class="social-link" aria-label="Instagram">
+            <img src="images/sns-icon-instagram.svg" alt="Instagram" />
+          </a>
+        </div>
         <ul>
           <li>運営会社</li>
           <li>プライバシーポリシー</li>

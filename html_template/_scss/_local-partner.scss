@@ -24,10 +24,8 @@
     position: relative;
     z-index: 2;
 
-    @media (max-width: 390px) {
-        margin: 0 -242px;
-        width: 875px;
-        max-width: none;
+    @media screen and (max-width: 1024px) {
+      padding: 0;
     }
   }
 
@@ -38,6 +36,9 @@
     display: flex;
     justify-content: center;
 
+    @media screen and (max-width: 1024px) {
+      height: auto;
+    }
     @media (max-width: 768px) {
       margin-top: 32px;
       margin-bottom: 40px;
@@ -54,6 +55,12 @@
     min-width: calc((800px + 80px) * 3);
     padding-bottom: 60px; /* ページネーション用の余白 */
 
+    @media screen and (max-width: 1024px) {
+      width: 100vw;
+      margin-left: calc((100vw - 100%) / -2);
+      min-width: 0;
+      padding-bottom: 60px; /* ページネーション用の余白 */
+    }
     .swiper-wrapper {
       align-items: stretch;
     }
@@ -62,19 +69,12 @@
       height: auto;
       display: flex;
       margin-right: 50px;
-    }
-
-    /* ナビゲーションボタンのカスタマイズ */
-    .swiper-button-next {
-      transform: translateX(430px);
-    }
-    .swiper-button-prev {
-      transform: translateX(-474px);
+      justify-content: center;
     }
     .swiper-button-next,
     .swiper-button-prev {
-      width: 44px;
-      height: 44px;
+      width: 40px;
+      height: 40px;
       margin-top: 0;
       border-radius: 50%;
       background-color: #e65d3e;
@@ -97,9 +97,22 @@
         opacity: 0.3;
         pointer-events: none;
       }
+    }
 
-      @media (max-width: 768px) {
-        display: none; /* モバイルでは非表示 */
+    /* ナビゲーションボタンのカスタマイズ */
+    .swiper-button-next {
+      transform: translateX(430px);
+      @media screen and (max-width: 1024px) {
+        transform: none;
+        left: auto;
+        right: clamp(10px,10%,100px);
+      }
+    }
+    .swiper-button-prev {
+      transform: translateX(-474px);
+      @media screen and (max-width: 1024px) {
+        transform: none;
+        left: clamp(10px,10%,100px);
       }
     }
 
@@ -128,8 +141,9 @@
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
     height: 280px;
     width: 100%;
+    max-width: 800px;
 
-    @media (max-width: 768px) {
+    @media (max-width: 1024px) {
       flex-direction: column;
       height: auto;
     }
@@ -138,15 +152,15 @@
       width: 400px;
       height: 280px;
       background: linear-gradient(45deg, #e8e8e8 25%, transparent 25%),
-        linear-gradient(-45deg, #e8e8e8 25%, transparent 25%),
-        linear-gradient(45deg, transparent 75%, #e8e8e8 75%),
+        linear-gradient(-45deg, #e8e8e8 25%, transparent 25%), linear-gradient(45deg, transparent 75%, #e8e8e8 75%),
         linear-gradient(-45deg, transparent 75%, #e8e8e8 75%);
       background-size: 20px 20px;
       flex-shrink: 0;
 
-      @media (max-width: 768px) {
+      @media (max-width: 1024px) {
         width: 100%;
-        height: 200px;
+        height: auto;
+        aspect-ratio: 16 / 9;
       }
     }
 
