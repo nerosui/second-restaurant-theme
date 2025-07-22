@@ -1,0 +1,179 @@
+/* // PROJECTセクション */
+#index-page .project {
+  position: relative;
+  padding: 80px 0;
+  background: #f8f7ee;
+
+  @media (max-width: 600px) {
+    padding: 40px 0;
+  }
+
+  .container {
+    position: relative;
+  }
+
+  .section-subtitle {
+    font-family: "Noto Sans JP", sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #303030;
+    text-align: center;
+    margin-bottom: 48px;
+
+    @media (max-width: 600px) {
+      font-size: 16px;
+      margin-bottom: 32px;
+    }
+  }
+
+  .pick-up-badge {
+    position: absolute;
+    top: -20px;
+    right: -15px;
+    width: 80px;
+    height: 80px;
+    background: #e65d3e;
+    border: 3px solid #f8f7ee;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+
+    @media (max-width: 600px) {
+      top: 240px;
+      right: 20px;
+      width: 60px;
+      height: 60px;
+    }
+
+    span {
+      font-family: "Poppins", sans-serif;
+      font-size: 14px;
+      font-weight: 600;
+      line-height: 1.5;
+      color: #ffffff;
+      text-align: center;
+
+      @media (max-width: 600px) {
+        font-size: 10px;
+      }
+    }
+  }
+
+  .project-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    margin-bottom: 64px;
+    max-width: 819px;
+    margin-left: auto;
+    margin-right: auto;
+
+    @media (max-width: 600px) {
+      margin-bottom: 40px;
+      gap: 20px;
+    }
+  }
+
+  .project-card {
+    position: relative;
+    display: flex;
+    background: #ffffff;
+    border-radius: 0;
+    box-shadow: none;
+    height: 280px;
+
+    @media (max-width: 600px) {
+      flex-direction: column;
+      height: auto;
+    }
+
+    .project-image {
+      width: 400px;
+      max-width: calc(50vw - 40px);
+      height: 280px;
+      background: linear-gradient(45deg, #e8e8e8 25%, transparent 25%),
+        linear-gradient(-45deg, #e8e8e8 25%, transparent 25%),
+        linear-gradient(45deg, transparent 75%, #e8e8e8 75%),
+        linear-gradient(-45deg, transparent 75%, #e8e8e8 75%);
+      background-size: 20px 20px;
+      flex-shrink: 0;
+
+      @media (max-width: 500px) {
+        width: 100%;
+        max-width: 100%;
+        height: 200px;
+      }
+    }
+
+    .project-info {
+      width: 419px;
+      background: #ffffff;
+      padding: 40px 60px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      @media (max-width: 500px) {
+        width: 100%;
+        padding: 24px;
+      }
+
+      .project-date {
+        font-family: "Poppins", sans-serif;
+        font-size: 14px;
+        font-weight: 600;
+        line-height: 1.5;
+        color: #000000;
+        margin-bottom: 16px;
+
+        @media (max-width: 500px) {
+          font-size: 12px;
+          margin-bottom: 12px;
+        }
+      }
+
+      .project-title {
+        font-family: "Noto Sans JP", sans-serif;
+        font-size: 24px;
+        font-weight: 500;
+        line-height: 1.5;
+        color: #303030;
+        margin-bottom: 32px;
+
+        @media (max-width: 600px) {
+          font-size: 18px;
+          margin-bottom: 24px;
+        }
+      }
+
+      .project-tags {
+        display: flex;
+        gap: 8px;
+        flex-wrap: wrap;
+
+        .tag {
+          display: inline-block;
+          background: #e65d3e;
+          color: #ffffff;
+          padding: 0 16px;
+          height: 24px;
+          line-height: 24px;
+          border-radius: 12px;
+          font-family: "Noto Sans JP", sans-serif;
+          font-size: 16px;
+          font-weight: 500;
+
+          @media (max-width: 600px) {
+            font-size: 14px;
+            padding: 0 12px;
+            height: 20px;
+            line-height: 20px;
+          }
+        }
+      }
+    }
+  }
+}

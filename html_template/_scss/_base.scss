@@ -1,0 +1,141 @@
+:root {
+  --primary-color: #e65d3e;
+  --dark-text: #303030;
+  --light-text: #8e8e8e;
+  --white: #ffffff;
+  --light-bg: #f8f7ee;
+  --pink-bg: #ffeeea;
+  --dark-bg: #403c3c;
+  --footer-text: #ece9e8;
+
+  /* Fonts */
+  --font-poppins: "Poppins", sans-serif;
+  --font-noto: "Noto Sans JP", sans-serif;
+
+  /* Breakpoints */
+  --mobile: 390px;
+  --tablet: 768px;
+  --desktop: 1440px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+body {
+  font-family: "Noto Sans JP", sans-serif;
+  line-height: 1.6;
+  color: var(--dark-text);
+  background-color: #ffffff;
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 40px;
+
+  @media (max-width: 390px) {
+    padding: 0 20px;
+  }
+
+  @media (min-width: 391px) and (max-width: 768px) {
+    padding: 0 30px;
+  }
+}
+
+/* // セクション共通スタイル */
+.section-header {
+  text-align: center;
+  margin-bottom: 48px;
+}
+.section-dot {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  background: var(--primary-color);
+  border-radius: 50%;
+  margin-top: 24px;
+}
+
+.section-title {
+  font-family: "Poppins", sans-serif;
+  font-size: 48px;
+  font-weight: 600;
+  color: var(--dark-text);
+  text-align: center;
+  line-height: 1.5;
+
+  /* // レスポンシブ対応 */
+  @media (max-width: 390px) {
+    font-size: 32px;
+    line-height: 1.5;
+  }
+
+  @media (min-width: 391px) and (max-width: 768px) {
+    font-size: 36px;
+  }
+}
+
+.section-subtitle {
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 2;
+  text-align: center;
+  color: var(--dark-text);
+  margin-bottom: 48px;
+
+  /* // レスポンシブ対応 */
+  @media (max-width: 390px) {
+    font-size: 20px;
+    line-height: 1.5;
+    margin-bottom: 40px;
+  }
+
+  @media (min-width: 391px) and (max-width: 768px) {
+    font-size: 22px;
+  }
+}
+
+.section-button {
+  display: block;
+  margin: 40px auto 0;
+  width: 225px;
+  line-height: 2.5;
+  background: #ffffff;
+  color: var(--primary-color);
+  border: 1px solid var(--primary-color);
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background: var(--primary-color);
+    color: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 16px rgba(230, 93, 62, 0.3);
+  }
+}
+
+.hiddenPC {
+  display: none!important;
+
+  @media (max-width: 390px) {
+    display: block!important;
+  }
+}
+.hiddenSP {
+  display: block!important;;
+
+  @media (max-width: 390px) {
+    display: none!important;
+  }
+}

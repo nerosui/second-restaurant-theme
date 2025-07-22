@@ -1,0 +1,13 @@
+{
+  "name": "PHP Apache DevContainer",
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
+  
+  "workspaceFolder": "/var/www/html",
+  "workspaceMount": "type=bind,source=${localWorkspaceFolder}/html_template,target=/var/www/html",
+  "features": {
+    "ghcr.io/devcontainers/features/git:1": {},
+    "ghcr.io/devcontainers/features/node:1": {}
+  }
+}
