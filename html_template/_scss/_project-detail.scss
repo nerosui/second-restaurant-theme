@@ -1,0 +1,165 @@
+@use "base" as *;
+
+/* Project Detail Page */
+#project-detail-page {
+    .article-container {
+        background-color: #fff;
+        max-width: 960px;
+        margin: 0 auto;
+        margin-top: clamp(20px, 10vw, 120px);
+        padding: clamp(10px, 8vw, 5rem);
+        @media (max-width: 960px) {
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+    }
+
+    /* プロジェクトヘッダー */
+    .project-header {
+        margin-bottom: 60px;
+
+        @media (max-width: 768px) {
+            margin-bottom: 40px;
+        }
+
+        .project-title {
+            font-size: 36px;
+            font-weight: 700;
+            color: var(--dark-text);
+            margin: 0;
+
+            @media (max-width: 768px) {
+                font-size: 28px;
+            }
+
+            @media (max-width: 480px) {
+                font-size: 24px;
+            }
+        }
+    }
+
+    /* メイン画像 */
+    .project-main-image {
+        margin-bottom: 60px;
+
+        @media (max-width: 768px) {
+            margin-bottom: 40px;
+        }
+
+        img {
+            width: 100%;
+            height: 534px;
+            object-fit: cover;
+            border-radius: 0;
+
+            @media (max-width: 768px) {
+                height: 250px;
+            }
+
+            @media (max-width: 480px) {
+                height: 200px;
+            }
+        }
+    }
+
+    /* プロジェクト概要 */
+    .project-overview {
+        margin-bottom: 60px;
+
+        @media (max-width: 768px) {
+            margin-bottom: 40px;
+        }
+
+        .project-description {
+            color: var(--dark-text);
+            margin: 0;
+
+            @media (max-width: 768px) {
+                font-size: 14px;
+            }
+        }
+    }
+
+    /* プロジェクト詳細情報 */
+    .project-details {
+        margin-bottom: 80px;
+
+        @media (max-width: 768px) {
+            margin-bottom: 60px;
+        }
+
+        .detail-list {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: start;
+            @media screen and (max-width: 600px) {
+                flex-direction: column;
+            }
+            dt,
+            dd {
+                margin: 0;
+                line-height: 3.5;
+                color: var(--primary-color);
+                border-top: 1px solid #f6d1c9;
+                &:last-of-type {
+                    border-bottom: 1px solid #f6d1c9;
+                }
+                @media (max-width: 768px) {
+                    width: 100%;
+                    flex: 1 1 100%!important;
+                }
+            }
+            dt {
+                flex: 1 1 30%;
+                font-weight: 700;
+                @media (max-width: 768px) {
+                    font-size: 14px;
+                    line-height: 2.5;
+                    padding: 12px 16px;
+                }
+
+                @media (max-width: 768px) {
+                    &:last-of-type {
+                        border-bottom:none;
+                    }
+                }
+            }
+
+            dd {
+                flex: 1 1 70%;
+                color: var(--dark-text);
+                @media (max-width: 768px) {
+                    font-size: 14px;
+                    line-height: 2.5;
+                    padding: 12px 16px;
+                }
+                .example-card {
+                    margin: 1rem auto;
+                }
+            }
+        }
+    }
+
+    /* 予約セクション */
+    .reservation-section {
+        .reservation-info {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+
+            .reservation-text {
+                line-height: 3.5;
+                color: var(--primary-color);
+
+                @media (max-width: 768px) {
+                    font-size: 14px;
+                    line-height: 2.5;
+                }
+            }
+
+            .reservation-icon {
+                flex-shrink: 0;
+            }
+        }
+    }
+}

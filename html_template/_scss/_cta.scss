@@ -3,7 +3,7 @@
   background: #fff;
 
   @media (max-width: 390px) {
-    padding: 80px 0;
+    padding: 80px 0 0;
   }
 
   .cta-buttons {
@@ -17,6 +17,7 @@
   }
 
   .cta-button {
+    position: relative;
     display: flex;
     flex: 1 1 100%;
     align-items: center;
@@ -25,24 +26,44 @@
     background: #fff;
     border: 1px solid var(--dark-bg);
     cursor: pointer;
-    transition: all 0.3s ease;
+    transition: background 0.3s ease;
+    z-index: 1;
 
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      z-index: -1;
+      background-size: cover;
+    }
     @media (max-width: 390px) {
       padding: 44px 40px;
     }
   }
   .join-button {
+    &::before {
+      background-image: url("images/cta_join_button.jpg");
+    }
     &:hover {
-      background: #dddddd;
+      &::before {
+        opacity: 1;
+      }
     }
   }
   .contact-button {
-    &:hover {
-      background: #dddddd;
+    &::before {
+      background-image: url("images/cta_contact_button.jpg");
     }
   }
   .button-content {
+    position: inherit;
     flex: 1;
+    z-index: 10;
   }
 
   .button-title {
@@ -72,6 +93,9 @@
   .button-arrow {
     width: 48px;
     height: 48px;
+    border: 1px solid var(--primary-color);
+    border-radius: 100%;
+    transition: all 0.3s ease;
 
     @media (max-width: 390px) {
       width: 32px;
@@ -81,6 +105,28 @@
     svg {
       width: 100%;
       height: 100%;
+      transition: all 0.3s ease;
+    }
+  }
+
+  .join-button:hover,
+  .contact-button:hover {
+    &::before {
+      opacity: 1;
+    }
+    .button-title,
+    .button-subtitle {
+      color: #fff !important;
+    }
+    .button-arrow {
+      svg {
+        circle {
+          fill: #fff;
+        }
+        path {
+          stroke: var(--primary-color);
+        }
+      }
     }
   }
 }

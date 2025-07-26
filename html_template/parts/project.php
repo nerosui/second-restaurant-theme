@@ -11,9 +11,11 @@
       <div class="project-card">
         <!-- PICK UPバッジ -->
         <div class="pick-up-badge">
-        <span>PICK UP</span>
+          <span>PICK UP</span>
         </div>
-        <div class="project-image"></div>
+        <div class="project-image">
+          <img src="images/project-dummy-1.png" alt="プロジェクト画像">
+        </div>
         <div class="project-info">
           <div class="project-date">2025/00/00 - 2025/00/00</div>
           <h4 class="project-title">開催プロジェクトダミーのタイトルです</h4>
@@ -24,7 +26,9 @@
         </div>
       </div>
       <div class="project-card">
-        <div class="project-image"></div>
+        <div class="project-image">
+          <img src="images/project-dummy-2.png" alt="プロジェクト画像">
+        </div>
         <div class="project-info">
           <div class="project-date">2025/00/00 - 2025/00/00</div>
           <h4 class="project-title">開催プロジェクトダミーのタイトルです</h4>
@@ -35,7 +39,9 @@
         </div>
       </div>
       <div class="project-card">
-        <div class="project-image"></div>
+        <div class="project-image">
+          <img src="images/project-dummy-3.png" alt="プロジェクト画像">
+        </div>
         <div class="project-info">
           <div class="project-date">2025/00/00 - 2025/00/00</div>
           <h4 class="project-title">開催プロジェクトダミーのタイトルです</h4>
@@ -46,7 +52,6 @@
         </div>
       </div>
     </div>
-
     <button class="section-button">VIEW LIST</button>
   </div>
 </section>

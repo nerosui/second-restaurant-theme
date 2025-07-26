@@ -12,17 +12,19 @@
   }
 
   .container {
-    max-width: 1440px;
+    max-width: 1040px;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 40px;
 
     @media (max-width: 600px) {
       padding: 0 20px;
     }
     &.flex {
       display: flex;
-        flex-direction: row;
+      flex-direction: row;
       align-items: stretch;
+      justify-content: space-between;
+      gap: 40px;
 
       @media (max-width: 600px) {
       flex-direction: column;
@@ -39,7 +41,6 @@
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    margin: 0 4rem;
 
     @media (max-width: 600px) {
       margin-bottom: 40px;
@@ -67,7 +68,6 @@
 
     @media (min-width: 601px) {
       align-items: flex-end;
-      padding-right: 80px;
     }
   }
 

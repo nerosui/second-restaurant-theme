@@ -1,10 +1,10 @@
 <?php require 'header.php'; ?>
 <main id="index-page">
-	<?php include 'parts/top_hero.php'; ?>
-	<?php include 'parts/about.php'; ?>
-	<?php include 'parts/local-partner.php'; ?>
-	<?php include 'parts/chef.php'; ?>
-	<?php include 'parts/project.php'; ?>
-	<?php include 'parts/news.php'; ?>
+	<?php require 'parts/top_hero.php'; ?>
+	<?php require 'parts/about.php'; ?>
+	<?php require 'parts/local-partner.php'; ?>
+	<?php require 'parts/chef.php'; ?>
+	<?php require 'parts/project.php'; ?>
+	<?php require 'parts/news.php'; ?>
 </main>
 <?php require 'footer.php'; ?>

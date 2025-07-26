@@ -23,7 +23,7 @@
     margin-top: 88px;
     margin-left: clamp(20px, 5vw, 80px);
     width: 100%;
-    height: clamp(400px, 80vh, 730px);
+    height: clamp(400px, 80vh, 800px);
     background-size: 20px 20px;
     background-position:
       0 0,
@@ -31,6 +31,22 @@
       10px -10px,
       -10px 0px;
     will-change: transform;
+
+    .hero-swiper {
+      width: 100%;
+      height: 100%;
+
+      .swiper-wrapper {
+        width: 100%;
+        height: 100%;
+      }
+
+      .swiper-slide {
+        width: 100%;
+        height: 100%;
+      }
+    }
+
     img {
       width: 100%;
       height: 100%;
@@ -38,6 +54,10 @@
     }
 
     @media (max-width: 390px) {
+      .hero-swiper {
+        width: 100%;
+        height: 100%;
+      }
     }
 
     @media (max-width: 600px) {
@@ -47,6 +67,11 @@
       height: auto;
       padding: 0;
       height: clamp(300px, 80vh, 430px);
+
+      .hero-swiper {
+        width: 100%;
+        height: 100%;
+      }
     }
 
     @media (min-width: 601px) and (max-width: 768px) {
@@ -54,7 +79,12 @@
       width: 100%;
       margin-bottom: 40px;
       margin-left: 20px;
-    height: clamp(400px, 80vh, 600px);
+      height: clamp(400px, 80vh, 600px);
+
+      .hero-swiper {
+        width: 100%;
+        height: 100%;
+      }
     }
   }
 
@@ -130,7 +160,7 @@
   .hero-button {
     position: absolute;
     right: 0;
-    bottom: 100px;
+    bottom: 25px;
     animation: fadeInUp 1s ease-out 0.4s both;
     max-width: 100%;
 

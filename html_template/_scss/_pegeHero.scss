@@ -1,0 +1,105 @@
+#about-page,
+#join-page {
+    /* Hero Section */
+    .hero-section {
+        position: relative;
+        height: 916px;
+        background: var(--primary-color);
+        margin-top: 170px;
+
+        @media (max-width: 390px) {
+            height: auto;
+            padding: 0 0 60px;
+        margin-top: 150px;
+
+        }
+
+        .hero-background img {
+            position: relative;
+            top: -80px;
+            left: 80px;
+            text-align: right;
+            width: calc(100vw - 80px);
+            height: 100%;
+            max-height: 560px;
+            object-fit: cover;
+            z-index: 1;
+
+
+            @media (max-width: 600px) {
+                left: 0;
+                width: 100%;
+                aspect-ratio: 1 / 1;
+            }
+        }
+
+        .hero-container {
+            position: relative;
+            z-index: 2;
+            padding-bottom: 80px;
+
+            @media (max-width: 390px) {
+                padding-bottom: 40px;
+            }
+        }
+
+        .hero-content {
+            max-width: 960px;
+            padding: 0 40px;
+            margin: 0 auto;
+
+            @media (max-width: 390px) {
+                margin-top: -40px;
+                max-width: 100%;
+                padding: 0 20px;
+            }
+        }
+
+        .hero-title {
+            font-family: var(--font-poppins);
+            font-size: 64px;
+            font-weight: 600;
+            line-height: 1.5;
+            color: var(--white);
+            margin-bottom: 16px;
+        }
+
+        @media (max-width: 390px) {
+            .hero-title {
+                font-size: 32px;
+            }
+        }
+
+        .hero-subtitle {
+            font-family: var(--font-noto);
+            font-size: 32px;
+            font-weight: 700;
+            line-height: 1.125;
+            color: var(--white);
+            margin-bottom: 24px;
+        }
+
+        @media (max-width: 390px) {
+            .hero-subtitle {
+                font-size: 20px;
+                line-height: 1.8;
+            }
+        }
+
+        .hero-description {
+            font-family: var(--font-noto);
+            font-size: 18px;
+            font-weight: 500;
+            line-height: 1.78;
+            color: var(--white);
+            max-width: 1007px;
+        }
+
+        @media (max-width: 390px) {
+            .hero-description {
+                font-size: 14px;
+                line-height: 1.5;
+            }
+        }
+    }
+}

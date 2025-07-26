@@ -7,11 +7,6 @@
     padding: 40px 0;
   }
 
-  .container {
-    @media (max-width: 390px) {
-    }
-  }
-
   .chef-grid {
 
     width: clamp(20px, 100%, 870px);

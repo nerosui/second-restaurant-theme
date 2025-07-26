@@ -16,7 +16,9 @@
           <!-- パートナーカードのプレースホルダー -->
           <div class="swiper-slide active">
             <div class="partner-card">
-              <div class="partner-image"></div>
+              <div class="partner-image">
+                <img src="images/localpartner-dummy-1.png" alt="地域パートナー画像">
+              </div>
               <div class="partner-info">
                 <div class="partner-location">香川県三豊市</div>
                 <h4 class="partner-name">地域パートナー名称 地域パートナー名称</h4>
@@ -26,7 +28,9 @@
           </div>
           <div class="swiper-slide">
             <div class="partner-card">
-              <div class="partner-image"></div>
+              <div class="partner-image">
+                <img src="images/localpartner-dummy-2.png" alt="地域パートナー画像">
+              </div>
               <div class="partner-info">
                 <div class="partner-location">長野県松本市</div>
                 <h4 class="partner-name">アルプス地域パートナー アルプス地域パートナー</h4>
@@ -36,7 +40,9 @@
           </div>
           <div class="swiper-slide">
             <div class="partner-card">
-              <div class="partner-image"></div>
+              <div class="partner-image">
+                <img src="images/localpartner-dummy-1.png" alt="地域パートナー画像">
+              </div>
               <div class="partner-info">
                 <div class="partner-location">沖縄県石垣市</div>
                 <h4 class="partner-name">石垣島地域パートナー 石垣島地域パートナー</h4>
@@ -46,7 +52,9 @@
           </div>
           <div class="swiper-slide">
             <div class="partner-card">
-              <div class="partner-image"></div>
+              <div class="partner-image">
+                <img src="images/localpartner-dummy-2.png" alt="地域パートナー画像">
+              </div>
               <div class="partner-info">
                 <div class="partner-location">北海道札幌市</div>
                 <h4 class="partner-name">北海道地域パートナー 北海道地域パートナー</h4>
@@ -56,7 +64,9 @@
           </div>
           <div class="swiper-slide">
             <div class="partner-card">
-              <div class="partner-image"></div>
+              <div class="partner-image">
+                <img src="images/localpartner-dummy-1.png" alt="地域パートナー画像">
+              </div>
               <div class="partner-info">
                 <div class="partner-location">北海道札幌市</div>
                 <h4 class="partner-name">北海道地域パートナー 北海道地域パートナー</h4>

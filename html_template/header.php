@@ -17,10 +17,26 @@
 </head>
 
 <body>
+  <!-- ローディング画面 -->
+  <div id="loading" class="loading-wrapper">
+    <div class="loading-content">
+      <div class="loading-logo">
+        <img src="images/loading_logo.png" alt="Second Restaurant Logo" class="loading-logo-img" />
+      </div>
+      <div class="loading-dots">
+        <div class="loading-dot dot-1"></div>
+        <div class="loading-dot dot-2"></div>
+        <div class="loading-dot dot-3"></div>
+      </div>
+    </div>
+  </div>
+
   <!-- ヘッダー -->
-  <header class="header">
+  <header class="sr-header">
     <div class="header-logo">
-      <img src="images/logo.png" alt="Second Restaurant Logo" class="logo" />
+      <a href="/" class="logo-link">
+        <img src="images/logo.svg" alt="Second Restaurant Logo" class="logo" />
+      </a>
     </div>
     <button
       class="menu-button"
@@ -53,11 +69,11 @@
           <img src="images/menu-logo.svg" alt="Second Restaurant Logo" class="drawer-logo-img" />
         </div>
         <ul class="drawer-list">
-          <li><a href="#about">ABOUT</a></li>
-          <li><a href="#">LOCAL PARTNER</a></li>
-          <li><a href="#">TRAVELING CHEF</a></li>
-          <li><a href="#">PROJECT</a></li>
-          <li><a href="#">NEWS</a></li>
+          <li><a href="./about.php">ABOUT</a></li>
+          <li><a href="./localpartner.php">LOCAL PARTNER</a></li>
+          <li><a href="./chef.php">TRAVELING CHEF</a></li>
+          <li><a href="./project.php">PROJECT</a></li>
+          <li><a href="./news.php">NEWS</a></li>
         </ul>
         <div class="drawer-footer">
           <div class="drawer-social">
@@ -69,12 +85,12 @@
             </a>
           </div>
           <div class="drawer-links">
-            <a href="#">運営会社</a>
+            <a href="https://interlocalpartners.jp/">運営会社</a>
             <a href="#">プライバシーポリシー</a>
           </div>
           <div class="drawer-buttons">
-            <button class="drawer-btn join-btn">JOIN</button>
-            <button class="drawer-btn contact-btn">CONTACT</button>
+            <a href="./join.php" class="drawer-btn join-btn">JOIN</a>
+            <a href="./contact.php" class="drawer-btn contact-btn">CONTACT</a>
           </div>
         </div>
       </div>

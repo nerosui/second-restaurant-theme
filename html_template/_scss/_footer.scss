@@ -1,12 +1,8 @@
 /* // フッター */
-.footer {
+.sr-footer {
   background: #403c3c;
   color: #ffffff;
   padding: 80px 0 40px;
-
-  .container{
-    max-width: 960px;
-  }
 
   @media (max-width: 390px) {
     padding: 40px 0 20px;
@@ -21,7 +17,6 @@
     @media (max-width: 390px) {
       grid-template-columns: 1fr;
       gap: 30px;
-      text-align: center;
       margin-bottom: 30px;
     }
 
@@ -37,6 +32,10 @@
       width: auto;
       margin-bottom: 16px;
       max-width: 400px;
+      @media screen and (max-width: 768px) {
+        max-width: 100%;
+        
+      }
     }
   }
 
@@ -90,7 +89,6 @@
     }
   }
   .social-link {
-    filter: invert(1);
     margin-right: 1rem;
   }
 

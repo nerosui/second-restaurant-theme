@@ -1,0 +1,209 @@
+/* Chef Detail Page Styles */
+#chef-detail-page {
+
+    /* Article Container */
+    .chef-article {
+        padding: 80px 0;
+        background: var(--light-bg);
+    }
+
+    .article-container {
+        max-width: 960px;
+        margin: 4rem auto;
+        padding: 4rem clamp(10px, 5vw, 4rem);
+        background: var(--white);
+    }
+
+    /* Chef Profile Section */
+    .chef-profile-section {
+        background: var(--white);
+        padding-bottom: 80px;
+        border-bottom: 1px solid #f6d1c9;
+
+        @media (max-width: 768px) {
+            padding: 40px;
+        }
+
+        @media (max-width: 390px) {
+            padding: 20px;
+        }
+    }
+
+    .chef-profile-content {
+        display: flex;
+        gap: 80px;
+
+        @media (max-width: 768px) {
+            flex-direction: column;
+            gap: 40px;
+        }
+    }
+
+    .chef-profile-image {
+
+        @media (max-width: 768px) {
+            flex: none;
+            align-self: center;
+        }
+
+        img {
+            width: 100%;
+            max-width: 320px;
+            aspect-ratio: 1 /1;
+            object-fit: cover;
+            border-radius: 0;
+
+            @media (max-width: 768px) {
+                height: 400px;
+                max-width: 320px;
+            }
+
+            @media (max-width: 390px) {
+                height: 300px;
+                max-width: 240px;
+            }
+        }
+    }
+
+    .chef-profile-info {
+        flex: 1;
+    }
+
+    .chef-name {
+        font-family: var(--font-noto);
+        font-size: 24px;
+        font-weight: 500;
+        line-height: 0.875;
+        color: var(--dark-text);
+        margin-bottom: 21px;
+
+        @media (max-width: 768px) {
+            font-size: 20px;
+            margin-bottom: 16px;
+        }
+    }
+
+    .chef-title {
+        font-family: var(--font-noto);
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 1.5;
+        color: var(--primary-color);
+        margin-bottom: 24px;
+
+        @media (max-width: 768px) {
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+    }
+
+    .chef-tags {
+        font-family: var(--font-noto);
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 1.5;
+        color: var(--light-text);
+        margin-bottom: 40px;
+
+        @media (max-width: 768px) {
+            margin-bottom: 30px;
+        }
+    }
+
+    .chef-description {
+        margin-bottom: 64px;
+
+        @media (max-width: 768px) {
+            margin-bottom: 40px;
+        }
+
+        p {
+            font-family: var(--font-noto);
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 1.5;
+            color: var(--dark-text);
+            text-align: justify;
+
+            @media (max-width: 768px) {
+                font-size: 14px;
+            }
+        }
+    }
+
+    .chef-links {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .link-item {
+        display: flex;
+        gap: 40px;
+
+        @media (max-width: 768px) {
+            gap: 20px;
+        }
+    }
+
+    .link-label {
+        font-family: var(--font-poppins);
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 1.5;
+        color: var(--dark-text);
+        width: 60px;
+        flex-shrink: 0;
+
+        @media (max-width: 768px) {
+            font-size: 14px;
+            width: 50px;
+        }
+    }
+
+    .link-url {
+        font-family: var(--font-poppins);
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 1.5;
+        color: var(--dark-text);
+
+        @media (max-width: 768px) {
+            font-size: 14px;
+        }
+    }
+
+    /* Past Restaurants Section */
+    .past-restaurants-section {
+        background: var(--white);
+        padding: 80px 0 40px;
+
+        @media (max-width: 768px) {
+            padding: 40px 0;
+        }
+
+        @media (max-width: 390px) {
+            padding: 20px 0;
+        }
+    }
+
+    .section-title {
+        font-family: var(--font-noto);
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 2.8;
+        color: var(--primary-color);
+        margin-bottom: 16px;
+
+        @media (max-width: 768px) {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        @media (max-width: 390px) {
+            font-size: 16px;
+        }
+    }
+
+
+}

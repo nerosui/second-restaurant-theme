@@ -1,0 +1,300 @@
+#local-partner-page {
+
+    // Page Hero Section
+    .page-hero {
+        background-color: #ffffff;
+        padding: 68px 0 20px;
+
+        .page-hero-content {
+            text-align: center;
+
+            .page-title {
+                font-family: "Poppins", sans-serif;
+                font-weight: 600;
+                font-size: 64px;
+                line-height: 1.5;
+                color: #f6d1c9;
+                margin: 0;
+
+                @media (max-width: 768px) {
+                    font-size: 32px;
+                }
+            }
+
+            .page-subtitle-dot {
+                width: 12px;
+                height: 12px;
+                background-color: #e65d3e;
+                border-radius: 50%;
+                margin: 8px auto 0;
+            }
+        }
+    }
+
+    // Local Partner Intro Section
+    .local-partner-intro {
+        background-color: #ffffff;
+        margin:4rem auto;
+
+        .section-title {
+            font-weight: 700;
+            font-size: 32px;
+            line-height: 1.125;
+            color: #000000;
+            margin: 0 0 45.79px;
+
+            @media (max-width: 768px) {
+                font-size: 24px;
+                margin-bottom: 30px;
+            }
+        }
+
+        .title-line {
+            position: relative;
+            height: 3px;
+            margin-bottom: 34.21px;
+
+            &::before {
+                content: "";
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 196px;
+                height: 3px;
+                background-color: #e65d3e;
+            }
+
+            &::after {
+                content: "";
+                position: absolute;
+                left: 196px;
+                top: 0;
+                width: calc(100% - 196px);
+                height: 3px;
+                background-color: #f6d1c9;
+            }
+        }
+
+        .section-description {
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 2;
+            color: #000000;
+            margin: 0;
+            max-width: 960px;
+
+            @media (max-width: 768px) {
+                font-size: 14px;
+                line-height: 1.8;
+            }
+        }
+    }
+
+    // Local Partner List Section
+    .local-partner-list {
+        background-color: #f8f7ee;
+        padding: 14.4px 0 146px;
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        // Filter Bar
+        .filter-bar {
+            background-color: #ffffff;
+            border: 1px solid #e65d3e;
+            padding: 31.63px 52px 43.37px;
+            margin-bottom: 92px;
+            display: flex;
+            align-items: flex-start;
+            gap: 40px;
+
+            @media (max-width: 768px) {
+                flex-direction: column;
+                gap: 20px;
+                padding: 20px;
+            }
+
+            .filter-title {
+                display: flex;
+                align-items: center;
+                gap: 12px;
+                flex-shrink: 0;
+
+                img {
+                    width: 20px;
+                    height: 20px;
+                }
+
+                span {
+                    font-weight: 700;
+                    font-size: 16px;
+                    line-height: 1.5;
+                    color: #e65d3e;
+                }
+            }
+
+            .filter-tags {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 15px 14px;
+                align-items: center;
+
+                .tag {
+                    font-weight: 500;
+                    font-size: 16px;
+                    line-height: 1.5;
+                    color: #8e8e8e;
+                    text-decoration: none;
+                    transition: color 0.3s ease;
+
+                    &.active {
+                        color: #303030;
+                        font-weight: 500;
+                    }
+
+                    &:hover {
+                        color: #303030;
+                    }
+                }
+            }
+        }
+
+        // Partner Grid
+        .partner-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+            margin-bottom: 65px;
+            max-width: 800px;
+
+            @media (max-width: 768px) {
+                gap: 30px;
+            }
+
+            .partner-card {
+                display: flex;
+                background-color: #ffffff;
+                height: 280px;
+                overflow: hidden;
+
+                @media (max-width: 768px) {
+                    flex-direction: column;
+                    height: auto;
+                }
+
+                .partner-image {
+                    width: 400px;
+                    height: 280px;
+                    flex-shrink: 0;
+                    overflow: hidden;
+
+                    @media (max-width: 768px) {
+                        width: 100%;
+                        height: 200px;
+                    }
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                    }
+                }
+
+                .partner-info {
+                    flex: 1;
+                    padding: 40px 55.24px 0 54.29px;
+                    display: flex;
+                    flex-direction: column;
+                    position: relative;
+
+                    @media (max-width: 768px) {
+                        padding: 20px;
+                    }
+
+                    .partner-location {
+                        display: inline-block;
+                        background-color: #e65d3e;
+                        color: #ffffff;
+                        font-weight: 500;
+                        font-size: 16px;
+                        line-height: 1.5;
+                        padding: 0 15.24px;
+                        height: 24px;
+                        border-radius: 12px;
+                        margin-bottom: 25px;
+                        width: fit-content;
+                        display: flex;
+                        align-items: center;
+                    }
+
+                    .partner-name {
+                        font-weight: 500;
+                        font-size: 20px;
+                        line-height: 1.8;
+                        color: #303030;
+                        margin: 0 0 25px;
+                        max-width: 285.71px;
+
+                        @media (max-width: 768px) {
+                            font-size: 18px;
+                            max-width: none;
+                        }
+                    }
+
+                    .partner-tags {
+                        font-weight: 500;
+                        font-size: 14px;
+                        line-height: 1.5;
+                        color: #8e8e8e;
+                        margin: 0;
+                        max-width: 297px;
+
+                        @media (max-width: 768px) {
+                            max-width: none;
+                        }
+                    }
+                }
+            }
+        }
+
+        // Pagination
+        .pagination {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 25px;
+
+            .page-number,
+            .next-page {
+                font-family: "Poppins", sans-serif;
+                font-weight: 500;
+                font-size: 16px;
+                line-height: 1.5;
+                color: #8e8e8e;
+                text-decoration: none;
+                width: 24px;
+                height: 24px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                transition: all 0.3s ease;
+
+                &.current {
+                    color: #303030;
+                    font-weight: 500;
+                    border-bottom: 1px solid #303030;
+                }
+
+                &:hover {
+                    color: #303030;
+                }
+            }
+
+            .next-page {
+                margin-left: 20px;
+            }
+        }
+    }
+}

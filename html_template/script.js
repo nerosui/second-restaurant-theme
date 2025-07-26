@@ -1,5 +1,37 @@
-// スムーススクロール
+// ローディング画面の制御
+window.addEventListener('load', function() {
+    const loading = document.getElementById('loading');
+    if (loading) {
+        // ページ読み込み完了後、少し遅延してローディング画面をフェードアウト
+        setTimeout(() => {
+            loading.classList.add('fade-out');
+            // アニメーション完了後に要素を非表示
+            setTimeout(() => {
+                loading.style.display = 'none';
+            }, 500);
+        }, 800); // 800ms後にフェードアウト開始
+    }
+});
+
+// ページ遷移時のローディング画面表示
 document.addEventListener('DOMContentLoaded', function() {
+    // 外部リンクを除く全てのリンクに対してローディング画面を表示
+    const pageLinks = document.querySelectorAll('a[href]:not([href^="#"]):not([href^="mailto:"]):not([href^="tel:"]):not([target="_blank"])');
+    
+    pageLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            const href = this.getAttribute('href');
+            // 外部リンクや特殊なリンクは除外
+            if (href && !href.startsWith('http') && !href.startsWith('//')) {
+                const loading = document.getElementById('loading');
+                if (loading) {
+                    loading.style.display = 'flex';
+                    loading.classList.remove('fade-out');
+                }
+            }
+        });
+    });
+
     // スムーススクロールの実装
     const links = document.querySelectorAll('a[href^="#"]');
     
@@ -46,6 +78,20 @@ document.addEventListener('DOMContentLoaded', function() {
     drawerClose.addEventListener('click', closeDrawer);
     document.addEventListener('keydown', function(e) {
         if (e.key === 'Escape') closeDrawer();
+    });
+
+    // Hero Swiper の初期化
+    const heroSwiper = new Swiper('.hero-swiper', {
+        effect: 'fade',
+        fadeEffect: {
+            crossFade: true
+        },
+        autoplay: {
+            delay: 3000,
+            disableOnInteraction: false,
+        },
+        loop: true,
+        speed: 1000,
     });
 
     // カードの順次表示アニメーション
