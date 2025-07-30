@@ -27,6 +27,7 @@
 
             .faq-item {
                 border-bottom: none;
+                display: block;
 
                 .faq-toggle {
                     display: none;
@@ -36,6 +37,7 @@
                     display: flex;
                     align-items: center;
                     padding: 14px 24px;
+                    margin: 0;
                     background-color: var(--white);
                     cursor: pointer;
                     min-height: 64px;
@@ -218,6 +220,7 @@
             }
         }
 
+        .wpcf7-form.init,
         .contact-form {
             background-color: var(--white);
             border: 1px solid var(--light-border);

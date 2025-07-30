@@ -313,10 +313,11 @@
       }
     }
   }
-  .example-cards{
-    display:flex;
-    flex-direction: column;
-    gap:1rem;
+  
+  .project-examples{
+    .blogcard-wrap{
+      width: 100%;
+    }
   }
 
   /* // Responsive adjustments */

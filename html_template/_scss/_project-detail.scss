@@ -88,15 +88,28 @@
             margin-bottom: 60px;
         }
 
-        .detail-list {
+        ul.detail-list {
+            flex-direction: column;
+            padding-left: 0;
+        }
+
+        .detail-list,
+        ul.detail-list {
             display: flex;
             flex-wrap: wrap;
             align-items: start;
             @media screen and (max-width: 600px) {
                 flex-direction: column;
             }
+            li {
+                width: 100%;
+                display: flex;
+                align-items: start;
+            }
             dt,
-            dd {
+            .dt,
+            dd,
+            .dd {
                 margin: 0;
                 line-height: 3.5;
                 color: var(--primary-color);
@@ -106,12 +119,14 @@
                 }
                 @media (max-width: 768px) {
                     width: 100%;
-                    flex: 1 1 100%!important;
+                    flex: 1 1 100% !important;
                 }
             }
-            dt {
+            dt,
+            .dt {
                 flex: 1 1 30%;
                 font-weight: 700;
+                white-space: nowrap;
                 @media (max-width: 768px) {
                     font-size: 14px;
                     line-height: 2.5;
@@ -120,12 +135,13 @@
 
                 @media (max-width: 768px) {
                     &:last-of-type {
-                        border-bottom:none;
+                        border-bottom: none;
                     }
                 }
             }
 
-            dd {
+            dd,
+            .dd {
                 flex: 1 1 70%;
                 color: var(--dark-text);
                 @media (max-width: 768px) {
@@ -136,6 +152,56 @@
                 .example-card {
                     margin: 1rem auto;
                 }
+            }
+        }
+    }
+    .wp-block-group.detail-list {
+        gap: 0;
+        .wp-block-columns {
+            border-top: 1px solid #f6d1c9;
+            margin-bottom: 0;
+            align-items: center !important;
+            &:last-of-type {
+                border-bottom: 1px solid #f6d1c9;
+            }
+
+            @media (max-width: 768px) {
+                gap: 0;
+            }
+            .wp-block-column {
+                padding: 1rem;
+                @media (max-width: 768px) {
+                    font-size: 14px;
+                }
+                a {
+                    color: var(--primary-color);
+                    text-decoration: none;
+                    margin: 0;
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                    &.blogcard-wrap {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+        .wp-block-column:first-child {
+            color: var(--primary-color);
+            font-weight: 700;
+            white-space: nowrap;
+            @media (max-width: 768px) {
+                &:last-of-type {
+                    border-bottom: none;
+                }
+                padding: 12px 16px 0;
+            }
+        }
+
+        .wp-block-column:last-child {
+            color: var(--dark-text);
+            @media (max-width: 768px) {
+                padding: 0 16px 12px;
             }
         }
     }

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<phpdoc>
+    <title>Second Restaurant WordPress Theme</title>
+    <description>
+        地域とシェフをつなぐ"多拠点レストラン"という新たな文化を創出するWordPressテーマ
+    </description>
+    <author>Second Restaurant Development Team</author>
+
+    <parser>
+        <target>docs</target>
+        <markers>
+            <item>TODO</item>
+            <item>FIXME</item>
+        </markers>
+        <extensions>
+            <extension>php</extension>
+        </extensions>
+        <visibility>public,protected,private</visibility>
+    </parser>
+
+    <transformer>
+        <target>docs</target>
+    </transformer>
+
+    <files>
+        <directory>.</directory>
+        <ignore>vendor/*</ignore>
+        <ignore>node_modules/*</ignore>
+        <ignore>tmp/*</ignore>
+        <ignore>tmp-user/*</ignore>
+    </files>
+
+    <transformations>
+        <template name="responsive-twig" />
+    </transformations>
+</phpdoc>

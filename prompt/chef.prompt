@@ -1,0 +1,14 @@
+
+Figmaデザイン
+`https://www.figma.com/design/AvtrteuVy8KalYAJ2bgkBi/SecondRestaurant?node-id=392-1874&t=eo9ajeb0ExEZ3Bmy-4`
+
+上記のデザインに則り、プライバシーポリシーページをコーディングする。
+
+仕様
+- WordPressの関数は利用しない。
+- header,cta,fotterはページの上下に`require 'header'` `require 'footer'`の記載でインポートすることで表示できるのでコーディングは不要です。
+- CTAセクションはfooterに含まれているのでコーディング不要です。
+- _scss/_base.scssが適用されるのに注意すること
+- 画像も全てダウンロードし、imgタグで表示すること
+- scssは自動的にコンパイルされるため、コンパイルはしない
+- breadcrumbは既存ページのコードを流用すること

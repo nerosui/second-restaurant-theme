@@ -1,6 +1,6 @@
 <?php require 'header.php'; ?>
 
-<main id="local-partner-detail-page">
+<main id="local-partner-detail-page" class="local-partner-detail-page">
     <!-- ページタイトル -->
     <div class="page-hero-simple">
         <div class="page-hero-content">
@@ -53,17 +53,13 @@
                     </div>
                     <div class="restaurant-description">
                         <div class="restaurant-details">
-                            <dl class="detail-list">
+                           <dl class="detail-list">
                                 <dt>拠点名</dt>
                                 <dd>サンプル</dd>
                                 <dt>席数</dt>
                                 <dd>00席〜00席</dd>
                                 <dt>特徴的な設備</dt>
-                                <dd>
-                                    ・オープンキッチン<br />
-                                    ・厨房が見えるカウンター席<br />
-                                    ・40インチモニター設置
-                                </dd>
+                                <dd>・オープンキッチン<br>・厨房が見えるカウンター席<br>・40インチモニター設置</dd>
                                 <dt>その他</dt>
                                 <dd>OOOジャンルにおすすめ</dd>
                             </dl>

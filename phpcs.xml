@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+<ruleset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    name="Second Restaurant Theme"
+    xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/squizlabs/PHP_CodeSniffer/master/phpcs.xsd">
+
+    <description>WordPress Coding Standards for Second Restaurant Theme</description>
+
+    <!-- 対象ファイル -->
+    <file>.</file>
+
+    <!-- 除外ディレクトリ -->
+    <exclude-pattern>vendor/*</exclude-pattern>
+    <exclude-pattern>node_modules/*</exclude-pattern>
+    <exclude-pattern>tmp/*</exclude-pattern>
+    <exclude-pattern>tmp-user/*</exclude-pattern>
+    <exclude-pattern>**/min/*</exclude-pattern>
+    <exclude-pattern>**/*.min.js</exclude-pattern>
+    <exclude-pattern>**/*.min.css</exclude-pattern>
+    <exclude-pattern>**/html_template/**/*</exclude-pattern>
+
+    <!-- WordPressコーディング規約を使用 -->
+    <rule ref="WordPress">
+        <!-- テーマファイルでの直接DB操作を許可 -->
+        <exclude name="WordPress.DB.DirectDatabaseQuery"/>
+        <!-- テーマファイルでのファイル操作を許可 -->
+        <exclude name="WordPress.WP.AlternativeFunctions"/>
+        <!-- 翻訳関数の厳密チェックを緩和 -->
+        <exclude name="WordPress.WP.I18n.MissingTranslatorsComment"/>
+    </rule>
+
+    <!-- PHP互換性チェック -->
+    <rule ref="PHPCompatibilityWP"/>
+
+    <!-- 最小PHP版本 -->
+    <config name="testVersion" value="7.4-"/>
+
+    <!-- WordPress版本 -->
+    <config name="minimum_supported_wp_version" value="6.0"/>
+
+    <!-- テキストドメインの設定 -->
+    <rule ref="WordPress.WP.I18n">
+        <properties>
+            <property name="text_domain" type="array">
+                <element value="second-restaurant"/>
+            </properties>
+        </properties>
+    </rule>
+
+    <!-- ファイルヘッダーの設定 -->
+    <rule ref="Squiz.Commenting.FileComment">
+        <exclude name="Squiz.Commenting.FileComment.Missing"/>
+    </rule>
+
+    <!-- 関数コメントの設定 -->
+    <rule ref="Squiz.Commenting.FunctionComment">
+        <exclude name="Squiz.Commenting.FunctionComment.MissingParamTag"/>
+        <exclude name="Squiz.Commenting.FunctionComment.ParamCommentFullStop"/>
+    </rule>
+
+</ruleset>

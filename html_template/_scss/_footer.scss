@@ -1,9 +1,17 @@
 /* // フッター */
+.footar {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
 .sr-footer {
+  margin: 0;
   background: #403c3c;
   color: #ffffff;
-  padding: 80px 0 40px;
-
+  padding: 80px 0 0;
+  .container:not(#container) {
+    margin: 0 auto;
+  }
   @media (max-width: 390px) {
     padding: 40px 0 20px;
   }
@@ -34,7 +42,6 @@
       max-width: 400px;
       @media screen and (max-width: 768px) {
         max-width: 100%;
-        
       }
     }
   }

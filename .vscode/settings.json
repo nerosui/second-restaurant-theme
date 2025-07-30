@@ -1,0 +1,111 @@
+{
+  // PHP設定
+  "php.suggest.basic": false,
+  "php.validate.enable": true,
+  "intelephense.files.maxSize": 5000000,
+  "intelephense.stubs": [
+    "apache",
+    "bcmath",
+    "bz2",
+    "calendar",
+    "com_dotnet",
+    "Core",
+    "ctype",
+    "curl",
+    "date",
+    "dba",
+    "dom",
+    "enchant",
+    "exif",
+    "fileinfo",
+    "filter",
+    "fpm",
+    "ftp",
+    "gd",
+    "hash",
+    "iconv",
+    "imap",
+    "intl",
+    "json",
+    "ldap",
+    "libxml",
+    "mbstring",
+    "mcrypt",
+    "mysql",
+    "mysqli",
+    "password",
+    "pcntl",
+    "pcre",
+    "PDO",
+    "pdo_mysql",
+    "Phar",
+    "readline",
+    "recode",
+    "Reflection",
+    "regex",
+    "session",
+    "SimpleXML",
+    "soap",
+    "sockets",
+    "sodium",
+    "SPL",
+    "standard",
+    "superglobals",
+    "sysvsem",
+    "sysvshm",
+    "tokenizer",
+    "xml",
+    "xdebug",
+    "xmlreader",
+    "xmlwriter",
+    "yaml",
+    "zip",
+    "zlib",
+    "wordpress"
+  ],
+  // フォーマッター設定
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "[php]": {
+    "editor.defaultFormatter": "persoderlind.vscode-phpcbf"
+  },
+  // ファイル関連設定
+  "files.associations": {
+    "*.php": "php",
+    "*.inc": "php",
+    "*.theme": "php"
+  },
+  // エディター表示設定
+  "editor.rulers": [
+    80,
+    120
+  ],
+  "editor.wordWrap": "on",
+  "editor.tabSize": 4,
+  "editor.insertSpaces": true,
+  // WordPress固有設定
+  "emmet.includeLanguages": {
+    "php": "html"
+  },
+  // HTMLフォーマット設定
+  "html.format.indentInnerHtml": true,
+  "html.format.templating": true,
+  // CSS設定
+  "css.validate": true,
+  "scss.validate": true,
+  // ファイル除外設定
+  "files.exclude": {
+    "**/node_modules": true,
+    "**/vendor": true,
+    "**/.git": true,
+    "**/.DS_Store": true,
+    "**/Thumbs.db": true
+  },
+  // 検索除外設定
+  "search.exclude": {
+    "**/node_modules": true,
+    "**/vendor": true,
+    "**/*.min.js": true,
+    "**/*.min.css": true
+  }
+}

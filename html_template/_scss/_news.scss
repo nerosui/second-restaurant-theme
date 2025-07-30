@@ -23,12 +23,10 @@
       display: flex;
       flex-direction: row;
       align-items: stretch;
-      justify-content: space-between;
       gap: 40px;
 
       @media (max-width: 600px) {
-      flex-direction: column;
-        justify-content: space-between;
+        flex-direction: column;
       }
     }
   }
@@ -62,6 +60,7 @@
   }
 
   .news-content {
+    flex: 1;
     display: flex;
     flex-direction: column;
     align-items: center;
