@@ -275,6 +275,46 @@ function disable_comments_admin_bar()
 }
 add_action('wp_before_admin_bar_render', 'disable_comments_admin_bar');
 
+// リンクメニューを非表示にする
+function hide_links_admin_menu()
+{
+    remove_menu_page('link-manager.php');
+}
+add_action('admin_menu', 'hide_links_admin_menu');
+
+// 管理メニューの順番を変更する
+function customize_admin_menu_order($menu_order)
+{
+    if (!$menu_order) return true;
+    
+    return array(
+        'index.php', // ダッシュボード
+        'separator1', // セパレーター
+        'edit.php', // ニュース（投稿）
+        'edit.php?post_type=chef', // シェフ
+        'edit.php?post_type=local_partner', // ローカルパートナー
+        'edit.php?post_type=project', // プロジェクト
+        'upload.php', // メディア
+        'separator2', // セパレーター
+        'edit.php?post_type=page', // 固定ページ（お問い合わせの下に移動）
+        'themes.php', // 外観
+        'plugins.php', // プラグイン
+        'users.php', // ユーザー
+        'tools.php', // ツール
+        'options-general.php', // 設定
+        'separator-last', // セパレーター
+        'cocoon-settings' // Cocoon設定（一番下に移動）
+    );
+}
+
+function enable_custom_menu_order($bool)
+{
+    return true;
+}
+
+add_filter('custom_menu_order', 'enable_custom_menu_order');
+add_filter('menu_order', 'customize_admin_menu_order');
+
 // ブロックパターンを登録
 function register_custom_block_patterns()
 {
