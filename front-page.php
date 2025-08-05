@@ -104,13 +104,12 @@ if (!defined('ABSPATH')) exit; ?>
         <div class="container">
             <div class="section-header">
                 <h2 class="section-title">ABOUT</h2>
-                <span class="section-dot"></span>
             </div>
+            <h3 class="section-subtitle">
+                Second Restaurantは、「地域」と「シェフ」をつなぎ<br />
+                "多拠点レストラン"という新たな文化を創出するプロジェクトです
+            </h3>
             <div class="about-content">
-                <h3 class="about-subtitle">
-                    Second Restaurantは、「地域」と「シェフ」をつなぎ<br />
-                    "多拠点レストラン"という新たな文化を創出するプロジェクトです
-                </h3>
                 <div class="about-text">
                     <p>
                         暮らす場所や働き方がかつてないほど自由になった今、都市と地方の差は以前にも増して小さくなりました。<br />
@@ -136,7 +135,6 @@ if (!defined('ABSPATH')) exit; ?>
         <div class="container">
             <div class="section-header">
                 <h2 class="section-title">LOCAL PARTNER</h2>
-                <span class="section-dot"></span>
             </div>
             <h3 class="section-subtitle">
                 Second Restaurantに参画している地域パートナー
@@ -206,7 +204,6 @@ if (!defined('ABSPATH')) exit; ?>
         <div class="container">
             <div class="section-header">
                 <h2 class="section-title">TRAVELING CHEF</h2>
-                <span class="section-dot"></span>
             </div>
             <h3 class="section-subtitle">
                 Second Restaurantに参画している旅するシェフたち
@@ -267,7 +264,6 @@ if (!defined('ABSPATH')) exit; ?>
         <div class="container">
             <div class="section-header">
                 <h2 class="section-title">PROJECT</h2>
-                <span class="section-dot"></span>
             </div>
             <h3 class="section-subtitle">Second Restaurantの開催事例</h3>
 
@@ -356,7 +352,6 @@ if (!defined('ABSPATH')) exit; ?>
         <div class="container flex">
             <div class="section-header">
                 <h2 class="section-title">NEWS</h2>
-                <span class="section-dot"></span>
                 <a href="<?php echo esc_url(get_permalink(get_page_by_path('news-list'))); ?>" class="section-button hiddenSP">VIEW LIST</a>
             </div>
 

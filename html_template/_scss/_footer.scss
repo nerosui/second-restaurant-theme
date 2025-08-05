@@ -38,7 +38,7 @@
     .logo {
       height: 48px;
       width: auto;
-      margin-bottom: 16px;
+      margin-bottom: 24px; /* Changed from 16px to 24px as requested */
       max-width: 400px;
       @media screen and (max-width: 768px) {
         max-width: 100%;
@@ -82,6 +82,11 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    
+    /* Requirement: Align SNS icons with company/privacy policy links on left */
+    @media (max-width: 390px) {
+      align-items: flex-start;
+    }
   }
 
   .footer-links li {
@@ -104,6 +109,11 @@
     gap: 16px;
     justify-content: center;
     align-items: center;
+    
+    /* Requirement: Left align on mobile and match with other footer elements */
+    @media (max-width: 390px) {
+      justify-content: flex-start;
+    }
   }
 
   .footer-copyright {

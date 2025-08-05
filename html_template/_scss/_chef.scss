@@ -139,5 +139,10 @@
       }
     }
 
+    /* Requirement: Adjust VIEW LIST button spacing - match top to image spacing, 120px bottom */
+    .section-button {
+      margin-top: 60px; /* Match image spacing */
+      margin-bottom: 120px; /* As requested */
+    }
   }
 }

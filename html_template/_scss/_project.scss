@@ -131,9 +131,12 @@
         line-height: 1.5;
         color: #303030;
         margin-bottom: 32px;
+        border-bottom: 4.8px solid #F6D1C9; /* 20% of 24px font-size */
+        padding-bottom: 4px;
 
         @media (max-width: 600px) {
           font-size: 18px;
+          border-bottom: 3.6px solid #F6D1C9; /* 20% of 18px font-size */
           margin-bottom: 24px;
         }
       }

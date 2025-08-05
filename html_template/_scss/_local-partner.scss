@@ -146,6 +146,7 @@
     @media (max-width: 1024px) {
       flex-direction: column;
       height: auto;
+      box-shadow: none; /* Remove shadow on mobile */
     }
 
     .partner-image {
@@ -204,9 +205,12 @@
         color: #303030;
         line-height: 1.5;
         margin-bottom: 25px;
+        border-bottom: 4.8px solid #F6D1C9; /* 20% of 24px font-size */
+        padding-bottom: 4px;
 
         @media (max-width: 768px) {
           font-size: 20px;
+          border-bottom: 4px solid #F6D1C9; /* 20% of 20px font-size */
           margin-bottom: 15px;
         }
       }
