@@ -87,6 +87,7 @@ body {
   height: 12px;
   background: var(--primary-color);
   border-radius: 50%;
+  margin-top: 24px;
 }
 
 .section-title {
@@ -1099,7 +1100,7 @@ body.admin-bar .menu-drawer {
     margin-bottom: 30px;
   }
 }
-@media (min-width: 391px) and (max-width: 768px) {
+@media (min-width: 391px) and (max-width: 820px) {
   .sr-footer .footer-content {
     grid-template-columns: 1fr;
     gap: 40px;
@@ -1111,7 +1112,7 @@ body.admin-bar .menu-drawer {
   margin-bottom: 16px;
   max-width: 400px;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 820px) {
   .sr-footer .footer-logo .logo {
     max-width: 100%;
   }
@@ -2318,14 +2319,12 @@ body.admin-bar .menu-drawer {
 #about-page .hero-section,
 #join-page .hero-section {
   position: relative;
-  height: 916px;
   background: var(--primary-color);
   margin-top: 170px;
 }
 @media (max-width: 390px) {
   #about-page .hero-section,
   #join-page .hero-section {
-    height: auto;
     padding: 0 0 60px;
     margin-top: 150px;
   }
@@ -2511,13 +2510,34 @@ body.admin-bar .menu-drawer {
 #about-page .section-title {
   text-align: left;
 }
+#about-page section:not(.hero-section) {
+  padding: 120px 0 40px;
+}
+@media (max-width: 390px) {
+  #about-page section:not(.hero-section) {
+    padding: 80px 0 0;
+  }
+}
+#about-page .section-title {
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1.125;
+  color: var(--primary-color);
+  margin-bottom: 32px;
+}
+@media (max-width: 390px) {
+  #about-page .section-title {
+    font-size: 20px;
+    line-height: 1.8;
+    margin-bottom: 24px;
+  }
+}
 #about-page .chef-issues {
-  padding: 120px 0;
   background: #fff;
 }
 @media (max-width: 390px) {
   #about-page .chef-issues {
-    padding: 80px 0;
+    padding: 80px 0 0;
   }
 }
 #about-page .chef-issues .section-title {
@@ -2657,31 +2677,11 @@ body.admin-bar .menu-drawer {
 }
 #about-page .philosophy {
   position: relative;
-  padding: 120px 0;
   background: var(--pink-bg);
-}
-@media (max-width: 390px) {
-  #about-page .philosophy {
-    padding: 80px 0;
-  }
 }
 #about-page .philosophy .container {
   position: relative;
   z-index: 2;
-}
-#about-page .philosophy .section-title {
-  font-size: 32px;
-  font-weight: 700;
-  line-height: 1.125;
-  color: var(--primary-color);
-  margin-bottom: 32px;
-}
-@media (max-width: 390px) {
-  #about-page .philosophy .section-title {
-    font-size: 20px;
-    line-height: 1.8;
-    margin-bottom: 24px;
-  }
 }
 #about-page .philosophy .philosophy-subtitle {
   font-size: 24px;
@@ -2712,47 +2712,26 @@ body.admin-bar .menu-drawer {
   }
 }
 #about-page .philosophy .philosophy-description {
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 1.5;
   color: var(--dark-text);
-  margin-bottom: 64px;
+  margin-top: 2.5rem;
   max-width: 959px;
   text-align: justify;
 }
 @media (max-width: 390px) {
   #about-page .philosophy .philosophy-description {
     font-size: 14px;
-    margin-bottom: 40px;
+    margin-top: 1.5rem;
   }
 }
 #about-page .philosophy .philosophy-image img {
   width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
   height: auto;
   border-radius: 8px;
 }
 #about-page .vision {
-  padding: 120px 0;
   background: #fff;
-}
-@media (max-width: 390px) {
-  #about-page .vision {
-    padding: 80px 0;
-  }
-}
-#about-page .vision .section-title {
-  font-size: 32px;
-  font-weight: 700;
-  line-height: 1.125;
-  color: var(--primary-color);
-  margin-bottom: 32px;
-}
-@media (max-width: 390px) {
-  #about-page .vision .section-title {
-    font-size: 20px;
-    line-height: 1.8;
-    margin-bottom: 24px;
-  }
 }
 #about-page .vision .section-description {
   font-size: 16px;
@@ -2816,8 +2795,36 @@ body.admin-bar .menu-drawer {
     font-size: 16px;
   }
 }
+#about-page .project-examples {
+  background-color: #f8f7ee;
+}
+#about-page .project-examples .container {
+  margin: 0 auto;
+  padding: 0 10px 80px;
+}
+@media screen and (max-width: 390px) {
+  #about-page .project-examples .container {
+    padding: 0 10px 40px;
+  }
+}
+@media screen and (max-width: 390px) {
+  #about-page .project-examples .blogcard-snippet.internal-blogcard-snippet {
+    display: none;
+  }
+}
 #about-page .project-examples .blogcard-wrap {
   width: 100%;
+}
+#about-page .project-examples .blogcard-wrap .blogcard {
+  border-color: #8e8e8e;
+}
+#about-page .project-examples .blogcard-wrap .internal-blogcard-wrap.a-wrap.cf {
+  background-color: #f5f5f5;
+}
+#about-page .project-examples .blogcard-wrap .blogcard-thumbnail {
+  margin-top: 0;
+  border-radius: 4px 0 0 4px;
+  overflow: hidden;
 }
 @media (max-width: 390px) {
   #about-page .container {

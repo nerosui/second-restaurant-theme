@@ -3,15 +3,12 @@
     /* Hero Section */
     .hero-section {
         position: relative;
-        height: 916px;
         background: var(--primary-color);
         margin-top: 170px;
-
+        
         @media (max-width: 390px) {
-            height: auto;
             padding: 0 0 60px;
-        margin-top: 150px;
-
+            margin-top: 150px;
         }
 
         .hero-background img {
