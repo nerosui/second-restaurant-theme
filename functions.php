@@ -323,40 +323,6 @@ function enable_custom_menu_order($bool)
 add_filter('custom_menu_order', 'enable_custom_menu_order');
 add_filter('menu_order', 'customize_admin_menu_order');
 
-// Cocoon設定メニューを最下位に移動する追加処理
-function move_cocoon_settings_to_bottom() {
-    global $menu;
-    
-    if (!$menu) return;
-    
-    $cocoon_menu_item = null;
-    $cocoon_position = null;
-    
-    // Cocoon設定メニューを検索
-    foreach ($menu as $position => $menu_item) {
-        if (isset($menu_item[2]) && isset($menu_item[0])) {
-            $menu_slug = $menu_item[2];
-            $menu_title = $menu_item[0];
-            
-            // Cocoon関連のメニューをチェック
-            if (strpos($menu_slug, 'cocoon') !== false || 
-                strpos($menu_title, 'Cocoon') !== false ||
-                strpos($menu_title, 'cocoon') !== false) {
-                $cocoon_menu_item = $menu_item;
-                $cocoon_position = $position;
-                break;
-            }
-        }
-    }
-    
-    // Cocoon設定が見つかった場合、最下位に移動
-    if ($cocoon_menu_item && $cocoon_position !== null) {
-        unset($menu[$cocoon_position]);
-        $menu[999] = $cocoon_menu_item; // 999は最下位のposition
-        ksort($menu);
-    }
-}
-add_action('admin_menu', 'move_cocoon_settings_to_bottom', 999);
 
 // ブロックパターンを登録
 function register_custom_block_patterns()
