@@ -296,32 +296,22 @@ function customize_admin_menu_order($menu_order)
         'edit.php?post_type=local_partner', // ローカルパートナー
         'edit.php?post_type=project', // プロジェクト
         'upload.php', // メディア
-        'separator2', // セパレーター
+        'wpcf7', // Contact Form 7
         'edit.php?post_type=page', // 固定ページ
+        'separator2', // セパレーター
         'themes.php', // 外観
         'plugins.php', // プラグイン
         'users.php', // ユーザー
         'tools.php', // ツール
         'options-general.php', // 設定
-        'separator-last' // セパレーター
+        'separator-last', // セパレーター
+        'separator-last',
+        'siteguard',
+        'typesquare-admin-menu',
+        'cwp_plugin',
+        'theme-settings'
     );
-    
-    // Cocoon設定を動的に検出して最後に追加
-    global $menu;
-    if ($menu) {
-        foreach ($menu as $menu_item) {
-            if (isset($menu_item[2])) {
-                $menu_slug = $menu_item[2];
-                // Cocoon設定の可能なスラッグをチェック
-                if (strpos($menu_slug, 'cocoon') !== false || 
-                    strpos($menu_item[0], 'Cocoon') !== false ||
-                    strpos($menu_item[0], 'cocoon') !== false) {
-                    $new_order[] = $menu_slug;
-                }
-            }
-        }
-    }
-    
+
     return $new_order;
 }
 
