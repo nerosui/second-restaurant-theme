@@ -32,7 +32,7 @@
   .partner-grid {
     margin-top: 48px;
     margin-bottom: 64px;
-    height: 400px;
+    height: auto;
     display: flex;
     justify-content: center;
 
@@ -79,7 +79,7 @@
       border-radius: 50%;
       background-color: #e65d3e;
       position: absolute;
-      top: calc(50% - 84px);
+      top: calc(50% - 44px);
       left: 50%;
       z-index: 1000;
 
@@ -105,20 +105,20 @@
       @media screen and (max-width: 1024px) {
         transform: none;
         left: auto;
-        right: clamp(10px,10%,100px);
+        right: clamp(10px, 10%, 100px);
       }
     }
     .swiper-button-prev {
       transform: translateX(-474px);
       @media screen and (max-width: 1024px) {
         transform: none;
-        left: clamp(10px,10%,100px);
+        left: clamp(10px, 10%, 100px);
       }
     }
 
     /* ページネーションのカスタマイズ */
     .swiper-pagination {
-      bottom: 20px;
+      bottom: 0;
 
       .swiper-pagination-bullet {
         width: 12px;
@@ -133,6 +133,26 @@
     }
   }
 
+  .partner-link {
+    position: relative;
+    &::before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      display: block;
+      content: "";
+      background: #ffffff;
+      z-index: 1;
+      height: 280px;
+      border-radius: 8px;
+      @media (max-width: 1024px) {
+        height: auto;
+      }
+    }
+  }
+
   .partner-card {
     display: flex;
     background: #ffffff;
@@ -142,6 +162,13 @@
     height: 280px;
     width: 100%;
     max-width: 800px;
+    position: relative;
+    z-index: 5;
+    opacity: 1;
+    transition: all 0.3s ease;
+    &:hover{
+      opacity: 0.8;
+    }
 
     @media (max-width: 1024px) {
       flex-direction: column;
@@ -152,7 +179,7 @@
       width: 400px;
       height: 280px;
 
-      img{
+      img {
         width: 100%;
         height: 100%;
         object-fit: cover;

@@ -72,7 +72,7 @@
 
   .news-list {
     width: 100%;
-    max-width: 641px;
+    max-width: 640px;
     margin-bottom: 40px;
 
     @media (max-width: 600px) {
@@ -83,6 +83,10 @@
   .news-item {
     padding: 16px 0;
     display: block;
+    opacity: 1;
+    &:hover{
+      opacity: 0.8!important;
+    }
     
     @media (max-width: 600px) {
       padding: 20px 0;

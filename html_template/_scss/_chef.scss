@@ -72,6 +72,11 @@
     background: #ffffff;
     display: flex;
     flex-direction: column;
+    opacity: 1;
+    transition: opacity 0.3s ease !important;
+    &:hover{
+      opacity: 0.8!important;
+    }
   }
 
   .chef-image {

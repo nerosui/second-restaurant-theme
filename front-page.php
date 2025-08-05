@@ -149,7 +149,7 @@ if (!defined('ABSPATH')) exit; ?>
                         <?php
                         $local_partners = new WP_Query(array(
                             'post_type' => 'local_partner',
-                            'posts_per_page' => 10,
+                            'posts_per_page' => 5,
                             'post_status' => 'publish'
                         ));
 
@@ -165,7 +165,7 @@ if (!defined('ABSPATH')) exit; ?>
                                 }
                         ?>
                                 <div class="swiper-slide">
-                                    <a href="<?php the_permalink(); ?>">
+                                    <a href="<?php the_permalink(); ?>" class="partner-link">
                                         <div class="partner-card">
                                             <div class="partner-image">
                                                 <?php if (has_post_thumbnail()) : ?>
@@ -219,7 +219,7 @@ if (!defined('ABSPATH')) exit; ?>
                         <?php
                         $chefs = new WP_Query(array(
                             'post_type' => 'chef',
-                            'posts_per_page' => 10,
+                            'posts_per_page' => 5,
                             'post_status' => 'publish'
                         ));
 
@@ -251,12 +251,12 @@ if (!defined('ABSPATH')) exit; ?>
                             ?>
                         <?php endif; ?>
                     </div>
-                    <!-- Add Pagination -->
-                    <div class="swiper-pagination"></div>
-                    <!-- Add Navigation -->
-                    <div class="swiper-button-next"></div>
-                    <div class="swiper-button-prev"></div>
-                </div>
+            </div>
+            <!-- Add Pagination -->
+            <div class="swiper-pagination"></div>
+            <!-- Add Navigation -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
             </div>
             <a href="<?php echo get_post_type_archive_link('chef'); ?>" class="section-button">VIEW LIST</a>
         </div>
