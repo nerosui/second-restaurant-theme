@@ -1,0 +1,19 @@
+.body {
+    .wp-block-separator {
+        width: 100%;
+        margin-bottom: 0;
+    }
+}
+
+// Gap utility classes
+@for $i from 1 through 20 {
+    .gap-#{$i} {
+        gap: #{$i * 0.25}rem !important;
+    }
+    .row-gap-#{$i} {
+        row-gap: #{$i * 0.25}rem !important;
+    }
+    .column-gap-#{$i} {
+        column-gap: #{$i * 0.25}rem !important;
+    }
+}

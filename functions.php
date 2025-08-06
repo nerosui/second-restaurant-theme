@@ -1114,3 +1114,67 @@ add_action('wp_loaded', 'create_sample_custom_posts');
 }
 
 // addSampleData();
+
+function cocoon_editor_color_palette_setup() {
+    $colors = get_cocoon_editor_color_palette_colors();
+    $original = array(
+        array(
+            'name'  => 'プライマリーカラー',
+            'slug'  => 'primary-color',
+            'color' => '#e65d3e',
+        ),
+        array(
+            'name'  => 'ダークテキスト',
+            'slug'  => 'dark-text',
+            'color' => '#303030',
+        ),
+        array(
+            'name'  => 'ライトテキスト',
+            'slug'  => 'light-text',
+            'color' => '#8e8e8e',
+        ),
+        array(
+            'name'  => 'ホワイト',
+            'slug'  => 'white',
+            'color' => '#ffffff',
+        ),
+        array(
+            'name'  => 'ライト背景',
+            'slug'  => 'light-bg',
+            'color' => '#f8f7ee',
+        ),
+        array(
+            'name'  => 'ライト背景2',
+            'slug'  => 'light-bg2',
+            'color' => '#F5F5F5',
+        ),
+        array(
+            'name'  => 'ピンク背景',
+            'slug'  => 'pink-bg',
+            'color' => '#ffeeea',
+        ),
+        array(
+            'name'  => 'ダーク背景',
+            'slug'  => 'dark-bg',
+            'color' => '#403c3c',
+        ),
+        array(
+            'name'  => 'フッターテキスト',
+            'slug'  => 'footer-text',
+            'color' => '#ece9e8',
+        ),
+        array(
+            'name'  => 'ライトボーダー',
+            'slug'  => 'light-border',
+            'color' => '#f6d1c9',
+        ),
+    );
+    // カラーパレットの設定
+    add_theme_support('editor-color-palette', array_merge($original, $colors));
+    // カスタム色を無効
+    add_theme_support('disable-custom-colors');
+    // カスタムフォントサイズを無効
+    add_theme_support('disable-custom-font-sizes');
+    return $colors;
+}
+add_action('after_setup_theme', 'cocoon_editor_color_palette_setup');
