@@ -275,6 +275,55 @@ function disable_comments_admin_bar()
 }
 add_action('wp_before_admin_bar_render', 'disable_comments_admin_bar');
 
+// リンクメニューを非表示にする
+function hide_links_admin_menu()
+{
+    remove_menu_page('link-manager.php');
+}
+add_action('admin_menu', 'hide_links_admin_menu');
+
+// 管理メニューの順番を変更する
+function customize_admin_menu_order($menu_order)
+{
+    if (!$menu_order) return $menu_order;
+    
+    // 基本のメニュー順序
+    $new_order = array(
+        'index.php', // ダッシュボード
+        'separator1', // セパレーター
+        'edit.php', // ニュース（投稿）
+        'edit.php?post_type=chef', // シェフ
+        'edit.php?post_type=local_partner', // ローカルパートナー
+        'edit.php?post_type=project', // プロジェクト
+        'upload.php', // メディア
+        'wpcf7', // Contact Form 7
+        'edit.php?post_type=page', // 固定ページ
+        'separator2', // セパレーター
+        'themes.php', // 外観
+        'plugins.php', // プラグイン
+        'users.php', // ユーザー
+        'tools.php', // ツール
+        'options-general.php', // 設定
+        'separator-last', // セパレーター
+        'separator-last',
+        'siteguard',
+        'typesquare-admin-menu',
+        'cwp_plugin',
+        'theme-settings'
+    );
+
+    return $new_order;
+}
+
+function enable_custom_menu_order($bool)
+{
+    return true;
+}
+
+add_filter('custom_menu_order', 'enable_custom_menu_order');
+add_filter('menu_order', 'customize_admin_menu_order');
+
+
 // ブロックパターンを登録
 function register_custom_block_patterns()
 {
