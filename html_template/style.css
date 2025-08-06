@@ -3860,11 +3860,6 @@ img {
 #local-partner-detail-page {
   /* Article Container */
   /* Partner Header */
-  /* Section Common Styles */
-  /* Region Section */
-  /* Detail Lists */
-  /* Partner Introduction Section */
-  /* Past Restaurants Section */
 }
 #local-partner-detail-page .local-partner-article {
   padding: 80px 0;
@@ -3933,44 +3928,11 @@ img {
   font-weight: 500;
   color: #8e8e8e;
 }
-#local-partner-detail-page .region-section,
-#local-partner-detail-page .restaurant-section,
-#local-partner-detail-page .partner-intro-section,
-#local-partner-detail-page .past-restaurants-section {
-  background: var(--white);
-  padding: 80px 0;
-  border-bottom: 1px solid #f6d1c9;
-}
-#local-partner-detail-page .region-section:last-child,
-#local-partner-detail-page .restaurant-section:last-child,
-#local-partner-detail-page .partner-intro-section:last-child,
-#local-partner-detail-page .past-restaurants-section:last-child {
-  border-bottom: none;
-}
-@media (max-width: 768px) {
-  #local-partner-detail-page .region-section,
-  #local-partner-detail-page .restaurant-section,
-  #local-partner-detail-page .partner-intro-section,
-  #local-partner-detail-page .past-restaurants-section {
-    padding: 40px;
-    margin-bottom: 40px;
-  }
-}
-@media (max-width: 390px) {
-  #local-partner-detail-page .region-section,
-  #local-partner-detail-page .restaurant-section,
-  #local-partner-detail-page .partner-intro-section,
-  #local-partner-detail-page .past-restaurants-section {
-    padding: 20px;
-    margin-bottom: 40px;
-  }
-}
 #local-partner-detail-page .section-title {
   font-size: 1.5rem;
   font-weight: 700;
   line-height: 0.875;
   color: var(--primary-color);
-  margin-bottom: 61px;
   text-align: left;
 }
 @media (max-width: 768px) {
@@ -4037,243 +3999,9 @@ img {
   max-width: 100%;
   margin: 0;
 }
-#local-partner-detail-page .region-description,
-#local-partner-detail-page .restaurant-description {
-  flex: 1;
-}
-#local-partner-detail-page .region-description p,
-#local-partner-detail-page .restaurant-description p {
-  font-family: var(--font-noto);
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 1.5;
-  color: var(--dark-text);
-  margin-bottom: 61px;
-}
-@media (max-width: 768px) {
-  #local-partner-detail-page .region-description p,
-  #local-partner-detail-page .restaurant-description p {
-    margin-bottom: 40px;
-  }
-}
-#local-partner-detail-page .region-details,
-#local-partner-detail-page .restaurant-details {
-  border-top: 1px solid var(--footer-text);
-  padding-top: 16px;
-}
-#local-partner-detail-page .detail-list,
-#local-partner-detail-page ul.detail-list {
-  list-style: none;
-  padding: 0;
-}
-#local-partner-detail-page .detail-list li::marker,
-#local-partner-detail-page ul.detail-list li::marker {
-  display: none;
-}
-#local-partner-detail-page .detail-list dt,
-#local-partner-detail-page .detail-list li > .dt,
-#local-partner-detail-page ul.detail-list dt,
-#local-partner-detail-page ul.detail-list li > .dt {
-  font-family: var(--font-noto);
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 1.5;
-  color: var(--primary-color);
-  margin-bottom: 12px;
-  padding-top: 16px;
-  border-top: 1px solid var(--footer-text);
-}
-#local-partner-detail-page .detail-list dt:first-child,
-#local-partner-detail-page .detail-list li:first-child > .dt,
-#local-partner-detail-page ul.detail-list dt:first-child,
-#local-partner-detail-page ul.detail-list li:first-child > .dt {
-  border-top: none;
-  padding-top: 0;
-}
-#local-partner-detail-page .detail-list dd,
-#local-partner-detail-page .detail-list li > .dd,
-#local-partner-detail-page ul.detail-list dd,
-#local-partner-detail-page ul.detail-list li > .dd {
-  font-family: var(--font-noto);
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 1.5;
-  color: var(--dark-text);
-  margin-bottom: 16px;
-  margin-left: 0;
-}
-#local-partner-detail-page .map-link {
-  margin-top: 100px;
-}
-@media (max-width: 768px) {
-  #local-partner-detail-page .map-link {
-    margin-top: 60px;
-  }
-}
-#local-partner-detail-page .google-map-link {
-  display: inline-flex;
-  align-items: center;
-  font-family: var(--font-noto);
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 3.5;
-  color: var(--primary-color);
-  text-decoration: none;
-}
-#local-partner-detail-page .google-map-link .link-arrow {
-  width: 16px;
-  height: 16px;
-  margin-left: 12px;
-}
-#local-partner-detail-page .partner-intro-section .partner-intro-content {
-  display: flex;
-  flex-direction: column;
-  gap: 32px;
-}
-#local-partner-detail-page .partner-intro-section .partner-profile {
-  display: flex;
-  gap: 2rem;
-}
-@media (max-width: 768px) {
-  #local-partner-detail-page .partner-intro-section .partner-profile {
-    flex-direction: column;
-    gap: 30px;
-  }
-}
-#local-partner-detail-page .partner-intro-section .profile-image {
-  flex: 0 0 160px;
-}
-#local-partner-detail-page .partner-intro-section .profile-image img {
-  aspect-ratio: 1/1;
-  max-width: 120px;
-  object-fit: cover;
-  border-radius: 100%;
-}
-#local-partner-detail-page .partner-intro-section .profile-info {
-  flex: 1;
-}
-#local-partner-detail-page .partner-intro-section .profile-name {
-  font-family: var(--font-noto);
-  font-size: 20px;
-  font-weight: 500;
-  line-height: 1.8;
-  color: var(--dark-text);
-  margin-bottom: 16px;
-}
-#local-partner-detail-page .partner-intro-section .profile-links {
-  margin-bottom: 36px;
-}
-#local-partner-detail-page .partner-intro-section .link-item {
-  display: flex;
-  margin-bottom: 4px;
-}
-#local-partner-detail-page .partner-intro-section .link-label {
-  font-family: var(--font-poppins);
-  font-size: 16px;
-  font-weight: 700;
-  line-height: 1.5;
-  color: var(--dark-text);
-  width: 60px;
-}
-#local-partner-detail-page .partner-intro-section .link-url {
-  font-family: var(--font-poppins);
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 1.5;
-  color: var(--dark-text);
-}
-#local-partner-detail-page .partner-intro-section .profile-description {
-  font-family: var(--font-noto);
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 1.5;
-  color: var(--dark-text);
-  text-align: justify;
-}
-#local-partner-detail-page .partner-intro-section .partner-comment {
-  background: #f5f5f5;
-  padding: 40px;
-  border-radius: 0;
-}
-@media (max-width: 768px) {
-  #local-partner-detail-page .partner-intro-section .partner-comment {
-    padding: 20px;
-  }
-}
-#local-partner-detail-page .partner-intro-section .comment-title {
-  font-family: var(--font-noto);
-  font-size: 20px;
-  font-weight: 500;
-  line-height: 1.8;
-  color: var(--dark-text);
-  margin-bottom: 16px;
-}
-#local-partner-detail-page .partner-intro-section .comment-text {
-  font-family: var(--font-noto);
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 1.5;
-  color: var(--dark-text);
-  text-align: justify;
-}
-#local-partner-detail-page .past-restaurant-card {
-  display: flex;
-  background: #f5f5f5;
-  border: 1px solid var(--light-text);
-  border-radius: 6px;
-  overflow: hidden;
-  max-width: 799px;
-}
-@media (max-width: 768px) {
-  #local-partner-detail-page .past-restaurant-card {
-    flex-direction: column;
-  }
-}
-#local-partner-detail-page .card-image {
-  flex: 0 0 222px;
-}
-#local-partner-detail-page .card-image img {
-  width: 100%;
-  height: 160px;
-  object-fit: cover;
-}
-@media (max-width: 768px) {
-  #local-partner-detail-page .card-image {
-    flex: none;
-  }
-  #local-partner-detail-page .card-image img {
-    height: 200px;
-  }
-}
-#local-partner-detail-page .card-content {
-  padding: 20px 24px;
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-}
-#local-partner-detail-page .card-title {
-  font-family: var(--font-noto);
-  font-size: 16px;
-  font-weight: 700;
-  line-height: 2.25;
-  color: var(--dark-text);
-  margin-bottom: 8px;
-}
-#local-partner-detail-page .card-description {
-  font-family: var(--font-noto);
-  font-size: 14px;
-  font-weight: 500;
-  line-height: 1.5;
-  color: var(--dark-text);
-  margin-bottom: 14px;
-  flex: 1;
-}
-#local-partner-detail-page .card-url {
-  font-family: var(--font-noto);
-  font-size: 12px;
-  font-weight: 500;
-  line-height: 1.75;
-  color: var(--light-text);
+#local-partner-detail-page a {
+  text-decoration: underline;
+  text-underline-offset: 4px;
 }
 
 /* Chef Detail Page Styles */
@@ -5564,4 +5292,247 @@ img {
   }
 }
 
-/* eslint-enable*//*# sourceMappingURL=style.css.map */
+.body .wp-block-separator {
+  width: 100%;
+  margin-bottom: 0;
+}
+
+.gap-1 {
+  gap: 0.25rem !important;
+}
+
+.row-gap-1 {
+  row-gap: 0.25rem !important;
+}
+
+.column-gap-1 {
+  column-gap: 0.25rem !important;
+}
+
+.gap-2 {
+  gap: 0.5rem !important;
+}
+
+.row-gap-2 {
+  row-gap: 0.5rem !important;
+}
+
+.column-gap-2 {
+  column-gap: 0.5rem !important;
+}
+
+.gap-3 {
+  gap: 0.75rem !important;
+}
+
+.row-gap-3 {
+  row-gap: 0.75rem !important;
+}
+
+.column-gap-3 {
+  column-gap: 0.75rem !important;
+}
+
+.gap-4 {
+  gap: 1rem !important;
+}
+
+.row-gap-4 {
+  row-gap: 1rem !important;
+}
+
+.column-gap-4 {
+  column-gap: 1rem !important;
+}
+
+.gap-5 {
+  gap: 1.25rem !important;
+}
+
+.row-gap-5 {
+  row-gap: 1.25rem !important;
+}
+
+.column-gap-5 {
+  column-gap: 1.25rem !important;
+}
+
+.gap-6 {
+  gap: 1.5rem !important;
+}
+
+.row-gap-6 {
+  row-gap: 1.5rem !important;
+}
+
+.column-gap-6 {
+  column-gap: 1.5rem !important;
+}
+
+.gap-7 {
+  gap: 1.75rem !important;
+}
+
+.row-gap-7 {
+  row-gap: 1.75rem !important;
+}
+
+.column-gap-7 {
+  column-gap: 1.75rem !important;
+}
+
+.gap-8 {
+  gap: 2rem !important;
+}
+
+.row-gap-8 {
+  row-gap: 2rem !important;
+}
+
+.column-gap-8 {
+  column-gap: 2rem !important;
+}
+
+.gap-9 {
+  gap: 2.25rem !important;
+}
+
+.row-gap-9 {
+  row-gap: 2.25rem !important;
+}
+
+.column-gap-9 {
+  column-gap: 2.25rem !important;
+}
+
+.gap-10 {
+  gap: 2.5rem !important;
+}
+
+.row-gap-10 {
+  row-gap: 2.5rem !important;
+}
+
+.column-gap-10 {
+  column-gap: 2.5rem !important;
+}
+
+.gap-11 {
+  gap: 2.75rem !important;
+}
+
+.row-gap-11 {
+  row-gap: 2.75rem !important;
+}
+
+.column-gap-11 {
+  column-gap: 2.75rem !important;
+}
+
+.gap-12 {
+  gap: 3rem !important;
+}
+
+.row-gap-12 {
+  row-gap: 3rem !important;
+}
+
+.column-gap-12 {
+  column-gap: 3rem !important;
+}
+
+.gap-13 {
+  gap: 3.25rem !important;
+}
+
+.row-gap-13 {
+  row-gap: 3.25rem !important;
+}
+
+.column-gap-13 {
+  column-gap: 3.25rem !important;
+}
+
+.gap-14 {
+  gap: 3.5rem !important;
+}
+
+.row-gap-14 {
+  row-gap: 3.5rem !important;
+}
+
+.column-gap-14 {
+  column-gap: 3.5rem !important;
+}
+
+.gap-15 {
+  gap: 3.75rem !important;
+}
+
+.row-gap-15 {
+  row-gap: 3.75rem !important;
+}
+
+.column-gap-15 {
+  column-gap: 3.75rem !important;
+}
+
+.gap-16 {
+  gap: 4rem !important;
+}
+
+.row-gap-16 {
+  row-gap: 4rem !important;
+}
+
+.column-gap-16 {
+  column-gap: 4rem !important;
+}
+
+.gap-17 {
+  gap: 4.25rem !important;
+}
+
+.row-gap-17 {
+  row-gap: 4.25rem !important;
+}
+
+.column-gap-17 {
+  column-gap: 4.25rem !important;
+}
+
+.gap-18 {
+  gap: 4.5rem !important;
+}
+
+.row-gap-18 {
+  row-gap: 4.5rem !important;
+}
+
+.column-gap-18 {
+  column-gap: 4.5rem !important;
+}
+
+.gap-19 {
+  gap: 4.75rem !important;
+}
+
+.row-gap-19 {
+  row-gap: 4.75rem !important;
+}
+
+.column-gap-19 {
+  column-gap: 4.75rem !important;
+}
+
+.gap-20 {
+  gap: 5rem !important;
+}
+
+.row-gap-20 {
+  row-gap: 5rem !important;
+}
+
+.column-gap-20 {
+  column-gap: 5rem !important;
+}/*# sourceMappingURL=style.css.map */

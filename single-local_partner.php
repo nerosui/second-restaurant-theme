@@ -30,9 +30,7 @@
                     </div>
                 </header>
                 <div class="partner-content">
-                    <div class="partner-description">
-                        <?php the_content(); ?>
-                    </div>
+                    <?php the_content(); ?>
                 </div>
             </div>
 
