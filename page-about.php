@@ -29,7 +29,7 @@ if (!defined('ABSPATH')) exit; ?>
         <div class="container">
             <h2 class="section-title">料理人が抱える課題</h2>
             <p class="section-intro">
-                都市部に集中しすぎている料理人としてのキャリア
+                <span>都市部に集中しすぎている料理人としてのキャリア</span>
             </p>
             <p class="section-description">
                 暮らす場所や働き方が自由になった現在ですが、「飲食店」という視点では、店舗、人材、そしてそれに伴って料理人としてのキャリアも圧倒的に都市部に集中している現状があります。

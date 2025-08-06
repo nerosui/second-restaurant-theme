@@ -1,4 +1,8 @@
-#project-page,#news-page {
+#project-page,
+#news-page {
+    .project-intro{
+        padding: 40px 0 80px;
+    }
     // Base container styles
     .filter-tags {
         display: flex;

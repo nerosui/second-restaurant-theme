@@ -14,7 +14,7 @@
         <span>PROJECT</span>
     </div>
 
-    <section class="page-intro">
+    <section class="page-intro project-intro">
         <div class="container">
             <h2 class="page-section-title">セカンドレストラン開催情報</h2>
             <p class="section-description">

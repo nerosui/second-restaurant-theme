@@ -278,11 +278,30 @@ body {
   }
 }
 
+#local-partner-detail-page,
+#chef-detail-page,
+#project-detail-page {
+  article {
+    padding-top: clamp(40px, 8vw, 5rem);
+    padding-bottom: clamp(40px, 8vw, 5rem);
+    background: var(--light-bg);
+    .article-container {
+      max-width: 960px;
+      margin: 2.5rem auto 4rem;
+      padding: clamp(10px, 8vw, 5rem) clamp(10px, 6vw, 5rem);
+      background: var(--white);
+      @media (max-width: 960px) {
+          margin-left: 10px;
+          margin-right: 10px;
+      }
+    }
+  }
+}
+
 #local-partner-page,
 #chef-page {
   // CTA Banner Section
   .sr-cta-banner {
-    padding: 40px 0 0;
     max-width: 800px;
     margin: 5rem auto;
 
@@ -430,23 +449,35 @@ body {
 
 .blogcard {
   padding: 0;
-}
-.blogcard-content {
-  padding: 1rem 1rem .5rem 1rem;
-}
-.blogcard-thumbnail {
-  max-width: 160;
-  img {
-    aspect-ratio: 1 / 1;
-    object-fit: cover;
+  .blogcard-content {
+    padding: 1rem 1rem 0.5rem 1rem;
   }
-}
-.blogcard-footer {
-  clear: inherit;
-  color: var(--dark-text);
-  padding: 0 1rem 0 1rem;
-  margin-left: 179px;
-  font-size: 0.9rem;
+  .blogcard-thumbnail {
+    max-width: 160;
+    img {
+      aspect-ratio: 1 / 1;
+      object-fit: cover;
+    }
+  }
+  .blogcard-footer {
+    clear: inherit;
+    color: var(--dark-text);
+    padding: 0 1rem 0 1rem;
+    margin-left: 179px;
+    font-size: 0.9rem;
+    white-space: nowrap;
+    @media screen and (max-width: 834px) {
+      margin-left: 130px;
+      margin-right: 0;
+      font-size: 0.9em;
+      line-height: 1.2;
+    }
+    @media screen and (max-width: 600px) {
+      .blogcard-site {
+        display: none;
+      }
+    }
+  }
 }
 
 .full-blog-card {
@@ -462,4 +493,24 @@ body {
 
 .w-full {
   width: 100% !important;
+}
+
+.detail-list{
+  list-style: none;
+  padding: 0;
+  li::marker{
+      display:none;
+  }
+  li{
+    padding: 16px 0;
+    border-top: 1px solid var(--footer-text);
+  }
+  li:last-child {
+    border-bottom: 1px solid var(--footer-text);
+  }
+  strong{
+    font-weight: 400;
+    color: var(--primary-color);
+    display: block;
+  }
 }

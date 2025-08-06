@@ -130,18 +130,18 @@ add_action('init', 'change_post_labels');
 // カスタム投稿タイプの登録
 function register_custom_post_types()
 {
-    // シェフのカスタム投稿タイプ
+    // 旅するシェフのカスタム投稿タイプ
     register_post_type('chef', array(
         'labels' => array(
-            'name' => 'シェフ',
-            'singular_name' => 'シェフ',
+            'name' => '旅するシェフ',
+            'singular_name' => '旅するシェフ',
             'add_new' => '新規追加',
-            'add_new_item' => '新しいシェフを追加',
-            'edit_item' => 'シェフを編集',
-            'new_item' => '新しいシェフ',
-            'view_item' => 'シェフを表示',
-            'search_items' => 'シェフを検索',
-            'not_found' => 'シェフが見つかりません',
+            'add_new_item' => '新しい旅するシェフを追加',
+            'edit_item' => '旅するシェフを編集',
+            'new_item' => '新しい旅するシェフ',
+            'view_item' => '旅するシェフを表示',
+            'search_items' => '旅するシェフを検索',
+            'not_found' => '旅するシェフが見つかりません',
             'not_found_in_trash' => 'ゴミ箱にシェフが見つかりません'
         ),
         'public' => true,
@@ -152,19 +152,19 @@ function register_custom_post_types()
         'menu_icon' => 'dashicons-admin-users'
     ));
 
-    // ローカルパートナーのカスタム投稿タイプ
+    // 地域パートナーのカスタム投稿タイプ
     register_post_type('local_partner', array(
         'labels' => array(
-            'name' => 'ローカルパートナー',
-            'singular_name' => 'ローカルパートナー',
+            'name' => '地域パートナー',
+            'singular_name' => '地域パートナー',
             'add_new' => '新規追加',
-            'add_new_item' => '新しいローカルパートナーを追加',
-            'edit_item' => 'ローカルパートナーを編集',
-            'new_item' => '新しいローカルパートナー',
-            'view_item' => 'ローカルパートナーを表示',
-            'search_items' => 'ローカルパートナーを検索',
-            'not_found' => 'ローカルパートナーが見つかりません',
-            'not_found_in_trash' => 'ゴミ箱にローカルパートナーが見つかりません'
+            'add_new_item' => '新しい地域パートナーを追加',
+            'edit_item' => '地域パートナーを編集',
+            'new_item' => '新しい地域パートナー',
+            'view_item' => '地域パートナーを表示',
+            'search_items' => '地域パートナーを検索',
+            'not_found' => '地域パートナーが見つかりません',
+            'not_found_in_trash' => 'ゴミ箱に地域パートナーが見つかりません'
         ),
         'public' => true,
         'has_archive' => true,
@@ -220,7 +220,7 @@ function register_custom_taxonomies()
         'show_admin_column' => true
     ));
 
-    // ローカルパートナーのタグ
+    // 地域パートナーのタグ
     register_taxonomy('partner_category', 'local_partner', array(
         'labels' => array(
             'name' => 'パートナータグ',

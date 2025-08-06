@@ -2,17 +2,6 @@
 
 /* Project Detail Page */
 #project-detail-page {
-    .article-container {
-        background-color: #fff;
-        max-width: 960px;
-        margin: 0 auto;
-        margin-top: clamp(20px, 10vw, 120px);
-        padding: clamp(10px, 8vw, 5rem);
-        @media (max-width: 960px) {
-            margin-left: 10px;
-            margin-right: 10px;
-        }
-    }
 
     /* プロジェクトヘッダー */
     .project-header {
