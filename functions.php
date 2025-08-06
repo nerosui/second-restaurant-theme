@@ -285,7 +285,7 @@ add_action('admin_menu', 'hide_links_admin_menu');
 // 管理メニューの順番を変更する
 function customize_admin_menu_order($menu_order)
 {
-    if (!$menu_order) return true;
+    if (!$menu_order) return $menu_order;
     
     // 基本のメニュー順序
     $new_order = array(
