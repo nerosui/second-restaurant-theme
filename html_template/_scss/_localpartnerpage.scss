@@ -1,5 +1,4 @@
 #local-partner-page {
-
     // Page Hero Section
     .page-hero {
         background-color: #ffffff;
@@ -34,7 +33,10 @@
     // Local Partner Intro Section
     .local-partner-intro {
         background-color: #ffffff;
-        padding:40px 0 0;
+        padding: 40px 0 0;
+        .container {
+            margin: 0 auto;
+        }
 
         .section-title {
             font-weight: 700;
@@ -101,68 +103,6 @@
             margin-bottom: 0;
         }
 
-        // Filter Bar
-        .filter-bar {
-            background-color: #ffffff;
-            border: 1px solid #e65d3e;
-            padding: 31.63px 52px 43.37px;
-            margin-bottom: 92px;
-            display: flex;
-            align-items: flex-start;
-            gap: 40px;
-            width: 100%;
-
-            @media (max-width: 768px) {
-                flex-direction: column;
-                gap: 20px;
-                padding: 20px;
-            }
-
-            .filter-title {
-                display: flex;
-                align-items: center;
-                gap: 12px;
-                flex-shrink: 0;
-
-                img {
-                    width: 20px;
-                    height: 20px;
-                }
-
-                span {
-                    font-weight: 700;
-                    font-size: 16px;
-                    line-height: 1.5;
-                    color: #e65d3e;
-                }
-            }
-
-            .filter-tags {
-                display: flex;
-                flex-wrap: wrap;
-                gap: 15px 14px;
-                align-items: center;
-
-                .tag {
-                    font-weight: 500;
-                    font-size: 16px;
-                    line-height: 1.5;
-                    color: #8e8e8e;
-                    text-decoration: none;
-                    transition: color 0.3s ease;
-
-                    &.active {
-                        color: #303030;
-                        font-weight: 500;
-                    }
-
-                    &:hover {
-                        color: #303030;
-                    }
-                }
-            }
-        }
-
         // Partner Grid
         .partner-grid {
             display: flex;
@@ -189,13 +129,13 @@
 
                 .partner-image {
                     width: 400px;
-                    height: 280px;
+                    aspect-ratio: 10 / 7;
+                    object-fit: cover;
                     flex-shrink: 0;
                     overflow: hidden;
 
                     @media (max-width: 768px) {
                         width: 100%;
-                        height: 200px;
                     }
 
                     img {
@@ -261,6 +201,5 @@
                 }
             }
         }
-
     }
 }

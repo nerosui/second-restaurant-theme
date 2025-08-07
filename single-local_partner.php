@@ -9,7 +9,7 @@
 
                 <!-- ヘッダー情報 -->
                 <header class="partner-header">
-                    <h2 class="partner-name"><?php the_title(); ?></h2>
+                    <h2 class="partner-name title-underline"><?php the_title(); ?></h2>
                     <div class="partner-location">
                         <img src="<?php echo esc_url(get_stylesheet_directory_uri()); ?>/images/pin.svg" alt="" class="location-icon">
                         <span class="location-text">

@@ -73,13 +73,10 @@
             <img src="images/sns-icon-instagram.svg" alt="Instagram" />
           </a>
         </div>
-        <ul>
+        <ul class="footer-legal">
           <li><a href="https://interlocalpartners.jp/">運営会社</a></li>
           <li><a href="/privacy-policy">プライバシーポリシー</a></li>
         </ul>
-      </div>
-      <div class="footer-social">
-        <!-- SNSアイコンのプレースホルダー -->
       </div>
     </div>
     <div class="footer-copyright">
