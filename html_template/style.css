@@ -4814,6 +4814,11 @@ img {
 #contact-page {
   background-color: var(--white);
 }
+@media (max-width: 768px) {
+  #contact-page .container {
+    padding: 0 20px;
+  }
+}
 #contact-page .faq-section {
   background-color: var(--white);
   padding: 60px 0 80px;
@@ -4835,6 +4840,8 @@ img {
   }
 }
 #contact-page .faq-section .faq-list {
+  max-width: 800px;
+  margin: 0 auto;
   border: 1px solid var(--light-border);
   border-bottom: none;
 }
@@ -4944,7 +4951,7 @@ img {
   border-bottom: 1px solid var(--light-border);
 }
 #contact-page .contact-form-section {
-  background-color: #F8F7EE;
+  background-color: #f8f7ee;
   padding: 80px 0;
 }
 @media (max-width: 768px) {
@@ -4952,62 +4959,19 @@ img {
     padding: 60px 0;
   }
 }
-#contact-page .contact-form-section .container {
-  max-width: 1440px;
+#contact-page .contact-form-section .form-container {
+  max-width: 800px;
   margin: 0 auto;
-  padding: 0 240px;
+  padding: 0;
 }
 @media (max-width: 1024px) {
-  #contact-page .contact-form-section .container {
+  #contact-page .contact-form-section .form-container {
     padding: 0 120px;
   }
 }
 @media (max-width: 768px) {
-  #contact-page .contact-form-section .container {
+  #contact-page .contact-form-section .form-container {
     padding: 0 20px;
-  }
-}
-#contact-page .contact-form-section .page-section-title {
-  font-weight: 700;
-  font-size: 32px;
-  line-height: 1.125em;
-  color: var(--text-dark);
-  margin: 0 0 12px;
-  position: relative;
-  padding-bottom: 12px;
-}
-@media (max-width: 768px) {
-  #contact-page .contact-form-section .page-section-title {
-    font-size: 24px;
-  }
-}
-#contact-page .contact-form-section .page-section-title::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 320px;
-  height: 3px;
-  background-color: var(--primary-color);
-}
-@media (max-width: 768px) {
-  #contact-page .contact-form-section .page-section-title::after {
-    width: 240px;
-  }
-}
-#contact-page .contact-form-section .page-section-title::before {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 320px;
-  width: calc(100% - 320px);
-  height: 3px;
-  background-color: var(--light-border);
-}
-@media (max-width: 768px) {
-  #contact-page .contact-form-section .page-section-title::before {
-    left: 240px;
-    width: calc(100% - 240px);
   }
 }
 #contact-page .contact-form-section .form-intro {
@@ -5016,7 +4980,6 @@ img {
   line-height: 2em;
   color: var(--text-dark);
   margin: 40px 0;
-  text-align: center;
 }
 @media (max-width: 768px) {
   #contact-page .contact-form-section .form-intro {
@@ -5087,10 +5050,10 @@ img {
   height: 48px;
   padding: 12px 14px;
   border: 1px solid var(--light-border);
-  background-color: #F5F5F5;
+  background-color: #f5f5f5;
   font-size: 14px;
   line-height: 1.714em;
-  color: #8E8E8E;
+  color: #8e8e8e;
   box-sizing: border-box;
 }
 @media (max-width: 768px) {
@@ -5111,7 +5074,7 @@ img {
 #contact-page .contact-form-section .contact-form .form-group .form-input::placeholder,
 #contact-page .contact-form-section .contact-form .form-group .form-select::placeholder,
 #contact-page .contact-form-section .contact-form .form-group .form-textarea::placeholder {
-  color: #8E8E8E;
+  color: #8e8e8e;
 }
 #contact-page .contact-form-section .wpcf7-form.init .form-group .form-input:focus,
 #contact-page .contact-form-section .wpcf7-form.init .form-group .form-select:focus,
@@ -5143,7 +5106,7 @@ img {
 #contact-page .contact-form-section .wpcf7-form.init .form-group .select-wrapper .form-select,
 #contact-page .contact-form-section .contact-form .form-group .select-wrapper .form-select {
   appearance: none;
-  background-color: #F5F5F5;
+  background-color: #f5f5f5;
   cursor: pointer;
 }
 #contact-page .contact-form-section .wpcf7-form.init .form-group .select-wrapper .select-arrow,
@@ -5162,14 +5125,14 @@ img {
 #contact-page .contact-form-section .wpcf7-form.init .form-group .checkbox-group,
 #contact-page .contact-form-section .contact-form .form-group .checkbox-group {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 8px;
 }
 #contact-page .contact-form-section .wpcf7-form.init .form-group .checkbox-group .form-checkbox,
 #contact-page .contact-form-section .contact-form .form-group .checkbox-group .form-checkbox {
   width: 24px;
   height: 24px;
-  border: 1px solid #8E8E8E;
+  border: 1px solid #8e8e8e;
   background-color: var(--white);
   margin: 0;
   cursor: pointer;
@@ -5183,10 +5146,13 @@ img {
 #contact-page .contact-form-section .contact-form .form-group .checkbox-group .checkbox-label {
   font-weight: 500;
   font-size: 16px;
-  line-height: 2em;
   color: var(--text-dark);
   cursor: pointer;
   margin: 0;
+}
+#contact-page .contact-form-section .wpcf7-form.init .form-group .checkbox-group .checkbox-label a,
+#contact-page .contact-form-section .contact-form .form-group .checkbox-group .checkbox-label a {
+  text-decoration: underline;
 }
 @media (max-width: 768px) {
   #contact-page .contact-form-section .wpcf7-form.init .form-group .checkbox-group .checkbox-label,
@@ -5197,7 +5163,9 @@ img {
 #contact-page .contact-form-section .wpcf7-form.init .form-submit,
 #contact-page .contact-form-section .contact-form .form-submit {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
   margin-top: 60px;
 }
 @media (max-width: 768px) {
@@ -5220,6 +5188,7 @@ img {
   line-height: 1.5em;
   cursor: pointer;
   transition: all 0.3s ease;
+  padding: 0;
 }
 @media (max-width: 768px) {
   #contact-page .contact-form-section .wpcf7-form.init .form-submit .submit-button,

@@ -78,76 +78,77 @@ if (!defined('ABSPATH')) exit; ?>
         <div class="container">
             <h2 class="page-section-title">お問い合わせフォーム</h2>
             <p class="form-intro">下記フォームに必要事項を入力のうえ、送信ボタンを押してください。後日担当者から返信いたします。</p>
+            <div class="form-container">
+                <?php
+                // Contact Form 7が有効な場合はそのフォームを表示
+                if (function_exists('wpcf7_enqueue_scripts')) {
+                    echo do_shortcode('[contact-form-7 id="1" title="お問い合わせフォーム"]');
+                } else {
+                    // Contact Form 7が無効な場合は標準のHTMLフォームを表示
+                ?>
+                <form class="contact-form" action="<?php echo esc_url(admin_url('admin-post.php')); ?>" method="POST">
+                    <?php wp_nonce_field('contact_form_action', 'contact_form_nonce'); ?>
+                    <input type="hidden" name="action" value="submit_contact_form">
+                    
+                    <div class="form-group">
+                        <label class="form-label required">
+                            氏名<span class="required-mark">*</span>
+                        </label>
+                        <input type="text" name="contact_name" class="form-input" placeholder="例）山田太郎" required>
+                    </div>
 
-            <?php
-            // Contact Form 7が有効な場合はそのフォームを表示
-            if (function_exists('wpcf7_enqueue_scripts')) {
-                echo do_shortcode('[contact-form-7 id="1" title="お問い合わせフォーム"]');
-            } else {
-                // Contact Form 7が無効な場合は標準のHTMLフォームを表示
-            ?>
-            <form class="contact-form" action="<?php echo esc_url(admin_url('admin-post.php')); ?>" method="POST">
-                <?php wp_nonce_field('contact_form_action', 'contact_form_nonce'); ?>
-                <input type="hidden" name="action" value="submit_contact_form">
-                
-                <div class="form-group">
-                    <label class="form-label required">
-                        氏名<span class="required-mark">*</span>
-                    </label>
-                    <input type="text" name="contact_name" class="form-input" placeholder="例）山田太郎" required>
-                </div>
+                    <div class="form-group">
+                        <label class="form-label">所属</label>
+                        <input type="text" name="contact_organization" class="form-input" placeholder="会社名／団体名">
+                    </div>
 
-                <div class="form-group">
-                    <label class="form-label">所属</label>
-                    <input type="text" name="contact_organization" class="form-input" placeholder="会社名／団体名">
-                </div>
+                    <div class="form-group">
+                        <label class="form-label required">
+                            メールアドレス<span class="required-mark">*</span>
+                        </label>
+                        <input type="email" name="contact_email" class="form-input" placeholder="例）mail@sample.com" required>
+                    </div>
 
-                <div class="form-group">
-                    <label class="form-label required">
-                        メールアドレス<span class="required-mark">*</span>
-                    </label>
-                    <input type="email" name="contact_email" class="form-input" placeholder="例）mail@sample.com" required>
-                </div>
-
-                <div class="form-group">
-                    <label class="form-label required">
-                        お問い合わせ種別<span class="required-mark">*</span>
-                    </label>
-                    <div class="select-wrapper">
-                        <select name="contact_type" class="form-select" required>
-                            <option value="">選択してください</option>
-                            <option value="reservation">予約について</option>
-                            <option value="partner">地域パートナーについて</option>
-                            <option value="chef">旅するシェフについて</option>
-                            <option value="other">その他</option>
-                        </select>
-                        <div class="select-arrow">
-                            <img src="<?php echo esc_url(get_stylesheet_directory_uri()); ?>/images/dropdown-arrow.svg" alt="">
+                    <div class="form-group">
+                        <label class="form-label required">
+                            お問い合わせ種別<span class="required-mark">*</span>
+                        </label>
+                        <div class="select-wrapper">
+                            <select name="contact_type" class="form-select" required>
+                                <option value="">選択してください</option>
+                                <option value="reservation">予約について</option>
+                                <option value="partner">地域パートナーについて</option>
+                                <option value="chef">旅するシェフについて</option>
+                                <option value="other">その他</option>
+                            </select>
+                            <div class="select-arrow">
+                                <img src="<?php echo esc_url(get_stylesheet_directory_uri()); ?>/images/dropdown-arrow.svg" alt="">
+                            </div>
                         </div>
                     </div>
-                </div>
 
-                <div class="form-group">
-                    <label class="form-label required">
-                        お問い合わせ内容<span class="required-mark">*</span>
-                    </label>
-                    <textarea name="contact_message" class="form-textarea" placeholder="メッセージを入力" rows="4" required></textarea>
-                </div>
-
-                <div class="form-group">
-                    <div class="checkbox-group">
-                        <input type="checkbox" id="privacy" name="privacy_agreement" class="form-checkbox" required>
-                        <label for="privacy" class="checkbox-label">
-                            <a href="<?php echo esc_url(get_permalink(get_page_by_path('privacy-policy'))); ?>" target="_blank">プライバシーポリシー</a>に同意する
+                    <div class="form-group">
+                        <label class="form-label required">
+                            お問い合わせ内容<span class="required-mark">*</span>
                         </label>
+                        <textarea name="contact_message" class="form-textarea" placeholder="メッセージを入力" rows="4" required></textarea>
                     </div>
-                </div>
 
-                <div class="form-submit">
-                    <button type="submit" class="submit-button">送信</button>
-                </div>
-            </form>
-            <?php } ?>
+                    <div class="form-group">
+                        <div class="checkbox-group">
+                            <input type="checkbox" id="privacy" name="privacy_agreement" class="form-checkbox" required>
+                            <label for="privacy" class="checkbox-label">
+                                <a href="<?php echo esc_url(get_permalink(get_page_by_path('privacy-policy'))); ?>" target="_blank">プライバシーポリシー</a>に同意する
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="form-submit">
+                        <button type="submit" class="submit-button">送信</button>
+                    </div>
+                </form>
+                <?php } ?>
+            </div>
         </div>
     </section>
 </main>

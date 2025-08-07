@@ -1,6 +1,12 @@
 #contact-page {
     background-color: var(--white);
 
+    .container {
+        @media (max-width: 768px) {
+            padding: 0 20px;
+        }
+    }
+
     // FAQ セクション
     .faq-section {
         background-color: var(--white);
@@ -22,6 +28,8 @@
         }
 
         .faq-list {
+            max-width: 800px;
+            margin: 0 auto;
             border: 1px solid var(--light-border);
             border-bottom: none;
 
@@ -110,7 +118,9 @@
                     background-color: var(--bg-light);
                     max-height: 0;
                     overflow: hidden;
-                    transition: max-height 0.3s ease,border-bottom-color 0.3s ease;
+                    transition:
+                        max-height 0.3s ease,
+                        border-bottom-color 0.3s ease;
                     border-bottom: 1px solid transparent;
 
                     p {
@@ -142,17 +152,17 @@
 
     // お問い合わせフォーム セクション
     .contact-form-section {
-        background-color: #F8F7EE; // Figmaデザインの背景色
+        background-color: #f8f7ee; // Figmaデザインの背景色
         padding: 80px 0;
 
         @media (max-width: 768px) {
             padding: 60px 0;
         }
 
-        .container {
-            max-width: 1440px;
+        .form-container {
+            max-width: 800px;
             margin: 0 auto;
-            padding: 0 240px;
+            padding: 0;
 
             @media (max-width: 1024px) {
                 padding: 0 120px;
@@ -163,56 +173,12 @@
             }
         }
 
-        .page-section-title {
-            font-weight: 700;
-            font-size: 32px;
-            line-height: 1.125em;
-            color: var(--text-dark);
-            margin: 0 0 12px;
-            position: relative;
-            padding-bottom: 12px;
-
-            @media (max-width: 768px) {
-                font-size: 24px;
-            }
-
-            &::after {
-                content: "";
-                position: absolute;
-                bottom: 0;
-                left: 0;
-                width: 320px;
-                height: 3px;
-                background-color: var(--primary-color);
-
-                @media (max-width: 768px) {
-                    width: 240px;
-                }
-            }
-
-            &::before {
-                content: "";
-                position: absolute;
-                bottom: 0;
-                left: 320px;
-                width: calc(100% - 320px);
-                height: 3px;
-                background-color: var(--light-border);
-
-                @media (max-width: 768px) {
-                    left: 240px;
-                    width: calc(100% - 240px);
-                }
-            }
-        }
-
         .form-intro {
             font-weight: 500;
             font-size: 16px;
             line-height: 2em;
             color: var(--text-dark);
             margin: 40px 0;
-            text-align: center;
 
             @media (max-width: 768px) {
                 font-size: 14px;
@@ -271,10 +237,10 @@
                     height: 48px;
                     padding: 12px 14px;
                     border: 1px solid var(--light-border);
-                    background-color: #F5F5F5; // Figmaデザインの入力フィールド背景色
+                    background-color: #f5f5f5; // Figmaデザインの入力フィールド背景色
                     font-size: 14px;
                     line-height: 1.714em;
-                    color: #8E8E8E; // Figmaデザインのプレースホルダー色
+                    color: #8e8e8e; // Figmaデザインのプレースホルダー色
                     box-sizing: border-box;
 
                     @media (max-width: 768px) {
@@ -284,7 +250,7 @@
                     }
 
                     &::placeholder {
-                        color: #8E8E8E;
+                        color: #8e8e8e;
                     }
 
                     &:focus {
@@ -310,7 +276,7 @@
 
                     .form-select {
                         appearance: none;
-                        background-color: #F5F5F5;
+                        background-color: #f5f5f5;
                         cursor: pointer;
                     }
 
@@ -330,13 +296,13 @@
 
                 .checkbox-group {
                     display: flex;
-                    align-items: center;
+                    align-items: flex-start;
                     gap: 8px;
 
                     .form-checkbox {
                         width: 24px;
                         height: 24px;
-                        border: 1px solid #8E8E8E; // Figmaデザインのチェックボックスボーダー色
+                        border: 1px solid #8e8e8e; // Figmaデザインのチェックボックスボーダー色
                         background-color: var(--white);
                         margin: 0;
                         cursor: pointer;
@@ -350,10 +316,12 @@
                     .checkbox-label {
                         font-weight: 500;
                         font-size: 16px;
-                        line-height: 2em;
                         color: var(--text-dark);
                         cursor: pointer;
                         margin: 0;
+                        a{
+                            text-decoration: underline;
+                        }
 
                         @media (max-width: 768px) {
                             font-size: 14px;
@@ -364,7 +332,9 @@
 
             .form-submit {
                 display: flex;
-                justify-content: center;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: center;
                 margin-top: 60px;
 
                 @media (max-width: 768px) {
@@ -384,6 +354,7 @@
                     line-height: 1.5em;
                     cursor: pointer;
                     transition: all 0.3s ease;
+                    padding: 0;
 
                     @media (max-width: 768px) {
                         width: 180px;
