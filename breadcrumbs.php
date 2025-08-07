@@ -21,11 +21,17 @@ if ((get_post_type() === 'chef' || get_post_type() === 'project' || get_post_typ
     
     // 投稿タイプ別のアーカイブリンク名を設定
     $archive_name = $post_type_object->labels->name;
+    $archive_link = get_post_type_archive_link($post_type);
     if ($post_type === 'post') {
         $archive_name = 'ニュース';
         $archive_link = get_permalink( get_page_by_path( 'news-list' ) ) ?: home_url('/news-list/');
+    } elseif ($post_type === 'chef') {
+        $archive_name = 'TRAVELLING CHEF';
+    } elseif ($post_type === 'local_partner') {
+        $archive_name = 'LOCAL PARTNER';
+    } elseif ($post_type === 'project') {
+        $archive_name = 'PROJECT';
     } else {
-        $archive_link = get_post_type_archive_link($post_type);
     }
 
     // カスタム投稿タイプのアーカイブページリンク

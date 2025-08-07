@@ -379,7 +379,7 @@ if (!defined('ABSPATH')) exit; ?>
                     <?php endif; ?>
                 </div>
 
-                <a href="<?php echo get_post_type_archive_link('post'); ?>" class="news-button hiddenPC">VIEW LIST</a>
+                <a href="<?php echo get_post_type_archive_link('post'); ?>" class="section-button hiddenPC">VIEW LIST</a>
             </div>
         </div>
     </section>

@@ -1190,7 +1190,7 @@ body.admin-bar .menu-drawer {
   justify-content: space-between;
   gap: 0;
 }
-@media (max-width: 768px) {
+@media (max-width: 820px) {
   .cta-section .cta-buttons {
     flex-direction: column;
   }
@@ -1339,17 +1339,17 @@ body.admin-bar .menu-drawer {
 .sr-footer .footer-logo .logo {
   height: 48px;
   width: auto;
-  margin-bottom: 16px;
+  margin-bottom: 20px;
   max-width: 400px;
 }
 @media screen and (max-width: 820px) {
   .sr-footer .footer-logo .logo {
     max-width: 100%;
+    margin-bottom: 16px;
   }
 }
 .sr-footer .footer-tagline {
   font-size: 16px;
-  line-height: 5.5;
   color: #ece9e8;
 }
 .sr-footer .footer-nav ul,
@@ -1403,6 +1403,11 @@ body.admin-bar .menu-drawer {
   justify-content: flex-start;
   align-items: center;
 }
+@media screen and (max-width: 820px) {
+  .sr-footer .footer-social {
+    margin-bottom: 40px;
+  }
+}
 .sr-footer .footer-copyright {
   text-align: center;
   padding-top: 1rem;
@@ -1430,10 +1435,20 @@ body.admin-bar .menu-drawer {
   margin-bottom: 100px;
   height: auto;
 }
+@media screen and (max-width: 390px) {
+  #index-page .hero {
+    margin-top: 64px;
+  }
+}
 #index-page .hero .hero-image {
   padding-left: clamp(20px, 5vw, 80px);
   width: 100%;
   height: auto;
+}
+@media (max-width: 820px) {
+  #index-page .hero .hero-image {
+    padding-left: 0;
+  }
 }
 #index-page .hero .hero-image .hero-swiper {
   width: 100%;
@@ -1452,7 +1467,7 @@ body.admin-bar .menu-drawer {
   height: 800px;
   object-fit: cover;
 }
-@media (max-width: 768px) {
+@media (max-width: 820px) {
   #index-page .hero .hero-image img {
     height: 600px;
   }
@@ -1463,9 +1478,6 @@ body.admin-bar .menu-drawer {
   }
 }
 @media (max-width: 390px) {
-  #index-page .hero .hero-image {
-    padding-left: 0;
-  }
   #index-page .hero .hero-image .hero-swiper {
     width: 100%;
     height: 100%;
@@ -2038,7 +2050,7 @@ body.admin-bar .menu-drawer {
   grid-template-rows: repeat(2, 1fr);
   gap: 2rem;
   width: clamp(20px, 100%, 870px);
-  margin: 0 auto 80px;
+  margin: 60px auto;
   position: relative;
 }
 @media (max-width: 768px) {
@@ -2105,7 +2117,6 @@ body.admin-bar .menu-drawer {
   .chef .section-subtitle {
     font-size: 14px;
     line-height: 21px;
-    margin-bottom: 60px;
   }
 }
 
@@ -2512,7 +2523,7 @@ body.admin-bar .menu-drawer {
 @media (max-width: 390px) {
   #about-page .hero-section,
   #join-page .hero-section {
-    padding: 0 0 60px;
+    padding: 0;
     margin-top: 150px;
   }
 }
