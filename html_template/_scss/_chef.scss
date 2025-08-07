@@ -8,67 +8,24 @@
   }
 
   .chef-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 2rem;
 
     width: clamp(20px, 100%, 870px);
     margin: 0 auto 80px;
     position: relative;
-
-    .chef-swiper {
-      .swiper-slide {
-        width: 100%;
-        display: flex;
-        justify-content: center;
-      }
+    @media (max-width: 768px) {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: auto;
+      gap: 1.5rem;
     }
 
-    // Swiperのナビゲーションボタンカスタマイズ
-    .swiper-button-next,
-    .swiper-button-prev {
-      width: 40px;
-      height: 40px;
-      border-radius: 50%;
-      background-color: #e65d3e;
-      color: #ffffff;
-      top: 35%;
-      transform: translateY(-50%);
-      margin-top: 0;
-
-      &:after {
-        font-size: 16px;
-        font-weight: bold;
-      }
-
-      &:hover {
-        background-color: #d04a2a;
-      }
-    }
-
-    .swiper-button-prev {
-      left: -50px;
-      @media screen and (max-width: 768px) {
-        left: -30px;
-        
-      }
-    }
-
-    .swiper-button-next {
-      right: -50px;
-      @media screen and (max-width: 768px) {
-        right: -30px;
-        
-      }
-    }
-
-    // ページネーション
-    .swiper-pagination {
-      display: none;
-    }
   }
 
   .chef-card {
-    text-align: center;
-    width: 240px;
-    height: 360px;
+    width: 100%;
     background: #ffffff;
     display: flex;
     flex-direction: column;
@@ -80,8 +37,8 @@
   }
 
   .chef-image {
-    width: 240px;
-    height: 240px;
+    width: 100%;
+    aspect-ratio: 1 / 1;
     overflow: hidden;
     margin-bottom: 16px;
 
@@ -134,15 +91,6 @@
       margin-bottom: 60px;
     }
 
-    .chef-grid {
-      margin-bottom: 60px;
-
-      .chef-swiper {
-        .swiper-pagination {
-          bottom: -40px;
-        }
-      }
-    }
 
   }
 }

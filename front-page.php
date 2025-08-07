@@ -176,7 +176,7 @@ if (!defined('ABSPATH')) exit; ?>
                                             </div>
                                             <div class="partner-info">
                                                 <div class="partner-location"><?php echo esc_html($location ?: '地域未設定'); ?></div>
-                                                <h4 class="partner-name"><?php the_title(); ?></h4>
+                                                <h4 class="partner-name title-underline"><?php the_title(); ?></h4>
                                                 <p class="partner-tags"><?php echo esc_html(implode('　', $term_names)); ?></p>
                                             </div>
                                         </div>
@@ -213,50 +213,36 @@ if (!defined('ABSPATH')) exit; ?>
             </h3>
 
             <div class="chef-grid">
-                <!-- Swiper -->
-                <div class="swiper chef-swiper">
-                    <div class="swiper-wrapper">
-                        <?php
-                        $chefs = new WP_Query(array(
-                            'post_type' => 'chef',
-                            'posts_per_page' => 5,
-                            'post_status' => 'publish'
-                        ));
+                <?php
+                $chefs = new WP_Query(array(
+                    'post_type' => 'chef',
+                    'posts_per_page' => 6,
+                    'post_status' => 'publish'
+                ));
 
-                        if ($chefs->have_posts()) :
-                            while ($chefs->have_posts()) : $chefs->the_post();
-                                $position = get_post_meta(get_the_ID(), 'position', true);
-                        ?>
-                                <div class="swiper-slide">
-                                    <a href="<?php the_permalink(); ?>">
-                                        <div class="chef-card">
-                                            <div class="chef-image">
-                                                <?php if (has_post_thumbnail()) : ?>
-                                                    <?php the_post_thumbnail('medium', array('alt' => get_the_title())); ?>
-                                                <?php else : ?>
-                                                    <img src="<?php echo esc_url(get_stylesheet_directory_uri()); ?>/images/chef-1.jpg" alt="<?php the_title_attribute(); ?>" />
-                                                <?php endif; ?>
-                                            </div>
-                                            <div class="chef-info">
-                                                <h4 class="chef-name"><?php the_title(); ?></h4>
-                                                <p class="chef-position"><?php echo esc_html($position ?: '料理人'); ?></p>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </div>
-                            <?php
-                            endwhile;
-                            wp_reset_postdata();
-                        else :
-                            ?>
-                        <?php endif; ?>
-                    </div>
-            </div>
-            <!-- Add Pagination -->
-            <div class="swiper-pagination"></div>
-            <!-- Add Navigation -->
-            <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div>
+                if ($chefs->have_posts()) :
+                    while ($chefs->have_posts()) : $chefs->the_post();
+                        $position = get_post_meta(get_the_ID(), 'position', true);
+                ?>
+                    <a href="<?php the_permalink(); ?>" class="chef-card">
+                        <div class="chef-image">
+                            <?php if (has_post_thumbnail()) : ?>
+                                <?php the_post_thumbnail('medium', array('alt' => get_the_title())); ?>
+                            <?php else : ?>
+                                <img src="<?php echo esc_url(get_stylesheet_directory_uri()); ?>/images/chef-1.jpg" alt="<?php the_title_attribute(); ?>" />
+                            <?php endif; ?>
+                        </div>
+                        <div class="chef-info">
+                            <h4 class="chef-name"><?php the_title(); ?></h4>
+                            <p class="chef-position"><?php echo esc_html($position ?: '料理人'); ?></p>
+                        </div>
+                    </a>
+                    <?php
+                    endwhile;
+                    wp_reset_postdata();
+                else :
+                    ?>
+                <?php endif; ?>
             </div>
             <a href="<?php echo get_post_type_archive_link('chef'); ?>" class="section-button">VIEW LIST</a>
         </div>
@@ -309,7 +295,7 @@ if (!defined('ABSPATH')) exit; ?>
                                 </div>
                                 <div class="project-info">
                                     <div class="project-date"><?php echo esc_html($date_range); ?></div>
-                                    <h4 class="project-title"><?php the_title(); ?></h4>
+                                    <h4 class="project-title title-underline"><?php the_title(); ?></h4>
                                     <div class="project-tags">
                                         <?php
                                         $tags = get_the_tags();

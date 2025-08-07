@@ -19,6 +19,88 @@
   --desktop: 1440px;
 }
 
+// reset cocoon styles
+.entry-content > *,
+.mce-content-body > *,
+.article p,
+.demo .entry-content p,
+.article dl,
+.article ul,
+.article ol,
+.article blockquote,
+.article pre,
+.article table,
+.article .toc,
+.body .article,
+.body .column-wrap,
+.body .new-entry-cards,
+.body .popular-entry-cards,
+.body .navi-entry-cards,
+.body .box-menus,
+.body .ranking-item,
+.body .rss-entry-cards,
+.body .widget,
+.body .author-box,
+.body .blogcard-wrap,
+.body .login-user-only,
+.body .information-box,
+.body .question-box,
+.body .alert-box,
+.body .information,
+.body .question,
+.body .alert,
+.body .memo-box,
+.body .comment-box,
+.body .common-icon-box,
+.body .blank-box,
+.body .button-block,
+.body .micro-bottom,
+.body .caption-box,
+.body .tab-caption-box,
+.body .label-box,
+.body .toggle-wrap,
+.body .wp-block-image,
+.body .booklink-box,
+.body .kaerebalink-box,
+.body .tomarebalink-box,
+.body .product-item-box,
+.body .speech-wrap,
+.body .wp-block-categories,
+.body .wp-block-archives,
+.body .wp-block-archives-dropdown,
+.body .wp-block-calendar,
+.body .ad-area,
+.body .wp-block-gallery,
+.body .wp-block-audio,
+.body .wp-block-cover,
+.body .wp-block-file,
+.body .wp-block-media-text,
+.body .wp-block-video,
+.body .wp-block-buttons,
+.body .wp-block-columns,
+.body .wp-block-separator,
+.body .components-placeholder,
+.body .wp-block-search,
+.body .wp-block-social-links,
+.body .timeline-box,
+.body .blogcard-type,
+.body .btn-wrap,
+.body .btn-wrap a,
+.body .block-box,
+.body .wp-block-embed,
+.body .wp-block-group,
+.body .wp-block-table,
+.body .scrollable-table,
+.body .wp-block-separator,
+.body .wp-block,
+.body .video-container,
+.comment-area,
+.related-entries,
+.pager-post-navi,
+.comment-respond {
+  margin-bottom: 0;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -80,7 +162,6 @@ body {
   height: 12px;
   background: var(--primary-color);
   border-radius: 50%;
-  margin-top: 24px;
 }
 
 .section-title {
@@ -282,17 +363,21 @@ body {
 #chef-detail-page,
 #project-detail-page {
   article {
-    padding-top: clamp(40px, 8vw, 5rem);
-    padding-bottom: clamp(40px, 8vw, 5rem);
+    padding-top: 120px;
+    padding-bottom: 80px;
     background: var(--light-bg);
+    @media (max-width: 960px) {
+      padding-top: 24px;
+      padding-bottom: 40px;
+    }
     .article-container {
       max-width: 960px;
-      margin: 2.5rem auto 4rem;
+      margin: 0 auto 4rem;
       padding: clamp(10px, 8vw, 5rem) clamp(10px, 6vw, 5rem);
       background: var(--white);
       @media (max-width: 960px) {
-          margin-left: 10px;
-          margin-right: 10px;
+        margin-left: 10px;
+        margin-right: 10px;
       }
     }
   }
@@ -495,22 +580,36 @@ body {
   width: 100% !important;
 }
 
-.detail-list{
+.detail-list {
   list-style: none;
   padding: 0;
-  li::marker{
-      display:none;
+  li::marker {
+    display: none;
   }
-  li{
+  li {
     padding: 16px 0;
     border-top: 1px solid var(--footer-text);
   }
   li:last-child {
     border-bottom: 1px solid var(--footer-text);
   }
-  strong{
+  strong {
     font-weight: 400;
     color: var(--primary-color);
     display: block;
+  }
+}
+
+.title-underline {
+  text-decoration: underline;
+  text-decoration-color: var(--light-border);
+  text-underline-offset: 0.3rem;
+  text-decoration-thickness: 0.3rem;
+}
+
+// blogcardの本文をスマホで非表示
+@media screen and (max-width: 450px) {
+  .blogcard.internal-blogcard .blogcard-snippet.internal-blogcard-snippet {
+    display: none;
   }
 }
