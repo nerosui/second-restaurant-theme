@@ -11,28 +11,26 @@ if (!defined('ABSPATH')) exit; ?>
     <!-- ニュース一覧 -->
     <section class="news-list">
         <div class="container">
-            <div class="filter-bar">
-                <div class="filter-tags">
-                    <a href="<?php echo get_permalink(get_page_by_path('news-list')); ?>" class="<?php echo !isset($_GET['category']) ? 'active' : ''; ?>">
-                        すべて
-                    </a>
-                    <?php
-                    // カテゴリーフィルターを動的に生成
-                    $categories = get_categories(array(
-                        'orderby' => 'name',
-                        'order'   => 'ASC',
-                        'hide_empty' => true
-                    ));
-                    
-                    foreach ($categories as $category) {
-                        $is_active = isset($_GET['category']) && $_GET['category'] == $category->slug ? 'active' : '';
-                        $category_link = add_query_arg('category', $category->slug, get_post_type_archive_link('post'));
-                        echo '<a href="'.get_permalink(get_page_by_path('news-list')). esc_url('?category='.$category->slug) . '" class="' . $is_active . '">';
-                        echo esc_html($category->name);
-                        echo '</a>';
-                    }
-                    ?>
-                </div>
+            <div class="filter-tags">
+                <a href="<?php echo get_permalink(get_page_by_path('news-list')); ?>" class="<?php echo !isset($_GET['category']) ? 'active' : ''; ?>">
+                    すべて
+                </a>
+                <?php
+                // カテゴリーフィルターを動的に生成
+                $categories = get_categories(array(
+                    'orderby' => 'name',
+                    'order'   => 'ASC',
+                    'hide_empty' => true
+                ));
+                
+                foreach ($categories as $category) {
+                    $is_active = isset($_GET['category']) && $_GET['category'] == $category->slug ? 'active' : '';
+                    $category_link = add_query_arg('category', $category->slug, get_post_type_archive_link('post'));
+                    echo '<a href="'.get_permalink(get_page_by_path('news-list')). esc_url('?category='.$category->slug) . '" class="' . $is_active . '">';
+                    echo esc_html($category->name);
+                    echo '</a>';
+                }
+                ?>
             </div>
             
             <div class="news-container">
