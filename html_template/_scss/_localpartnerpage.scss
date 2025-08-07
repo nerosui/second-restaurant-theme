@@ -101,67 +101,6 @@
             margin-bottom: 0;
         }
 
-        // Filter Bar
-        .filter-bar {
-            background-color: #ffffff;
-            border: 1px solid #e65d3e;
-            padding: 31.63px 52px 43.37px;
-            margin-bottom: 92px;
-            display: flex;
-            align-items: flex-start;
-            gap: 40px;
-            width: 100%;
-
-            @media (max-width: 768px) {
-                flex-direction: column;
-                gap: 20px;
-                padding: 20px;
-            }
-
-            .filter-title {
-                display: flex;
-                align-items: center;
-                gap: 12px;
-                flex-shrink: 0;
-
-                img {
-                    width: 20px;
-                    height: 20px;
-                }
-
-                span {
-                    font-weight: 700;
-                    font-size: 16px;
-                    line-height: 1.5;
-                    color: #e65d3e;
-                }
-            }
-
-            .filter-tags {
-                display: flex;
-                flex-wrap: wrap;
-                gap: 15px 14px;
-                align-items: center;
-
-                .tag {
-                    font-weight: 500;
-                    font-size: 16px;
-                    line-height: 1.5;
-                    color: #8e8e8e;
-                    text-decoration: none;
-                    transition: color 0.3s ease;
-
-                    &.active {
-                        color: #303030;
-                        font-weight: 500;
-                    }
-
-                    &:hover {
-                        color: #303030;
-                    }
-                }
-            }
-        }
 
         // Partner Grid
         .partner-grid {

@@ -151,6 +151,29 @@ document.addEventListener('DOMContentLoaded', function() {
             this.style.transform = 'translateX(0)';
         });
     });
+
+    // フィルタータグの「もっと見る」機能
+    const filterTagsToggle = document.querySelector('.filter-tags-toggle');
+    const filterTags = document.querySelector('.filter-tags');
+    
+    if (filterTagsToggle && filterTags) {
+        filterTagsToggle.addEventListener('click', function() {
+            const toggleText = this.querySelector('.toggle-text');
+            const toggleIcon = this.querySelector('.toggle-icon');
+            
+            if (filterTags.classList.contains('expanded')) {
+                // 閉じる
+                filterTags.classList.remove('expanded');
+                toggleText.textContent = 'もっと見る';
+                toggleIcon.classList.remove('rotated');
+            } else {
+                // 開く
+                filterTags.classList.add('expanded');
+                toggleText.textContent = '閉じる';
+                toggleIcon.classList.add('rotated');
+            }
+        });
+    }
 });
 
 // CSSアニメーションの定義を追加

@@ -50,6 +50,12 @@
                     endif;
                     ?>
                 </div>
+                <button class="filter-tags-toggle" type="button">
+                    <span class="toggle-text">もっと見る</span>
+                    <svg class="toggle-icon" width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1 1L6 6L11 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
             </div>
 
             <div class="partner-grid">
@@ -69,8 +75,8 @@
                                 <span class="partner-location">
                                     <?php echo esc_html(get_post_meta(get_the_ID(), 'location', true) ?: '地域未設定'); ?>
                                 </span>
-                                <h3 class="partner-name">
-                                    <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+                                <h3 class="partner-name ">
+                                    <a href="<?php the_permalink(); ?>" class="title-underline"><?php the_title(); ?></a>
                                 </h3>
                                 <p class="partner-tags">
                                     <?php
