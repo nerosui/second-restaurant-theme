@@ -309,7 +309,7 @@ body {
   text-decoration: underline;
   text-underline-offset: 14px;
   text-decoration-thickness: 2px;
-  color: var(--primary-color);
+  text-decoration-color: var(--primary-color);
   background-image: linear-gradient(to right, #f6d1c9 40%, #f6d1c9 20%);
   background-size: 100% 2px;
   background-repeat: no-repeat;
@@ -4579,10 +4579,6 @@ img {
   flex-shrink: 0;
 }
 
-#project-page .project-intro,
-#news-page .project-intro {
-  padding: 40px 0 80px;
-}
 #project-page .filter-tags,
 #news-page .filter-tags {
   display: flex;
