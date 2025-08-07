@@ -35,7 +35,7 @@
             z-index: 2;
             padding-bottom: 80px;
 
-            @media (max-width: 390px) {
+            @media (max-width: 450px) {
                 padding-bottom: 40px;
             }
         }
@@ -45,7 +45,7 @@
             padding: 0 40px;
             margin: 0 auto;
 
-            @media (max-width: 390px) {
+            @media (max-width: 450px) {
                 margin-top: -40px;
                 max-width: 100%;
                 padding: 0 20px;
@@ -61,7 +61,7 @@
             margin-bottom: 16px;
         }
 
-        @media (max-width: 390px) {
+        @media (max-width: 450px) {
             .hero-title {
                 font-size: 32px;
             }
@@ -76,7 +76,7 @@
             margin-bottom: 24px;
         }
 
-        @media (max-width: 390px) {
+        @media (max-width: 450px) {
             .hero-subtitle {
                 font-size: 20px;
                 line-height: 1.8;
@@ -92,7 +92,7 @@
             max-width: 1007px;
         }
 
-        @media (max-width: 390px) {
+        @media (max-width: 450px) {
             .hero-description {
                 font-size: 14px;
                 line-height: 1.5;

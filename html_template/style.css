@@ -2542,7 +2542,7 @@ body.admin-bar .menu-drawer {
   z-index: 2;
   padding-bottom: 80px;
 }
-@media (max-width: 390px) {
+@media (max-width: 450px) {
   #about-page .hero-section .hero-container,
   #join-page .hero-section .hero-container {
     padding-bottom: 40px;
@@ -2554,7 +2554,7 @@ body.admin-bar .menu-drawer {
   padding: 0 40px;
   margin: 0 auto;
 }
-@media (max-width: 390px) {
+@media (max-width: 450px) {
   #about-page .hero-section .hero-content,
   #join-page .hero-section .hero-content {
     margin-top: -40px;
@@ -2571,7 +2571,7 @@ body.admin-bar .menu-drawer {
   color: var(--white);
   margin-bottom: 16px;
 }
-@media (max-width: 390px) {
+@media (max-width: 450px) {
   #about-page .hero-section .hero-title,
   #join-page .hero-section .hero-title {
     font-size: 32px;
@@ -2586,7 +2586,7 @@ body.admin-bar .menu-drawer {
   color: var(--white);
   margin-bottom: 24px;
 }
-@media (max-width: 390px) {
+@media (max-width: 450px) {
   #about-page .hero-section .hero-subtitle,
   #join-page .hero-section .hero-subtitle {
     font-size: 20px;
@@ -2602,7 +2602,7 @@ body.admin-bar .menu-drawer {
   color: var(--white);
   max-width: 1007px;
 }
-@media (max-width: 390px) {
+@media (max-width: 450px) {
   #about-page .hero-section .hero-description,
   #join-page .hero-section .hero-description {
     font-size: 14px;
@@ -3064,7 +3064,6 @@ body.admin-bar .menu-drawer {
   #join-page .section-intro {
     font-size: 16px;
     margin-bottom: 40px;
-    text-align: center;
   }
 }
 
@@ -3083,13 +3082,14 @@ body.admin-bar .menu-drawer {
   align-items: stretch;
   justify-content: space-between;
   gap: 5rem;
-  margin-bottom: 2rem;
+  margin-bottom: 5rem;
 }
 @media screen and (max-width: 768px) {
   .join-benefits .benefit-item {
     flex-direction: column;
     align-items: center;
     gap: 0;
+    margin-bottom: 40px;
   }
 }
 .join-benefits .benefit-item .benefit-image {
@@ -3177,12 +3177,12 @@ body.admin-bar .menu-drawer {
 }
 
 .join-roles {
-  padding: 64px 0 120px;
+  padding: 80px 0 120px;
   background-color: #ffeeea;
 }
 @media (max-width: 768px) {
   .join-roles {
-    padding: 50px 0 80px;
+    padding: 40px 0 80px;
   }
 }
 .join-roles .roles-content {
@@ -3190,13 +3190,6 @@ body.admin-bar .menu-drawer {
   flex-direction: column;
   justify-content: space-between;
   gap: 40px;
-  margin-top: 118px;
-}
-@media (max-width: 768px) {
-  .join-roles .roles-content {
-    gap: 50px;
-    margin-top: 60px;
-  }
 }
 .join-roles .role-item {
   flex: 1;

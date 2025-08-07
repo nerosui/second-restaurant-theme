@@ -43,7 +43,6 @@
     @media (max-width: 768px) {
       font-size: 16px;
       margin-bottom: 40px;
-      text-align: center;
     }
   }
 }
@@ -65,12 +64,13 @@
     align-items: stretch;
     justify-content: space-between;
     gap: 5rem;
-    margin-bottom: 2rem;
+    margin-bottom: 5rem;
 
     @media screen and (max-width: 768px) {
       flex-direction: column;
       align-items: center;
       gap: 0;
+      margin-bottom: 40px;
     }
 
     .benefit-image {
@@ -160,24 +160,19 @@
 // ROLES SECTION
 // ========================================
 .join-roles {
-  padding: 64px 0 120px;
+  padding: 80px 0 120px;
   background-color: #ffeeea;
 
   @media (max-width: 768px) {
-    padding: 50px 0 80px;
+    padding: 40px 0 80px;
   }
+
 
   .roles-content {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     gap: 40px;
-    margin-top: 118px;
-
-    @media (max-width: 768px) {
-      gap: 50px;
-      margin-top: 60px;
-    }
   }
 
   .role-item {
