@@ -12,7 +12,7 @@
     </section>
 
     <section class="sr-cta-banner">
-        <div class="sr-cta-content">
+        <a href="<?php echo esc_url(home_url('/join')); ?>" class="sr-cta-content">
             <div class="sr-cta-image">
                 <img src="<?php echo esc_url(get_stylesheet_directory_uri()); ?>/images/joinbanner_local.jpg" alt="Join Local Partner">
             </div>
@@ -23,7 +23,7 @@
                     <img src="<?php echo esc_url(get_stylesheet_directory_uri()); ?>/images/arrow-button.svg" alt="Arrow">
                 </div>
             </div>
-        </div>
+        </a>
     </section>
 
     <section class="local-partner-list">
