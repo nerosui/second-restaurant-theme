@@ -93,7 +93,7 @@
             }
 
             @media (max-width: 480px) {
-                grid-template-columns: 1fr;
+                grid-template-columns: repeat(2, 1fr);
             }
 
             .chef-card {
@@ -166,7 +166,10 @@
         }
 
         .chef-intro {
-            padding: 40px 0 80px;
+            padding: 40px 0 0;
+            .container{
+                margin: 0 auto;
+            }
 
             .section-title {
                 font-size: 20px;
@@ -185,12 +188,6 @@
                 margin-bottom: 40px;
 
                 .chef-card {
-                    height: 240px;
-
-                    .chef-image {
-                        height: 150px;
-                    }
-
                     .chef-info {
                         height: 90px;
                         padding: 10px;

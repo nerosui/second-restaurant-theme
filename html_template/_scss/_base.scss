@@ -139,6 +139,8 @@ body {
   padding: 0 40px;
   @media (max-width: 390px) {
     padding: 0 20px;
+    margin: 0 auto 2.5rem;
+
   }
   @media (min-width: 391px) and (max-width: 768px) {
     padding: 0 30px;
@@ -459,6 +461,8 @@ body {
     }
 
     @media (max-width: 768px) {
+      margin: 2.5rem auto;
+
       .sr-cta-content {
         flex-direction: column;
         height: auto;

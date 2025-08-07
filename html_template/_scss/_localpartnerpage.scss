@@ -1,5 +1,4 @@
 #local-partner-page {
-
     // Page Hero Section
     .page-hero {
         background-color: #ffffff;
@@ -34,7 +33,10 @@
     // Local Partner Intro Section
     .local-partner-intro {
         background-color: #ffffff;
-        padding:40px 0 0;
+        padding: 40px 0 0;
+        .container {
+            margin: 0 auto;
+        }
 
         .section-title {
             font-weight: 700;
@@ -100,7 +102,6 @@
             align-items: center;
             margin-bottom: 0;
         }
-
 
         // Partner Grid
         .partner-grid {
@@ -200,6 +201,5 @@
                 }
             }
         }
-
     }
 }

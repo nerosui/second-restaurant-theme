@@ -142,6 +142,7 @@ body {
 @media (max-width: 390px) {
   .container:not(#container) {
     padding: 0 20px;
+    margin: 0 auto 2.5rem;
   }
 }
 @media (min-width: 391px) and (max-width: 768px) {
@@ -467,6 +468,10 @@ body {
   height: 100%;
 }
 @media (max-width: 768px) {
+  #local-partner-page .sr-cta-banner,
+  #chef-page .sr-cta-banner {
+    margin: 2.5rem auto;
+  }
   #local-partner-page .sr-cta-banner .sr-cta-content,
   #chef-page .sr-cta-banner .sr-cta-content {
     flex-direction: column;
@@ -3641,6 +3646,9 @@ img {
   background-color: #ffffff;
   padding: 40px 0 0;
 }
+#local-partner-page .local-partner-intro .container {
+  margin: 0 auto;
+}
 #local-partner-page .local-partner-intro .section-title {
   font-weight: 700;
   font-size: 32px;
@@ -3886,7 +3894,7 @@ img {
 }
 @media (max-width: 480px) {
   #chef-page .chef-list .chef-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 #chef-page .chef-list .chef-grid .chef-card {
@@ -3941,7 +3949,10 @@ img {
     font-size: 28px;
   }
   #chef-page .chef-intro {
-    padding: 40px 0 80px;
+    padding: 40px 0 0;
+  }
+  #chef-page .chef-intro .container {
+    margin: 0 auto;
   }
   #chef-page .chef-intro .section-title {
     font-size: 20px;
@@ -3956,12 +3967,6 @@ img {
   #chef-page .chef-list .chef-grid {
     gap: 15px;
     margin-bottom: 40px;
-  }
-  #chef-page .chef-list .chef-grid .chef-card {
-    height: 240px;
-  }
-  #chef-page .chef-list .chef-grid .chef-card .chef-image {
-    height: 150px;
   }
   #chef-page .chef-list .chef-grid .chef-card .chef-info {
     height: 90px;
