@@ -298,9 +298,9 @@ if (!defined('ABSPATH')) exit; ?>
                                     <h4 class="project-title title-underline"><?php the_title(); ?></h4>
                                     <div class="project-tags">
                                         <?php
-                                        $tags = get_the_tags();
-                                        if ($tags) {
-                                            foreach ($tags as $tag) {
+                                        $tags = get_the_terms( get_the_ID(), 'project_category' );
+                                        if ( !empty( $tags ) ) {
+                                            foreach ( $tags as $tag ) {
                                                 echo '<span class="tag">' . esc_html($tag->name) . '</span>';
                                             }
                                         }
@@ -312,25 +312,7 @@ if (!defined('ABSPATH')) exit; ?>
                     <?php
                     endwhile;
                     wp_reset_postdata();
-                else :
                     ?>
-                    <!-- フォールバック用のダミーデータ -->
-                    <div class="project-card">
-                        <div class="pick-up-badge">
-                            <span>PICK UP</span>
-                        </div>
-                        <div class="project-image">
-                            <img src="<?php echo esc_url(get_stylesheet_directory_uri()); ?>/images/project-dummy-1.png" alt="プロジェクト画像">
-                        </div>
-                        <div class="project-info">
-                            <div class="project-date">2025/00/00 - 2025/00/00</div>
-                            <h4 class="project-title">開催プロジェクトダミーのタイトルです</h4>
-                            <div class="project-tags">
-                                <span class="tag">地域パートナー名</span>
-                                <span class="tag">シェフ名</span>
-                            </div>
-                        </div>
-                    </div>
                 <?php endif; ?>
             </div>
             <a href="<?php echo get_post_type_archive_link('project'); ?>" class="section-button">VIEW LIST</a>

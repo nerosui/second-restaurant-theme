@@ -45,7 +45,9 @@
       </button>
 
       <div class="language-selector">
-        <button class="language-btn">Language</button>
+        <button class="language-btn">
+          <?php echo do_shortcode('[gtranslate]'); ?>
+        </button>
       </div>
       <div class="drawer-logo">
         <img src="<?php echo esc_url(get_stylesheet_directory_uri()); ?>/images/menu-logo.svg" alt="Second Restaurant Logo" class="drawer-logo-img" />

@@ -6,7 +6,7 @@
   section:not(.hero-section){
     padding: 120px 0 40px;
     @media (max-width: 390px) {
-      padding: 80px 0 0;
+      padding: 80px 0 40px;
     }
   }
 
@@ -268,8 +268,10 @@
       border-radius: 12px;
       background: #fff;
 
-      @media (max-width: 390px) {
-        padding: 30px 20px;
+      @media (max-width: 450px) {
+        flex-direction: row;
+        justify-content: space-around;
+        padding: 20px;
       }
     }
 
@@ -277,6 +279,9 @@
       width: 130px;
       height: 130px;
       margin-bottom: 12px;
+      @media (max-width: 450px) {
+        margin-bottom: 0;
+      }
 
       img {
         width: 100%;
@@ -291,43 +296,12 @@
       color: var(--primary-color);
       text-align: center;
 
-      @media (max-width: 390px) {
-        font-size: 16px;
+      @media (max-width: 450px) {
+        font-size: 18px;
       }
     }
   }
 
-  .project-examples {
-    background-color: #f8f7ee;
-
-    .container {
-      margin: 0 auto;
-      padding: 0 10px 80px;
-      @media screen and (max-width: 390px) {
-        padding: 0 10px 40px;
-      }
-    }
-
-    @media screen and (max-width: 390px) {
-      .blogcard-snippet.internal-blogcard-snippet {
-        display: none;
-      }
-    }
-    .blogcard-wrap {
-      width: 100%;
-      .blogcard {
-        border-color: #8e8e8e;
-      }
-      .internal-blogcard-wrap.a-wrap.cf {
-        background-color: #f5f5f5;
-      }
-      .blogcard-thumbnail {
-          margin-top: 0;
-          border-radius: 4px 0 0 4px;
-          overflow: hidden;
-      }
-    }
-  }
 
   /* // Responsive adjustments */
   @media (max-width: 390px) {

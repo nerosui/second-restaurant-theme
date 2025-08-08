@@ -135,6 +135,7 @@
 
   .partner-link {
     position: relative;
+    max-width: 100%;
     &::before {
       position: absolute;
       top: 0;
@@ -234,6 +235,10 @@
         @media (max-width: 768px) {
           font-size: 20px;
           margin-bottom: 15px;
+          max-width: 100%;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
         }
       }
 

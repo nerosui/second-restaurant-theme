@@ -19,21 +19,19 @@ if (!defined('ABSPATH')) exit; ?>
 
     <section class="bg-list">
         <div class="container">
-            <div class="filter-bar">
-                <div class="filter-tags">
-                    <a href="<?php echo get_post_type_archive_link('project'); ?>" class="<?php echo !isset($_GET['filter']) ? 'active' : ''; ?>">
-                        すべて
-                    </a>
-                    <a href="<?php echo add_query_arg('filter', 'upcoming', get_post_type_archive_link('project')); ?>" class="<?php echo (isset($_GET['filter']) && $_GET['filter'] == 'upcoming') ? 'active' : ''; ?>">
-                        近日開催
-                    </a>
-                    <a href="<?php echo add_query_arg('filter', 'current', get_post_type_archive_link('project')); ?>" class="<?php echo (isset($_GET['filter']) && $_GET['filter'] == 'current') ? 'active' : ''; ?>">
-                        開催中
-                    </a>
-                    <a href="<?php echo add_query_arg('filter', 'ended', get_post_type_archive_link('project')); ?>" class="<?php echo (isset($_GET['filter']) && $_GET['filter'] == 'ended') ? 'active' : ''; ?>">
-                        終了
-                    </a>
-                </div>
+            <div class="filter-tags">
+                <a href="<?php echo get_post_type_archive_link('project'); ?>" class="<?php echo !isset($_GET['filter']) ? 'active' : ''; ?>">
+                    すべて
+                </a>
+                <a href="<?php echo add_query_arg('filter', 'upcoming', get_post_type_archive_link('project')); ?>" class="<?php echo (isset($_GET['filter']) && $_GET['filter'] == 'upcoming') ? 'active' : ''; ?>">
+                    近日開催
+                </a>
+                <a href="<?php echo add_query_arg('filter', 'current', get_post_type_archive_link('project')); ?>" class="<?php echo (isset($_GET['filter']) && $_GET['filter'] == 'current') ? 'active' : ''; ?>">
+                    開催中
+                </a>
+                <a href="<?php echo add_query_arg('filter', 'ended', get_post_type_archive_link('project')); ?>" class="<?php echo (isset($_GET['filter']) && $_GET['filter'] == 'ended') ? 'active' : ''; ?>">
+                    終了
+                </a>
             </div>
 
             <section class="project">

@@ -1,6 +1,11 @@
 #project-page,
 #news-page {
     // Base container styles
+    padding-top: 40px;
+    @media screen and (max-width: 390px) {
+        padding-top: 24px;
+        
+    }
     .filter-tags {
         display: flex;
         flex-wrap: wrap;

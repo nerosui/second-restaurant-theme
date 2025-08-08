@@ -4,29 +4,33 @@
     .hero-section {
         position: relative;
         background: var(--primary-color);
-        margin-top: 170px;
-        
-        @media (max-width: 390px) {
+        margin-top: 168px;
+
+        @media (max-width: 768px) {
             padding: 0;
-            margin-top: 150px;
+            margin-top: 88px;
         }
 
+        @media (max-width: 390px) {
+            padding: 0;
+            margin-top: 68px;
+        }
         .hero-background img {
             position: relative;
             top: -80px;
             left: 80px;
             text-align: right;
             width: calc(100vw - 80px);
-            height: 100%;
-            max-height: 560px;
+            height: 560px;
             object-fit: cover;
             z-index: 1;
 
-
-            @media (max-width: 600px) {
+            @media (max-width: 768px) {
+                top: 0;
                 left: 0;
                 width: 100%;
                 aspect-ratio: 1 / 1;
+                height: auto;
             }
         }
 
@@ -42,11 +46,11 @@
 
         .hero-content {
             max-width: 960px;
-            padding: 0 40px;
+            padding: 0 40px 0 80px;
             margin: 0 auto;
 
             @media (max-width: 450px) {
-                margin-top: -40px;
+                margin-top: 0;
                 max-width: 100%;
                 padding: 0 20px;
             }
@@ -59,11 +63,12 @@
             line-height: 1.5;
             color: var(--white);
             margin-bottom: 16px;
-        }
-
-        @media (max-width: 450px) {
-            .hero-title {
+            @media (max-width: 768px) {
+                margin-top: 40px;
+            }
+            @media (max-width: 450px) {
                 font-size: 32px;
+                margin-top: 24px;
             }
         }
 
