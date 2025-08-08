@@ -10,7 +10,7 @@
     .example-image {
         width: clamp(120px, 40vw, 220px);
         max-width: 100%;
-        background-image: url("images/example-1.jpg");
+        background-image: url("../images/example-1.jpg");
         background-size: cover;
         background-position: center;
         flex-shrink: 0;

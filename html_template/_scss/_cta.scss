@@ -44,7 +44,7 @@
   }
   .join-button {
     &::before {
-      background-image: url("images/cta_join_button.jpg");
+      background-image: url("../images/cta_join_button.jpg");
     }
     &:hover {
       &::before {
@@ -54,7 +54,7 @@
   }
   .contact-button {
     &::before {
-      background-image: url("images/cta_contact_button.jpg");
+      background-image: url("../images/cta_contact_button.jpg");
     }
   }
   .button-content {

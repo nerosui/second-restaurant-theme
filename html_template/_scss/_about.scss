@@ -44,7 +44,7 @@
       width: clamp(300px, 100vw - 60px, 800px);
       max-width: calc(100vw - 60px);
       height: 600px;
-      background: url("./images/map.png") center/contain no-repeat;
+      background: url("../images/map.png") center/contain no-repeat;
       background-size: contain;
       transform: translate(-25%, -50%);
       z-index: 1;
@@ -100,7 +100,7 @@
     width: 180px;
     height: 150px;
     margin: 0 auto 64px;
-    background: url("./images/illust.png") center/contain no-repeat;
+    background: url("../images/illust.png") center/contain no-repeat;
     border-radius: 8px;
 
     @media (max-width: 390px) {
