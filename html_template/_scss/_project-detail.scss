@@ -162,13 +162,17 @@
                 @media (max-width: 768px) {
                     font-size: 14px;
                 }
-                a {
+                a:not(.blogcard-wrap) {
                     color: var(--primary-color);
                     text-decoration: none;
                     margin: 0;
                     &:hover {
                         text-decoration: underline;
                     }
+                }
+                a.blogcard-wrap{
+                    width: 100%;
+                    margin: 0 auto;
                 }
             }
         }
