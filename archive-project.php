@@ -123,7 +123,7 @@ if (!defined('ABSPATH')) exit; ?>
                                 </div>
                                 <div class="project-info">
                                     <div class="project-date"><?php echo esc_html($date_range); ?></div>
-                                    <h4 class="project-title"><?php the_title(); ?></h4>
+                                    <h4 class="project-title title-underline"><?php the_title(); ?></h4>
                                     <div class="project-tags">
                                         <?php
                                         // プロジェクトカテゴリーを取得

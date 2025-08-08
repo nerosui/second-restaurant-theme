@@ -108,7 +108,7 @@ if (!defined('ABSPATH')) exit; ?>
                             width="80"
                             height="80" />
                     </div>
-                    <h3 class="vision-title">多拠点レストラン文化<br />の創出</h3>
+                    <h3 class="vision-title">多拠点レストラン文化<br class="hiddenSP"/>の創出</h3>
                 </div>
 
                 <div class="vision-card">
@@ -119,7 +119,7 @@ if (!defined('ABSPATH')) exit; ?>
                             width="80"
                             height="80" />
                     </div>
-                    <h3 class="vision-title">料理人の挑戦・育成の<br />機会増加</h3>
+                    <h3 class="vision-title">料理人の挑戦・育成の<br class="hiddenSP"/>機会増加</h3>
                 </div>
 
                 <div class="vision-card">
@@ -130,7 +130,7 @@ if (!defined('ABSPATH')) exit; ?>
                             width="80"
                             height="80" />
                     </div>
-                    <h3 class="vision-title">「美味しい時間」による<br />地域活性</h3>
+                    <h3 class="vision-title">「美味しい時間」による<br class="hiddenSP"/>地域活性</h3>
                 </div>
             </div>
         </div>

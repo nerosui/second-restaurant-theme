@@ -14,7 +14,7 @@ if (!defined('ABSPATH')) exit; ?>
         <div class="article-container">
             <!-- プロジェクトタイトル -->
             <header class="project-header">
-                <h2 class="project-title"><?php the_title(); ?></h2>
+                <h2 class="project-title title-underline"><?php the_title(); ?></h2>
             </header>
 
             <!-- プロジェクトコンテンツ -->

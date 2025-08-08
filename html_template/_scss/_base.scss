@@ -204,7 +204,7 @@ p{
 
   /* // レスポンシブ対応 */
   @media (max-width: 390px) {
-    font-size: 20px;
+    font-size: 16px;
     line-height: 1.5;
     margin-bottom: 40px;
   }
@@ -311,7 +311,7 @@ p{
   font-size: 32px;
   line-height: 36px;
   border-bottom: 3px solid transparent;
-  background-image: linear-gradient(to right, var(--primary-color) 40%, #f6d1c9 20%);
+  background-image: linear-gradient(to right, var(--primary-color) 20%, #f6d1c9 40%);
   background-size: 100% 2px;
   background-repeat: no-repeat;
   background-position: bottom;
@@ -709,4 +709,8 @@ p{
 
 .partner-grid .swiper-pagination-bullet{
   border-radius: 100%;
+}
+
+#go-to-top{
+  display: none;
 }

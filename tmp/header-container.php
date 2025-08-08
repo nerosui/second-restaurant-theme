@@ -73,7 +73,7 @@
           <a href="/privacy-policy">プライバシーポリシー</a>
         </div>
         <div class="drawer-buttons">
-          <a href="/join" class="drawer-btn join-btn">JOIN</a>
+          <a href="/join" class="drawer-btn join-btn">JOIN US</a>
           <a href="/contact" class="drawer-btn contact-btn">CONTACT</a>
         </div>
       </div>
