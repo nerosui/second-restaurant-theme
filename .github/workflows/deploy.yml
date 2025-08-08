@@ -17,18 +17,8 @@ jobs:
         - name: rsync deployments
           uses: burnett01/rsync-deployments@5.1
           with:
-            switches: -avz --delete
+            switches: -avz --delete --exclude='.git' --exclude='.github' --exclude='node_modules' --exclude='vendor' --exclude='.DS_Store' --exclude='.vscode' --exclude='.idea' --exclude='.sass-cache' --exclude='html_template'
             path: ./
-            excludes: |
-              .git
-              .github
-              node_modules
-              vendor
-              .DS_Store
-              .vscode
-              .idea
-              .sass-cache
-              html_template
             remote_path: ${{ secrets.REMOTE_PATH }}
             remote_host: ${{ secrets.REMOTE_HOST }}
             remote_user: ${{ secrets.REMOTE_USER }}
