@@ -8,8 +8,8 @@ add_editor_style();
 
 function enqueue_child_theme_styles()
 {
-    wp_enqueue_style('child-style', get_stylesheet_directory_uri() . '/html_template/style.css', array('cocoon-style'));
-    // wp_enqueue_style('child-style', get_stylesheet_directory_uri() . '/css/style.min.css', array('cocoon-style'));
+    // wp_enqueue_style('child-style', get_stylesheet_directory_uri() . '/html_template/style.css', array('cocoon-style'));
+    wp_enqueue_style('child-style', get_stylesheet_directory_uri() . '/css/style.min.css', array('cocoon-style'));
     wp_enqueue_script('child-script', get_stylesheet_directory_uri() . '/html_template/script.js', array('jquery'), '1.0.0', true);
 
     // Swiperのスタイルとスクリプトを読み込む

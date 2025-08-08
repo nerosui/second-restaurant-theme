@@ -2625,8 +2625,8 @@ body.admin-bar .menu-drawer {
 }
 #about-page .hero-section .hero-content,
 #join-page .hero-section .hero-content {
-  max-width: 960px;
-  padding: 0 40px 0 80px;
+  max-width: 1040px;
+  padding: 0 40px;
   margin: 0 auto;
 }
 @media (max-width: 450px) {
