@@ -89,7 +89,7 @@ get_header(); ?>
                                     <h3 class="chef-name"><?php the_title(); ?></h3>
                                     <p class="chef-title">
                                         <?php 
-                                        $chef_title = get_post_meta(get_the_ID(), 'chef_title', true);
+                                        $chef_title = get_post_meta(get_the_ID(), 'position', true);
                                         echo $chef_title ? esc_html($chef_title) : '料理人';
                                         ?>
                                     </p>
