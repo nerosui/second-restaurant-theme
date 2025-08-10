@@ -81,7 +81,7 @@ get_header(); ?>
                                         the_post_thumbnail('medium', array('alt' => get_the_title()));
                                     } else {
                                         // デフォルト画像を表示
-                                        echo '<img src="' . get_stylesheet_directory_uri() . '/html_template/images/chef-profile.jpg" alt="' . get_the_title() . '">';
+                                        echo '<img src="' . get_stylesheet_directory_uri() . '/html_template/images/comingsoon_chef.png" alt="' . get_the_title() . '">';
                                     }
                                     ?>
                                 </div>

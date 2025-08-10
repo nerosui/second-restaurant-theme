@@ -185,9 +185,7 @@ if (!defined('ABSPATH')) exit; ?>
                             <?php
                             endwhile;
                             wp_reset_postdata();
-                        else :
-                            ?>
-                        <?php endif; ?>
+                        endif; ?>
                     </div>
                     <!-- Add Pagination -->
                     <div class="swiper-pagination"></div>
@@ -229,7 +227,7 @@ if (!defined('ABSPATH')) exit; ?>
                             <?php if (has_post_thumbnail()) : ?>
                                 <?php the_post_thumbnail('medium', array('alt' => get_the_title())); ?>
                             <?php else : ?>
-                                <img src="<?php echo esc_url(get_stylesheet_directory_uri()); ?>/images/chef-1.jpg" alt="<?php the_title_attribute(); ?>" />
+                                <img src="<?php echo esc_url(get_stylesheet_directory_uri()); ?>/images/comingsoon_chef.png" alt="<?php the_title_attribute(); ?>" />
                             <?php endif; ?>
                         </div>
                         <div class="chef-info">
@@ -240,9 +238,7 @@ if (!defined('ABSPATH')) exit; ?>
                     <?php
                     endwhile;
                     wp_reset_postdata();
-                else :
-                    ?>
-                <?php endif; ?>
+                endif; ?>
             </div>
             <a href="<?php echo get_post_type_archive_link('chef'); ?>" class="section-button">VIEW LIST</a>
         </div>
@@ -264,9 +260,6 @@ if (!defined('ABSPATH')) exit; ?>
                     'posts_per_page' => 3,
                     'post_status' => 'publish'
                 ));
-
-
-
                 if ($projects->have_posts()) :
                     while ($projects->have_posts()) : $projects->the_post();
                         $start_date = get_post_meta(get_the_ID(), 'start_date', true);
@@ -290,7 +283,7 @@ if (!defined('ABSPATH')) exit; ?>
                                     <?php if (has_post_thumbnail()) : ?>
                                         <?php the_post_thumbnail('medium', array('alt' => get_the_title())); ?>
                                     <?php else : ?>
-                                        <img src="<?php echo esc_url(get_stylesheet_directory_uri()); ?>/images/project-dummy-<?php echo $i; ?>.png" alt="<?php the_title_attribute(); ?>">
+                                        <img src="<?php echo esc_url(get_stylesheet_directory_uri()); ?>/images/comingsoon_localproject.png" alt="<?php the_title_attribute(); ?>">
                                     <?php endif; ?>
                                 </div>
                                 <div class="project-info">
@@ -312,8 +305,7 @@ if (!defined('ABSPATH')) exit; ?>
                     <?php
                     endwhile;
                     wp_reset_postdata();
-                    ?>
-                <?php endif; ?>
+                endif; ?>
             </div>
             <a href="<?php echo get_post_type_archive_link('project'); ?>" class="section-button">VIEW LIST</a>
         </div>
@@ -350,15 +342,7 @@ if (!defined('ABSPATH')) exit; ?>
                         <?php
                         endwhile;
                         wp_reset_postdata();
-                    else :
-                        ?>
-                        <!-- フォールバック用のダミーデータ -->
-                        <a href="#" class="news-item">
-                            <span class="news-date">2025/00/00</span>
-                            <span class="news-category">ニュースリリース</span>
-                            <h4 class="news-title">ダミーのお知らせタイトルです。新たな地域拠点が参画しました。ダミーのお知らせタイトルです。</h4>
-                        </a>
-                    <?php endif; ?>
+                    endif; ?>
                 </div>
 
                 <a href="<?php echo get_post_type_archive_link('post'); ?>" class="section-button hiddenPC">VIEW LIST</a>

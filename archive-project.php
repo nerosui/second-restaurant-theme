@@ -118,7 +118,7 @@ if (!defined('ABSPATH')) exit; ?>
                                     <?php if (has_post_thumbnail()) : ?>
                                         <?php the_post_thumbnail('medium', array('alt' => get_the_title())); ?>
                                     <?php else : ?>
-                                        <img src="<?php echo esc_url(get_stylesheet_directory_uri()); ?>/images/project-dummy-<?php echo (($i % 3) + 1); ?>.png" alt="<?php the_title_attribute(); ?>">
+                                        <img src="<?php echo esc_url(get_stylesheet_directory_uri()); ?>/images/comingsoon_localproject.png" alt="<?php the_title_attribute(); ?>">
                                     <?php endif; ?>
                                 </div>
                                 <div class="project-info">
@@ -145,9 +145,7 @@ if (!defined('ABSPATH')) exit; ?>
                                     </div>
                                 </div>
                             </a>
-                        <?php
-                            endwhile;
-                        ?>
+                        <?php endwhile; ?>
                         <?php endif; ?>
                     </div>
                 </div>
