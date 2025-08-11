@@ -790,7 +790,6 @@ function setup_default_news_categories() {
     $default_categories = array(
         'news-release' => 'ニュースリリース',
         'media' => 'メディア掲載',
-        'other' => 'その他'
     );
     
     foreach ($default_categories as $slug => $name) {
