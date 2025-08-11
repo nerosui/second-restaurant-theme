@@ -56,6 +56,41 @@ function sr_customize_register($wp_customize) {
             'description' => $i === 1 ? '画像が設定されていない場合はデフォルト画像が表示されます' : '',
         )));
     }
+
+    // 仮エントリーフォームセクションを追加
+    $wp_customize->add_section('sr_entry_forms', array(
+        'title' => '仮エントリーフォーム設定',
+        'description' => 'JOIN USページの仮エントリーフォームのリンク先を設定できます',
+        'priority' => 35,
+    ));
+
+    // 地域パートナー仮エントリーフォームURL
+    $wp_customize->add_setting('sr_local_partner_form_url', array(
+        'default' => '',
+        'sanitize_callback' => 'esc_url_raw',
+    ));
+
+    $wp_customize->add_control('sr_local_partner_form_url', array(
+        'label' => '地域パートナー仮エントリーフォームURL',
+        'section' => 'sr_entry_forms',
+        'settings' => 'sr_local_partner_form_url',
+        'type' => 'url',
+        'description' => '地域パートナー用の仮エントリーフォームのURLを入力してください',
+    ));
+
+    // 旅するシェフ仮エントリーフォームURL
+    $wp_customize->add_setting('sr_traveling_chef_form_url', array(
+        'default' => '',
+        'sanitize_callback' => 'esc_url_raw',
+    ));
+
+    $wp_customize->add_control('sr_traveling_chef_form_url', array(
+        'label' => '旅するシェフ仮エントリーフォームURL',
+        'section' => 'sr_entry_forms',
+        'settings' => 'sr_traveling_chef_form_url',
+        'type' => 'url',
+        'description' => '旅するシェフ用の仮エントリーフォームのURLを入力してください',
+    ));
 }
 add_action('customize_register', 'sr_customize_register');
 
@@ -92,6 +127,14 @@ function get_sr_hero_images() {
     }
 
     return $hero_images;
+}
+
+// 仮エントリーフォームのURLを取得する関数
+function get_sr_entry_form_urls() {
+    return array(
+        'local_partner' => get_theme_mod('sr_local_partner_form_url', '#'),
+        'traveling_chef' => get_theme_mod('sr_traveling_chef_form_url', '#'),
+    );
 }
 
 // デフォルト投稿タイプのラベルを「ニュース」に変更

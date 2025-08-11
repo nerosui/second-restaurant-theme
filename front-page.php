@@ -149,46 +149,73 @@ if (!defined('ABSPATH')) exit; ?>
                         <?php
                         $local_partners = new WP_Query(array(
                             'post_type' => 'local_partner',
-                            'posts_per_page' => 5,
+                            'posts_per_page' => 6,
                             'post_status' => 'publish'
                         ));
+                        $count = $local_partners->post_count;
 
                         if ($local_partners->have_posts()) :
-                            while ($local_partners->have_posts()) : $local_partners->the_post();
-                                $location = get_post_meta(get_the_ID(), 'location', true);
-                                $terms = get_the_terms(get_the_ID(), 'partner_category');
-                                $term_names = array();
-                                if ($terms && !is_wp_error($terms)) {
-                                    foreach ($terms as $term) {
-                                        $term_names[] = '#' . $term->name;
-                                    }
-                                }
-                        ?>
-                                <div class="swiper-slide">
-                                    <a href="<?php the_permalink(); ?>" class="partner-link">
-                                        <div class="partner-card">
-                                            <div class="partner-image">
-                                                <?php if (has_post_thumbnail()) : ?>
-                                                    <?php the_post_thumbnail('medium', array('alt' => get_the_title())); ?>
-                                                <?php else : ?>
-                                                    <img src="<?php echo esc_url(get_stylesheet_directory_uri()); ?>/images/restaurant.png" alt="<?php the_title_attribute(); ?>">
-                                                <?php endif; ?>
-                                            </div>
-                                            <div class="partner-info">
-                                                <div class="partner-location"><?php echo esc_html($location ?: '地域未設定'); ?></div>
-                                                <h4 class="partner-name title-underline"><?php the_title(); ?></h4>
-                                                <p class="partner-tags"><?php echo esc_html(implode('　', $term_names)); ?></p>
-                                            </div>
+
+                            // スライドの数が1の場合、スライドさせない
+                            if ($count <= 1) :?>
+                                <a href="<?php the_permalink(); ?>" class="partner-link">
+                                    <div class="partner-card">
+                                        <div class="partner-image">
+                                            <?php if (has_post_thumbnail()) : ?>
+                                                <?php the_post_thumbnail('medium', array('alt' => get_the_title())); ?>
+                                            <?php else : ?>
+                                                <img src="<?php echo esc_url(get_stylesheet_directory_uri()); ?>/images/restaurant.png" alt="<?php the_title_attribute(); ?>">
+                                            <?php endif; ?>
                                         </div>
-                                    </a>
-                                </div>
+                                        <div class="partner-info">
+                                            <div class="partner-location"><?php echo esc_html($location ?: '地域未設定'); ?></div>
+                                            <h4 class="partner-name title-underline"><?php the_title(); ?></h4>
+                                            <p class="partner-tags"><?php echo esc_html(implode('　', $term_names)); ?></p>
+                                        </div>
+                                    </div>
+                                </a>
                             <?php
-                            endwhile;
+                            // スライドの数が２の場合、三回ループを繰り返す。
+                            // スライドの数が３から５の場合、二回ループを繰り返す。
+                            // スライドの数が６以上の場合、１回ループを繰り返す。
+                            else:
+                                $loop_count = ($count == 2) ? 3 : (($count < 6) ? 2 : 1);
+                                for ($i = 0; $i < $loop_count; $i++) :
+                                    while ($local_partners->have_posts()) : $local_partners->the_post();
+                                        $location = get_post_meta(get_the_ID(), 'location', true);
+                                        $terms = get_the_terms(get_the_ID(), 'partner_category');
+                                        $term_names = array();
+                                        if ($terms && !is_wp_error($terms)) {
+                                            foreach ($terms as $term) {
+                                                $term_names[] = '#' . $term->name;
+                                            }
+                                        }
+                                    ?>
+                                        <div class="swiper-slide">
+                                            <a href="<?php the_permalink(); ?>" class="partner-link">
+                                                <div class="partner-card">
+                                                    <div class="partner-image">
+                                                        <?php if (has_post_thumbnail()) : ?>
+                                                            <?php the_post_thumbnail('medium', array('alt' => get_the_title())); ?>
+                                                        <?php else : ?>
+                                                            <img src="<?php echo esc_url(get_stylesheet_directory_uri()); ?>/images/restaurant.png" alt="<?php the_title_attribute(); ?>">
+                                                        <?php endif; ?>
+                                                    </div>
+                                                    <div class="partner-info">
+                                                        <div class="partner-location"><?php echo esc_html($location ?: '地域未設定'); ?></div>
+                                                        <h4 class="partner-name title-underline"><?php the_title(); ?></h4>
+                                                        <p class="partner-tags"><?php echo esc_html(implode('　', $term_names)); ?></p>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    <?php
+                                    endwhile;
+                                endfor;
+                            endif;
                             wp_reset_postdata();
                         endif; ?>
                     </div>
-                    <!-- Add Pagination -->
-                    <div class="swiper-pagination"></div>
                     <!-- Add Navigation -->
                     <div class="swiper-button-next"></div>
                     <div class="swiper-button-prev"></div>

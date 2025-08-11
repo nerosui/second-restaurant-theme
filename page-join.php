@@ -146,8 +146,9 @@ if (!defined('ABSPATH')) exit; ?>
                         <div class="step-description">
                             <p class="step-description-text">以下のフォームに必要事項を記入して送付します。</p>
                             <div class="step-buttons">
-                                <a href="#" class="step-button">【地域パートナー】仮エントリーフォームはこちら</a>
-                                <a href="#" class="step-button">【旅するシェフ】仮エントリーフォームはこちら</a>
+                                <?php $form_urls = get_sr_entry_form_urls(); ?>
+                                <a href="<?php echo esc_url($form_urls['local_partner']); ?>" class="step-button" <?php echo $form_urls['local_partner'] !== '#' ? 'target="_blank" rel="noopener"' : ''; ?>>【地域パートナー】仮エントリーフォームはこちら</a>
+                                <a href="<?php echo esc_url($form_urls['traveling_chef']); ?>" class="step-button" <?php echo $form_urls['traveling_chef'] !== '#' ? 'target="_blank" rel="noopener"' : ''; ?>>【旅するシェフ】仮エントリーフォームはこちら</a>
                             </div>
                         </div>
                     </div>
