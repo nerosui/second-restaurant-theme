@@ -171,7 +171,7 @@ if (!defined('ABSPATH')) exit; ?>
                                                 <?php if (has_post_thumbnail()) : ?>
                                                     <?php the_post_thumbnail('medium', array('alt' => get_the_title())); ?>
                                                 <?php else : ?>
-                                                    <img src="<?php echo esc_url(get_stylesheet_directory_uri()); ?>/images/localpartner-dummy-1.png" alt="<?php the_title_attribute(); ?>">
+                                                    <img src="<?php echo esc_url(get_stylesheet_directory_uri()); ?>/images/restaurant.png" alt="<?php the_title_attribute(); ?>">
                                                 <?php endif; ?>
                                             </div>
                                             <div class="partner-info">
