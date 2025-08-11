@@ -53,6 +53,7 @@
                 <img
                     src="<?php echo esc_url(get_stylesheet_directory_uri()); ?>/images/footer_logo.svg"
                     alt="Second Restaurant Logo"
+                    loading="lazy"
                     class="logo" />
                     </a>
                 <p class="footer-tagline">旅するシェフのセカンドレストラン</p>
@@ -69,10 +70,10 @@
             <div class="footer-links">
                 <div class="footer-social">
                     <a href="#" class="social-link" aria-label="X (Twitter)">
-                        <img src="<?php echo esc_url(get_stylesheet_directory_uri()); ?>/images/sns-icon-x.svg" alt="X" />
+                        <img src="<?php echo esc_url(get_stylesheet_directory_uri()); ?>/images/sns-icon-x.svg" alt="X"  loading="lazy" />
                     </a>
                     <a href="#" class="social-link" aria-label="Instagram">
-                        <img src="<?php echo esc_url(get_stylesheet_directory_uri()); ?>/images/sns-icon-instagram.svg" alt="Instagram" />
+                        <img src="<?php echo esc_url(get_stylesheet_directory_uri()); ?>/images/sns-icon-instagram.svg" alt="Instagram"  loading="lazy" />
                     </a>
                 </div>
                 <ul class="footer-legal">
