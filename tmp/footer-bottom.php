@@ -69,16 +69,16 @@
             </div>
             <div class="footer-links">
                 <div class="footer-social">
-                    <a href="#" class="social-link" aria-label="X (Twitter)">
-                        <img src="<?php echo esc_url(get_stylesheet_directory_uri()); ?>/images/sns-icon-x.svg" alt="X"  loading="lazy" />
+                    <a href="https://www.facebook.com/profile.php?viewas=100000686899395&id=61578353163081" class="social-link" aria-label="Facebook">
+                        <img src="<?php echo esc_url(get_stylesheet_directory_uri()); ?>/images/sns-icon-x.svg" alt="Facebook"  loading="lazy" />
                     </a>
-                    <a href="#" class="social-link" aria-label="Instagram">
+                    <a href="https://www.instagram.com/secondrestaurant/" class="social-link" aria-label="Instagram">
                         <img src="<?php echo esc_url(get_stylesheet_directory_uri()); ?>/images/sns-icon-instagram.svg" alt="Instagram"  loading="lazy" />
                     </a>
                 </div>
                 <ul class="footer-legal">
                     <li><a href="https://interlocalpartners.jp/" target="_brank">運営会社</a></li>
-                    <li><a href="/privacy-policy">プライバシーポリシー</a></li>
+                    <li><a href="<?php echo esc_url(get_privacy_policy_url()); ?>">プライバシーポリシー</a></li>
                 </ul>
             </div>
         </div>

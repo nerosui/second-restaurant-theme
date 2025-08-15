@@ -1,0 +1,221 @@
+@use "base" as *;
+
+/* Project Detail Page */
+#project-detail-page {
+
+    /* プロジェクトヘッダー */
+    .project-header {
+        margin-bottom: 60px;
+
+        @media (max-width: 768px) {
+            margin-bottom: 40px;
+        }
+
+        .project-title {
+            font-size: 36px;
+            font-weight: 700;
+            color: var(--dark-text);
+            margin: 0;
+
+            @media (max-width: 768px) {
+                font-size: 28px;
+            }
+
+            @media (max-width: 480px) {
+                font-size: 24px;
+            }
+        }
+    }
+
+    /* メイン画像 */
+    .project-main-image {
+        margin-bottom: 60px;
+
+        @media (max-width: 768px) {
+            margin-bottom: 40px;
+        }
+
+        img {
+            width: 100%;
+            height: 534px;
+            object-fit: cover;
+            border-radius: 0;
+
+            @media (max-width: 768px) {
+                height: 250px;
+            }
+
+            @media (max-width: 480px) {
+                height: 200px;
+            }
+        }
+    }
+
+    /* プロジェクト概要 */
+    .project-overview {
+        margin-bottom: 60px;
+
+        @media (max-width: 768px) {
+            margin-bottom: 40px;
+        }
+
+        .project-description {
+            color: var(--dark-text);
+            margin: 0;
+
+            @media (max-width: 768px) {
+                font-size: 14px;
+            }
+        }
+    }
+
+    /* プロジェクト詳細情報 */
+    .project-details {
+        margin-bottom: 80px;
+
+        @media (max-width: 768px) {
+            margin-bottom: 60px;
+        }
+
+        ul.detail-list {
+            flex-direction: column;
+            padding-left: 0;
+        }
+
+        .detail-list,
+        ul.detail-list {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: start;
+            @media screen and (max-width: 600px) {
+                flex-direction: column;
+            }
+            li {
+                width: 100%;
+                display: flex;
+                align-items: start;
+            }
+            dt,
+            .dt,
+            dd,
+            .dd {
+                margin: 0;
+                line-height: 3.5;
+                color: var(--primary-color);
+                border-top: 1px solid #f6d1c9;
+                &:last-of-type {
+                    border-bottom: 1px solid #f6d1c9;
+                }
+                @media (max-width: 768px) {
+                    width: 100%;
+                    flex: 1 1 100% !important;
+                }
+            }
+            dt,
+            .dt {
+                flex: 1 1 30%;
+                font-weight: 700;
+                white-space: nowrap;
+                @media (max-width: 768px) {
+                    font-size: 14px;
+                    line-height: 2.5;
+                    padding: 12px 16px;
+                }
+
+                @media (max-width: 768px) {
+                    &:last-of-type {
+                        border-bottom: none;
+                    }
+                }
+            }
+
+            dd,
+            .dd {
+                flex: 1 1 70%;
+                color: var(--dark-text);
+                @media (max-width: 768px) {
+                    font-size: 14px;
+                    line-height: 2.5;
+                    padding: 12px 16px;
+                }
+                .example-card {
+                    margin: 1rem auto;
+                }
+            }
+        }
+    }
+    .wp-block-group.detail-list {
+        gap: 0;
+        .wp-block-columns {
+            border-top: 1px solid #f6d1c9;
+            margin-bottom: 0;
+            align-items: center !important;
+            &:last-of-type {
+                border-bottom: 1px solid #f6d1c9;
+            }
+
+            @media (max-width: 768px) {
+                gap: 0;
+            }
+            .wp-block-column {
+                padding: 1rem;
+                @media (max-width: 768px) {
+                    font-size: 14px;
+                }
+                a:not(.blogcard-wrap) {
+                    color: var(--primary-color);
+                    text-decoration: none;
+                    margin: 0;
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+                a.blogcard-wrap{
+                    width: 100%;
+                    margin: 0 auto;
+                }
+            }
+        }
+        .wp-block-column:first-child {
+            color: var(--primary-color);
+            font-weight: 700;
+            white-space: nowrap;
+            @media (max-width: 768px) {
+                &:last-of-type {
+                    border-bottom: none;
+                }
+                padding: 12px 16px 0;
+            }
+        }
+
+        .wp-block-column:last-child {
+            color: var(--dark-text);
+            @media (max-width: 768px) {
+                padding: 0 16px 12px;
+            }
+        }
+    }
+
+    /* 予約セクション */
+    .reservation-section {
+        .reservation-info {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+
+            .reservation-text {
+                line-height: 3.5;
+                color: var(--primary-color);
+
+                @media (max-width: 768px) {
+                    font-size: 14px;
+                    line-height: 2.5;
+                }
+            }
+
+            .reservation-icon {
+                flex-shrink: 0;
+            }
+        }
+    }
+}

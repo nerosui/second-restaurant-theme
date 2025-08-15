@@ -77,7 +77,6 @@ cocoon-child-master/
 ├── archive-{post_type}.php   # 一覧ページテンプレート
 ├── single-{post_type}.php    # 個別ページテンプレート
 ├── breadcrumbs.php           # パンくずリストテンプレート
-├── html_template/            # HTMLテンプレート（参考用）
 ├── images/                   # 画像ファイル
 ├── patterns/                 # Gutenbergブロックパターン
 └── .vscode/                  # VS Code設定
@@ -93,7 +92,7 @@ cocoon-child-master/
 
 ### スタイルの変更
 
-メインのスタイルは`html_template/style.css`で管理されています。
+メインのスタイルは`scss/style.scss`で管理されています。
 
 ### ブロックパターンの追加
 
@@ -121,7 +120,7 @@ A: パーマリンク設定を更新してください（設定 > パーマリ�
 A: `images/`フォルダに必要な画像ファイルがアップロードされているか確認してください
 
 **Q: スタイルが適用されない**
-A: ブラウザキャッシュをクリアし、`html_template/style.css`が正しく読み込まれているか確認してください
+A: ブラウザキャッシュをクリアし、`scss/style.scss`が正しく読み込まれているか確認してください
 
 ## ライセンス
 

@@ -1,0 +1,595 @@
+// ========================================
+// JOIN PAGE STYLES
+// ========================================
+
+#join-page {
+  .container {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 240px;
+
+    @media (max-width: 1200px) {
+      padding: 0 80px;
+    }
+
+    @media (max-width: 768px) {
+      padding: 0 20px;
+    }
+  }
+
+  .section-title {
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 1.125em;
+    text-align: left;
+    color: #e65d3e;
+    margin-bottom: 40px;
+
+    @media (max-width: 768px) {
+      font-size: 20px;
+      margin-bottom: 30px;
+    }
+  }
+
+  .section-intro {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 1.5em;
+    text-align: left;
+    color: #303030;
+    margin-bottom: 60px;
+
+    @media (max-width: 768px) {
+      font-size: 16px;
+      margin-bottom: 40px;
+    }
+  }
+
+  // ========================================
+  // BENEFITS SECTION
+  // ========================================
+  .join-benefits {
+    padding: 77px 0 120px;
+    background-color: #ffffff;
+
+    @media (max-width: 768px) {
+      padding: 60px 0 80px;
+    }
+
+    .benefit-item {
+      flex: 1;
+      display: flex;
+      align-items: stretch;
+      justify-content: space-between;
+      gap: 5rem;
+      margin-bottom: 5rem;
+
+      @media screen and (max-width: 768px) {
+        flex-direction: column;
+        align-items: center;
+        gap: 0;
+        margin-bottom: 40px;
+      }
+
+      .benefit-image {
+        width: 240px;
+        height: 240px;
+        border-radius: 0;
+        background-size: cover;
+        background-position: center;
+
+        @media (max-width: 768px) {
+          width: 200px;
+          height: 200px;
+          margin: 0 auto 30px;
+        }
+      }
+
+      @media screen and (max-width: 768px) {
+        .benefit-text {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+        }
+      }
+
+      .benefit-tag {
+        display: inline-block;
+        background-color: #e65d3e;
+        color: #ffffff;
+        font-size: 1.5rem;
+        font-weight: 700;
+        line-height: 1em;
+        padding: 8px 48px;
+        border-radius: 26px;
+
+        @media (max-width: 768px) {
+          font-size: 20px;
+          padding: 6px 36px;
+        }
+      }
+
+      .benefit-subtitle {
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 1.8em;
+        color: #303030;
+        margin: 1rem 0;
+
+        @media (max-width: 768px) {
+          font-size: 16px;
+          margin-bottom: 20px;
+        }
+      }
+
+      .benefit-list {
+        line-height: 1.5em;
+        color: #303030;
+        margin-block-start: 1em;
+        margin-block-end: 1em;
+        padding-inline-start: 40px;
+
+        li {
+          margin-bottom: 8px;
+          position: relative;
+        }
+
+        @media (max-width: 768px) {
+          font-size: 14px;
+          padding-inline-start: 20px;
+        }
+      }
+      .benefit-chef-text {
+        order: 1;
+        @media (max-width: 768px) {
+          order: 2;
+        }
+      }
+      .benefit-image-chef {
+        order: 2;
+        @media (max-width: 768px) {
+          order: 1;
+        }
+      }
+    }
+  }
+
+  // ========================================
+  // ROLES SECTION
+  // ========================================
+  .join-roles {
+    padding: 80px 0 120px;
+    background-color: #ffeeea;
+
+    @media (max-width: 768px) {
+      padding: 40px 0 80px;
+    }
+
+    .roles-content {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 40px;
+    }
+
+    .role-item {
+      flex: 1;
+      background-color: #ffffff;
+      padding: 0;
+      border-radius: 0;
+      display: flex;
+      gap: 2rem;
+      padding: 24px 60px;
+
+      @media (max-width: 768px) {
+        padding: 10px;
+        gap: 0;
+        flex-direction: column;
+      }
+    }
+
+    .role-badge {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 20px;
+
+      @media (max-width: 768px) {
+        padding: 20px 20px 0 20px;
+        height: auto;
+        min-height: 200px;
+      }
+    }
+
+    .role-icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px;
+      width: 100%;
+
+      img {
+        width: 100%;
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: contain;
+      }
+
+      @media (max-width: 768px) {
+        margin-bottom: 15px;
+        img {
+          max-width: 120px;
+        }
+      }
+    }
+
+    .role-texts {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      white-space: nowrap;
+      gap: 5px;
+    }
+
+    .role-en {
+      font-family: "Poppins", sans-serif;
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 1.5em;
+      color: #f6d1c9;
+      background-color: transparent;
+      padding: 0;
+
+      @media (max-width: 768px) {
+        font-size: 12px;
+      }
+    }
+
+    .role-jp {
+      font-family: "Poppins", sans-serif;
+      font-weight: 600;
+      font-size: 20px;
+      line-height: 1.5em;
+      color: #e65d3e;
+
+      @media (max-width: 768px) {
+        font-size: 16px;
+      }
+    }
+
+    .role-description {
+      padding-left: 40px;
+      text-align: left;
+      align-self: center;
+
+      @media (max-width: 768px) {
+        padding: 10px;
+        text-align: left;
+      }
+    }
+
+    .role-title {
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 1.2em;
+      color: #303030;
+      margin-bottom: 24px;
+
+      @media (max-width: 768px) {
+        font-size: 16px;
+        margin-bottom: 15px;
+      }
+    }
+
+    .role-list {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 1.5em;
+      color: #303030;
+      margin-block-start: 1em;
+      margin-block-end: 1em;
+      padding-inline-start: 40px;
+
+      @media (max-width: 768px) {
+        font-size: 14px;
+      }
+    }
+  }
+
+  // ========================================
+  // FLOW SECTION
+  // ========================================
+
+  .join-flow {
+    padding: 120px 0;
+    background-color: #ffffff;
+    counter-reset: step-counter 0;
+
+    @media (max-width: 768px) {
+      padding: 80px 0;
+    }
+
+    .flow-content {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      max-width: 960px;
+      margin: 0 auto;
+    }
+
+    .flow-step {
+      border: 1px solid #8e8e8e;
+      border-radius: 12px;
+      padding: 24px 40px;
+      position: relative;
+      display: flex;
+      align-items: flex-start;
+      gap: 40px;
+
+      @media (max-width: 768px) {
+        padding: 20px;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+      }
+    }
+
+    .step-content {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      gap: 24px;
+
+      @media (max-width: 768px) {
+        gap: 15px;
+        flex-direction: column;
+      }
+
+      &:before {
+        counter-increment: step-counter 1;
+        content: counter(step-counter);
+        width: 40px;
+        height: 40px;
+        background-color: #e65d3e;
+        color: #ffffff;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: "Poppins", sans-serif;
+        font-weight: 600;
+        font-size: 32px;
+        line-height: 1.5em;
+        z-index: 1;
+      }
+    }
+    .step-title-wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-width: 260px;
+      width: 35%;
+    }
+
+    .step-title {
+      font-weight: 500;
+      font-size: 24px;
+      line-height: 1.5em;
+      color: #e65d3e;
+
+      @media (max-width: 768px) {
+        font-size: 18px;
+      }
+    }
+
+    .step-icon {
+      width: 60px;
+      height: 44px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+
+      img {
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: contain;
+      }
+
+      @media (max-width: 768px) {
+        width: 40px;
+        height: 30px;
+        margin: 0 auto;
+      }
+    }
+
+    .step-description {
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 1.5em;
+      color: #303030;
+      flex: 1;
+
+      @media (max-width: 768px) {
+        font-size: 14px;
+      }
+      .step-description-text {
+        margin-bottom: 1rem;
+      }
+    }
+
+    .step-buttons {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      margin-top: auto;
+
+      @media (max-width: 768px) {
+        margin-top: 15px;
+      }
+    }
+
+    .step-button {
+      background-color: #f8d435;
+      color: #303030;
+
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 1.5em;
+      text-decoration: none;
+      padding: 8px 26px;
+      border-radius: 29px;
+      text-align: center;
+      transition: background-color 0.3s;
+      max-width: 420px;
+
+      &:hover {
+        background-color: #f5d020;
+      }
+
+      @media (max-width: 768px) {
+        font-size: 14px;
+        text-align: left;
+        padding: 6px 10px;
+      }
+    }
+
+    .flow-notice {
+      background-color: #f8f7ee;
+      padding: 24px 52px;
+      margin-bottom: 40px;
+    }
+
+    .notice-text {
+      font-weight: 500;
+      line-height: 1.5em;
+      color: #303030;
+      margin-bottom: 2rem;
+
+      @media (max-width: 768px) {
+        font-size: 14px;
+      }
+    }
+
+    .line-button {
+      margin: 0 auto;
+      background-color: #ffffff;
+      border: 1px solid #4cc764;
+      color: #4cc764;
+
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 1.5em;
+      text-decoration: none;
+      padding: 9px 24px;
+      border-radius: 29px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      transition: all 0.3s;
+      width: 271px;
+      justify-content: center;
+
+      &:hover {
+        background-color: #4cc764;
+        color: #ffffff;
+      }
+
+      @media (max-width: 768px) {
+        font-size: 14px;
+        padding: 8px 20px;
+        width: auto;
+      }
+    }
+
+    .line-icon {
+      width: 24px;
+      height: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+
+      @media (max-width: 768px) {
+        width: 20px;
+        height: 20px;
+      }
+    }
+  }
+
+  // ========================================
+  // ADDITIONAL RESPONSIVE & CONTAINER STYLES
+  // ========================================
+  .join-container {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 240px;
+
+    @media (max-width: 1440px) {
+      padding: 0 80px;
+    }
+
+    @media (max-width: 1200px) {
+      padding: 0 60px;
+    }
+
+    @media (max-width: 992px) {
+      padding: 0 40px;
+    }
+
+    @media (max-width: 768px) {
+      padding: 0 20px;
+    }
+  }
+
+  .section-subtitle {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5em;
+    color: #303030;
+    text-align: center;
+    margin-bottom: 40px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+
+    @media (max-width: 768px) {
+      font-size: 14px;
+      margin-bottom: 30px;
+    }
+  }
+
+  // Image optimization
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  // Button hover effects
+  .step-button {
+    transform: translateY(0);
+    transition: all 0.3s ease;
+
+    &:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    }
+  }
+
+  // Focus states for accessibility
+  .step-button:focus,
+  .line-button:focus,
+  .line-cta-button:focus {
+    outline: 2px solid #e65d3e;
+    outline-offset: 2px;
+  }
+}

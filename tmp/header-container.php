@@ -61,16 +61,16 @@
       </ul>
       <div class="drawer-footer">
         <div class="drawer-social">
-          <a href="#" class="social-link" aria-label="X (Twitter)">
-            <img src="<?php echo esc_url(get_stylesheet_directory_uri()); ?>/images/sns-icon-x.svg" alt="X" />
+          <a href="https://www.facebook.com/profile.php?viewas=100000686899395&id=61578353163081" class="social-link" aria-label="Facebook">
+            <img src="<?php echo esc_url(get_stylesheet_directory_uri()); ?>/images/sns-icon-x.svg" alt="Facebook" />
           </a>
-          <a href="#" class="social-link" aria-label="Instagram">
+          <a href="https://www.instagram.com/secondrestaurant/" class="social-link" aria-label="Instagram">
             <img src="<?php echo esc_url(get_stylesheet_directory_uri()); ?>/images/sns-icon-instagram.svg" alt="Instagram" />
           </a>
         </div>
         <div class="drawer-links">
           <a href="https://interlocalpartners.jp/">運営会社</a>
-          <a href="/privacy-policy">プライバシーポリシー</a>
+          <a href="<?php echo esc_url(get_privacy_policy_url()); ?>">プライバシーポリシー</a>
         </div>
         <div class="drawer-buttons">
           <a href="/join" class="drawer-btn join-btn">JOIN US</a>

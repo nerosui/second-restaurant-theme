@@ -126,7 +126,7 @@ if (!defined('ABSPATH')) exit; ?>
 
             <div class="flow-notice">
                 <p class="notice-text">応募の前に、セカンドレストラン公式LINEからチャットでお問い合わせが可能です。応募に関してご質問がある方はお友だち追加をしてご利用ください。</p>
-                <a href="#" class="line-button">
+                <a href="https://page.line.me/334koecx" class="line-button">
                     <div class="line-icon">
                         <img src="<?php echo esc_url(get_stylesheet_directory_uri()); ?>/images/line-icon.svg" alt="LINE Icon" width="24" height="24">
                     </div>

@@ -1,0 +1,258 @@
+/* // LOCAL PARTNERセクション */
+#index-page .local-partner {
+  padding: 80px 0;
+  background: url("../images/partner-bg.png") center/cover no-repeat;
+  position: relative;
+  overflow: hidden;
+
+  @media (max-width: 390px) {
+    padding: 40px 0;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.6);
+  }
+
+  .container {
+    position: relative;
+    z-index: 2;
+
+    @media screen and (max-width: 1024px) {
+      padding: 0;
+    }
+  }
+
+
+  .partner-grid {
+    margin-top: 48px;
+    margin-bottom: 64px;
+    height: auto;
+    display: flex;
+    justify-content: center;
+
+    @media screen and (max-width: 1024px) {
+      height: auto;
+    }
+    @media (max-width: 768px) {
+      margin-top: 32px;
+      margin-bottom: 40px;
+    }
+
+    @media (max-width: 390px) {
+      margin-top: 24px;
+    }
+  }
+
+  /* Swiper styles */
+  .partner-swiper {
+    width: 100%;
+    min-width: calc((800px + 80px) * 3);
+    padding-bottom: 60px; /* ページネーション用の余白 */
+
+    @media screen and (max-width: 1024px) {
+      width: 100vw;
+      margin-left: calc((100vw - 100%) / -2);
+      min-width: 0;
+      padding-bottom: 60px; /* ページネーション用の余白 */
+    }
+    .swiper-wrapper {
+      align-items: stretch;
+    }
+
+    .swiper-slide {
+      height: auto;
+      display: flex;
+      margin-right: 50px;
+      justify-content: center;
+    }
+    .swiper-button-next,
+    .swiper-button-prev {
+      width: 40px;
+      height: 40px;
+      margin-top: 0;
+      border-radius: 50%;
+      background-color: #e65d3e;
+      position: absolute;
+      top: calc(50% - 44px);
+      left: 50%;
+      z-index: 1000;
+
+      &:after {
+        font-size: 18px;
+        color: #ffffff;
+        font-weight: bold;
+      }
+
+      &:hover {
+        background-color: #d54a2c;
+      }
+
+      &.swiper-button-disabled {
+        opacity: 0.3;
+        pointer-events: none;
+      }
+    }
+
+    /* ナビゲーションボタンのカスタマイズ */
+    .swiper-button-next {
+      transform: translateX(430px);
+      @media screen and (max-width: 1024px) {
+        transform: none;
+        left: auto;
+        right: clamp(10px, 10%, 100px);
+      }
+    }
+    .swiper-button-prev {
+      transform: translateX(-474px);
+      @media screen and (max-width: 1024px) {
+        transform: none;
+        left: clamp(10px, 10%, 100px);
+      }
+    }
+
+    /* ページネーションのカスタマイズ */
+    .swiper-pagination {
+      bottom: 0;
+
+      .swiper-pagination-bullet {
+        width: 12px;
+        height: 12px;
+        background-color: rgba(230, 93, 62, 0.3);
+        opacity: 1;
+
+        &.swiper-pagination-bullet-active {
+          background-color: #e65d3e;
+        }
+      }
+    }
+  }
+
+  .partner-link {
+    position: relative;
+    max-width: 100%;
+    &::before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      display: block;
+      content: "";
+      background: #ffffff;
+      z-index: 1;
+      height: 280px;
+      border-radius: 8px;
+      @media (max-width: 1024px) {
+        height: auto;
+      }
+    }
+  }
+
+  .partner-card {
+    display: flex;
+    background: #ffffff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    height: 280px;
+    width: 100%;
+    max-width: 800px;
+    position: relative;
+    z-index: 5;
+    opacity: 1;
+    transition: all 0.3s ease;
+    &:hover{
+      opacity: 0.8;
+    }
+
+    @media (max-width: 1024px) {
+      flex-direction: column;
+      height: auto;
+    }
+
+    .partner-image {
+      width: 400px;
+      height: 280px;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      @media (max-width: 1024px) {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 16 / 9;
+      }
+    }
+
+    .partner-info {
+      width: 400px;
+      padding: 40px 55px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      position: relative;
+
+      @media (max-width: 768px) {
+        width: 100%;
+        padding: 24px;
+      }
+
+      .partner-location {
+        display: inline-block;
+        background: #e65d3e;
+        color: #ffffff;
+        padding: 0 15px;
+        border-radius: 12px;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 24px;
+        width: fit-content;
+        margin-bottom: 25px;
+
+        @media (max-width: 768px) {
+          font-size: 14px;
+          margin-bottom: 15px;
+        }
+      }
+
+      .partner-name {
+        font-size: 1.5rem;
+        font-weight: 500;
+        color: #303030;
+        line-height: 1.5;
+        margin-bottom: 25px;
+        display: inline;
+
+        @media (max-width: 768px) {
+          font-size: 20px;
+          margin-bottom: 15px;
+          max-width: 100%;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+      }
+
+      .partner-tags {
+        font-size: 14px;
+        font-weight: 500;
+        color: #8e8e8e;
+        line-height: 1.5;
+        margin: 0;
+
+        @media (max-width: 768px) {
+          font-size: 12px;
+        }
+      }
+    }
+  }
+}

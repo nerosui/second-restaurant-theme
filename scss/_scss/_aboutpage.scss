@@ -1,0 +1,322 @@
+#about-page {
+  .section-title {
+    text-align: left;
+  }
+
+  section:not(.hero-section) {
+    padding: 120px 0 40px;
+    @media (max-width: 390px) {
+      padding: 80px 0 40px;
+    }
+  }
+
+  .section-title {
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 1.125;
+    color: var(--primary-color);
+    margin-bottom: 32px;
+    @media (max-width: 390px) {
+      font-size: 20px;
+      line-height: 1.8;
+      margin-bottom: 24px;
+    }
+  }
+  /* // Chef Issues Section */
+  .chef-issues {
+    background: #fff;
+
+    @media (max-width: 390px) {
+      padding: 80px 0 0;
+    }
+
+    .section-title {
+      font-size: 32px;
+      font-weight: 700;
+      line-height: 1.125;
+      color: var(--primary-color);
+      margin-bottom: 40px;
+
+      @media (max-width: 390px) {
+        font-size: 20px;
+        line-height: 1.8;
+        margin-bottom: 24px;
+      }
+    }
+
+    .section-intro {
+      font-size: 24px;
+      font-weight: 500;
+      line-height: 1.5;
+      color: var(--dark-text);
+      margin-bottom: 24px;
+
+      @media (max-width: 390px) {
+        font-size: 16px;
+        margin-bottom: 16px;
+      }
+      span {
+        border-bottom: 3px solid rgba(#f6d1c9, 0.7); // Figmaの薄いピンク系
+        width: fit-content;
+        padding-bottom: 3px;
+        line-height: 1.7;
+      }
+    }
+
+    .section-description {
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 1.5;
+      color: var(--dark-text);
+      margin-bottom: 72px;
+      max-width: 959px;
+
+      @media (max-width: 390px) {
+        font-size: 14px;
+        margin-bottom: 40px;
+      }
+    }
+
+    .issues-content {
+      display: flex;
+      gap: 80px;
+      align-items: flex-start;
+      margin-bottom: 40px;
+
+      @media (max-width: 768px) {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 40px;
+      }
+    }
+
+    .issue-images {
+      display: flex;
+      justify-content: center;
+      gap: 32px;
+      flex-shrink: 0;
+
+      @media (max-width: 390px) {
+        gap: 20px;
+      }
+    }
+
+    .issue-image {
+      width: 240px;
+      height: 240px;
+      background-size: cover;
+      background-position: center;
+
+      @media (max-width: 390px) {
+        width: 144px;
+        height: 144px;
+      }
+    }
+
+    .issue-points {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 64px;
+
+      @media (max-width: 390px) {
+        gap: 40px;
+      }
+    }
+
+    .issue-point {
+      max-width: 640px;
+    }
+
+    .point-label {
+      font-family: var(--font-poppins);
+      font-size: 14px;
+      font-weight: 600;
+      line-height: 1.5;
+      color: var(--primary-color);
+      margin-bottom: 16px;
+
+      @media (max-width: 390px) {
+        font-size: 12px;
+      }
+    }
+
+    .point-title {
+      font-size: 18px;
+      font-weight: 500;
+      line-height: 2;
+      color: var(--dark-text);
+      margin-bottom: 16px;
+
+      @media (max-width: 390px) {
+        font-size: 15px;
+        line-height: 2.4;
+      }
+    }
+
+    .point-description {
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 1.5;
+      color: var(--dark-text);
+      text-align: justify;
+
+      @media (max-width: 390px) {
+        font-size: 14px;
+      }
+    }
+  }
+
+  /* // Philosophy Section */
+  .philosophy {
+    position: relative;
+    background: var(--pink-bg);
+
+    .container {
+      position: relative;
+      z-index: 2;
+    }
+
+    .philosophy-subtitle {
+      font-size: 24px;
+      font-weight: 500;
+      line-height: 1.5;
+      color: var(--dark-text);
+      margin-bottom: 32px;
+
+      @media (max-width: 390px) {
+        font-size: 16px;
+        margin-bottom: 24px;
+      }
+    }
+
+    .philosophy-intro {
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 1.5;
+      color: var(--dark-text);
+      margin-bottom: 56px;
+      max-width: 959px;
+      text-align: justify;
+
+      @media (max-width: 390px) {
+        font-size: 14px;
+        margin-bottom: 40px;
+      }
+    }
+
+    .philosophy-description {
+      color: var(--dark-text);
+      margin-top: 2.5rem;
+      max-width: 959px;
+      text-align: justify;
+
+      @media (max-width: 390px) {
+        font-size: 14px;
+        margin-top: 1.5rem;
+      }
+    }
+
+    .philosophy-image {
+      display: flex;
+      justify-items: center;
+      img {
+        width: 100%;
+        max-width: 800px;
+        margin: 0 auto;
+        height: auto;
+        border-radius: 8px;
+      }
+    }
+  }
+
+  /* // Vision Section */
+  .vision {
+    background: #fff;
+
+    .section-description {
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 1.5;
+      color: var(--dark-text);
+      margin-bottom: 80px;
+      max-width: 959px;
+
+      @media (max-width: 390px) {
+        font-size: 14px;
+        margin-bottom: 60px;
+      }
+    }
+
+    .vision-cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 40px;
+      max-width: 959px;
+
+      @media (max-width: 768px) {
+        grid-template-columns: 1fr;
+        gap: 24px;
+      }
+    }
+
+    .vision-card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 40px 20px;
+      border: 1px solid var(--light-text);
+      border-radius: 12px;
+      background: #fff;
+
+      @media (max-width: 450px) {
+        flex-direction: row;
+        justify-content: space-around;
+        padding: 20px;
+      }
+    }
+
+    .vision-icon {
+      width: 130px;
+      height: 130px;
+      margin-bottom: 12px;
+      @media (max-width: 450px) {
+        margin-bottom: 0;
+        min-width: 30%;
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    .vision-title {
+      font-size: 20px;
+      font-weight: 500;
+      line-height: 1.5;
+      color: var(--primary-color);
+      text-align: center;
+
+      @media (max-width: 450px) {
+        font-size: 18px;
+      }
+    }
+  }
+
+  .project-examples {
+    background-color: #f8f7ee;
+  }
+
+  /* // Responsive adjustments */
+  @media (max-width: 390px) {
+    .container {
+      padding: 0 20px;
+    }
+
+    .section-title {
+      text-align: left;
+    }
+  }
+}

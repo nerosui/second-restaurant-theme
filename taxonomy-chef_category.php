@@ -21,13 +21,13 @@ get_header(); ?>
         <a href="<?php echo home_url('/join'); ?>">
             <div class="sr-cta-content">
                 <div class="sr-cta-image">
-                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/html_template/images/join-traveling-chef.jpg" alt="Join Traveling Chef">
+                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/join-traveling-chef.jpg" alt="Join Traveling Chef">
                 </div>
                 <div class="sr-cta-text">
                     <h3 class="sr-cta-title">旅するシェフ募集！</h3>
                     <p class="sr-cta-subtitle">私たちと一緒に多拠点レストラン文化を育てませんか</p>
                     <div class="sr-cta-button">
-                        <img src="<?php echo get_stylesheet_directory_uri(); ?>/html_template/images/arrow-button.svg" alt="Arrow">
+                        <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/arrow-button.svg" alt="Arrow">
                     </div>
                 </div>
             </div>
@@ -38,7 +38,7 @@ get_header(); ?>
         <div class="container">
             <div class="filter-bar">
                 <div class="filter-title">
-                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/html_template/images/search-icon.svg" alt="Search" />
+                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/search-icon.svg" alt="Search" />
                     <span>絞り込む</span>
                 </div>
                 <div class="filter-tags">
@@ -76,7 +76,7 @@ get_header(); ?>
                                         the_post_thumbnail('medium', array('alt' => get_the_title()));
                                     } else {
                                         // デフォルト画像を表示
-                                        echo '<img src="' . get_stylesheet_directory_uri() . '/html_template/images/chef-profile.jpg" alt="' . get_the_title() . '">';
+                                        echo '<img src="' . get_stylesheet_directory_uri() . '/images/chef-profile.jpg" alt="' . get_the_title() . '">';
                                     }
                                     ?>
                                 </div>

@@ -8,9 +8,7 @@ add_editor_style();
 
 function enqueue_child_theme_styles()
 {
-    // wp_enqueue_style('child-style', get_stylesheet_directory_uri() . '/html_template/style.css', array('cocoon-style'));
     wp_enqueue_style('child-style', get_stylesheet_directory_uri() . '/css/style.min.css', array('cocoon-style'));
-    wp_enqueue_script('child-script', get_stylesheet_directory_uri() . '/html_template/script.js', array('jquery'), '1.0.0', true);
 
     // Swiperのスタイルとスクリプトを読み込む
     wp_enqueue_style('swiper-style', 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css');
@@ -28,7 +26,7 @@ function sr_my_theme_setup() {
     // ブロックエディターをサポート
     add_theme_support( 'editor-styles' );
     // エディター用の CSS ファイルを読み込む
-    add_editor_style( 'html_template/style.css' );
+    add_editor_style( 'css/style.css' );
 }
 add_action( 'after_setup_theme', 'sr_my_theme_setup' );
 
@@ -367,6 +365,17 @@ function enable_custom_menu_order($bool)
 add_filter('custom_menu_order', 'enable_custom_menu_order');
 add_filter('menu_order', 'customize_admin_menu_order');
 
+// ブロックパターンを登録
+function register_custom_block_patterns()
+{
+    // パターンタグを登録
+    register_block_pattern_category(
+        'second-restaurant',
+        array('label' => 'Second Restaurant')
+    );
+
+}
+add_action('init', 'register_custom_block_patterns');
 
 function add_local_partner_detail_class_to_editor_wrapper() {
     $script = "

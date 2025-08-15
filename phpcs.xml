@@ -16,7 +16,6 @@
     <exclude-pattern>**/min/*</exclude-pattern>
     <exclude-pattern>**/*.min.js</exclude-pattern>
     <exclude-pattern>**/*.min.css</exclude-pattern>
-    <exclude-pattern>**/html_template/**/*</exclude-pattern>
 
     <!-- WordPressコーディング規約を使用 -->
     <rule ref="WordPress">

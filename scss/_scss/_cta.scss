@@ -1,0 +1,125 @@
+/* // CTA Section */
+.cta-section {
+  background: #fff;
+
+  .cta-buttons {
+    display: flex;
+    justify-content: space-between;
+    gap: 0;
+
+    @media (max-width: 820px) {
+      flex-direction: column;
+    }
+  }
+
+  .cta-button {
+    position: relative;
+    display: flex;
+    flex: 1 1 100%;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: clamp(24px, 12vw, 72px);
+    padding-right: clamp(24px, 3vw, 50px);
+    padding-top: clamp(12px, 10vw, 60px);
+    padding-bottom: clamp(12px, 10vw, 60px);
+    margin: 0;
+    background: #fff;
+    border: 1px solid var(--dark-bg);
+    cursor: pointer;
+    transition: background 0.3s ease;
+    z-index: 1;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      z-index: -1;
+      background-size: cover;
+    }
+  }
+  .join-button {
+    &::before {
+      background-image: url("../images/cta_join_button.jpg");
+    }
+    &:hover {
+      &::before {
+        opacity: 1;
+      }
+    }
+  }
+  .contact-button {
+    &::before {
+      background-image: url("../images/cta_contact_button.jpg");
+    }
+  }
+  .button-content {
+    position: inherit;
+    flex: 1;
+    z-index: 10;
+  }
+
+  .button-title {
+    font-family: var(--font-poppins);
+    font-size: 48px;
+    font-weight: 500;
+    line-height: 1.5;
+    color: var(--primary-color);
+    margin-bottom: 8px;
+    white-space: nowrap;
+
+    @media (max-width: 768px) {
+      font-size: clamp(32px, 5vw, 48px);
+    }
+  }
+
+  .button-subtitle {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.2;
+    color: var(--dark-text);
+
+    @media (max-width: 390px) {
+      font-size: 16px;
+    }
+  }
+
+  .button-arrow {
+    width: clamp(32px, 10vw, 48px);
+    height: clamp(32px, 10vw, 48px);
+    border: 1px solid var(--primary-color);
+    border-radius: 100%;
+    transition: all 0.3s ease;
+
+    svg {
+      width: 100%;
+      height: 100%;
+      transition: all 0.3s ease;
+    }
+  }
+
+  .join-button:hover,
+  .contact-button:hover {
+    &::before {
+      opacity: 1;
+    }
+    .button-title,
+    .button-subtitle {
+      color: #fff !important;
+    }
+    .button-arrow {
+      svg {
+        circle {
+          fill: #fff;
+        }
+        path {
+          stroke: var(--primary-color);
+        }
+      }
+    }
+  }
+}
