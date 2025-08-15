@@ -47,13 +47,6 @@ if (!defined('ABSPATH')) exit; ?>
                 'post_type' => 'project',
                 'posts_per_page' => 1,
                 'post_status' => 'publish',
-                'meta_query' => array(
-                    array(
-                        'key' => 'is_pickup',
-                        'value' => '1',
-                        'compare' => '='
-                    )
-                ),
                 'meta_key' => 'start_date',
                 'orderby' => 'meta_value',
                 'order' => 'ASC',
@@ -66,6 +59,12 @@ if (!defined('ABSPATH')) exit; ?>
                     ),
                     array(
                         'key' => 'start_date',
+                        'value' => $today,
+                        'compare' => '<=',
+                        'type' => 'DATE'
+                    ),
+                    array(
+                        'key' => 'end_date',
                         'value' => $today,
                         'compare' => '>=',
                         'type' => 'DATE'
