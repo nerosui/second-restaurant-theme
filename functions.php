@@ -368,65 +368,6 @@ add_filter('custom_menu_order', 'enable_custom_menu_order');
 add_filter('menu_order', 'customize_admin_menu_order');
 
 
-// ブロックパターンを登録
-function register_custom_block_patterns()
-{
-    // パターンタグを登録
-    register_block_pattern_category(
-        'second-restaurant',
-        array('label' => 'Second Restaurant')
-    );
-
-    // シェフプロフィールパターンファイルを読み込み
-    $chef_profile_pattern = file_get_contents(get_stylesheet_directory() . '/patterns/chef-profile-pattern.html');
-
-    if ($chef_profile_pattern) {
-        register_block_pattern(
-            'second-restaurant/chef-profile',
-            array(
-                'title'       => 'シェフプロフィール',
-                'description' => 'シェフの詳細プロフィール表示用パターン',
-                'content'     => $chef_profile_pattern,
-                'categories'  => array('second-restaurant'),
-                'keywords'    => array('chef', 'profile', 'シェフ', 'プロフィール'),
-            )
-        );
-
-        // local_partnerブロックパターンの登録
-        $local_partner_profile_pattern_file = get_stylesheet_directory() . '/patterns/local-partner-profile-pattern.html';
-        if (file_exists($local_partner_profile_pattern_file)) {
-            $local_partner_profile_pattern = file_get_contents($local_partner_profile_pattern_file);
-            register_block_pattern(
-                'second-restaurant/local-partner-profile',
-                array(
-                    'title'       => '地域パートナープロフィール',
-                    'description' => '地域パートナーの詳細プロフィール表示用パターン',
-                    'content'     => $local_partner_profile_pattern,
-                    'categories'  => array('second-restaurant'),
-                    'keywords'    => array('local-partner', 'partner', 'profile', '地域パートナー', 'プロフィール'),
-                )
-            );
-        }
-
-        // プロジェクト詳細ブロックパターンの登録
-        $project_detail_pattern_file = get_stylesheet_directory() . '/patterns/project-detail-pattern.html';
-        if (file_exists($project_detail_pattern_file)) {
-            $project_detail_pattern = file_get_contents($project_detail_pattern_file);
-            register_block_pattern(
-                'second-restaurant/project-detail',
-                array(
-                    'title'       => 'プロジェクト詳細',
-                    'description' => 'プロジェクトの詳細情報表示用パターン',
-                    'content'     => $project_detail_pattern,
-                    'categories'  => array('second-restaurant'),
-                    'keywords'    => array('project', 'detail', 'プロジェクト', '詳細'),
-                )
-            );
-        }
-    }
-}
-add_action('init', 'register_custom_block_patterns');
-
 function add_local_partner_detail_class_to_editor_wrapper() {
     $script = "
     function addIdToEditorWrapper() {
